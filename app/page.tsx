@@ -10,7 +10,7 @@ export default function Home() {
       </div>
 
       <nav className={styles.nav}>
-        <Link href="/categories" className={styles["nav-link"]}>Projects</Link>
+        <Link href="/projects" className={styles["nav-link"]}>Projects</Link>
         <Link href="/inspirations" className={styles["nav-link"]}>Inspirations</Link>
         <Link href="/cv" className={styles["nav-link"]}>CV</Link>
       </nav>
