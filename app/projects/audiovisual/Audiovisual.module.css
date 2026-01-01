@@ -1,0 +1,139 @@
+html {
+    background-image: url("/imgs/backgrounds/pink.jpg");
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: rgba(22, 82, 4, 0.7);
+    scroll-behavior: smooth;
+}
+
+.title {
+    font-size: var(--font-size-medium);
+    font-family: var(--police-titre2-btn);
+    color: var(--color-black);
+    background-color: var(--color-pink);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.2rem;
+    margin-top: 3rem;
+}
+
+.subtitle {
+    font-size: var(--font-size-small);
+    font-family: var(--police-titre2-btn);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--color-pink);
+    margin: 0;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.main-content p {
+    font-size: var(--font-size-xsmall);
+    font-family: var(--police-texte);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    margin: 0;
+    text-align: justify;
+    margin-bottom: 0.5rem;
+}
+
+.iframe {
+    padding-bottom: 1.5rem;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--color-pink);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    gap: 1rem;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.container div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 45%;
+}
+
+
+.ancre {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-family: var(--police-titre2-btn);
+    font-size: var(--font-size-xsmall);
+    text-decoration: none;
+    color: white;
+}
+
+.link-synopsis {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.mix {
+    margin-bottom: 2rem;
+}
+
+#ecoute-text {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* Media queries */
+@media (max-width: 700px) {
+    .main-content p {
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+        font-size: var(--font-size-xxsmall);
+    }
+
+    .iframe {
+        width:70%;
+        height: auto;
+    }
+
+    .ytp-large-play-button {
+        width: 35px;
+        height: 35px;
+    }
+
+    .container {
+        width: 90%;
+        margin-bottom: 2rem;
+    }
+
+    .container div {
+        width: 90%;
+    }
+}
