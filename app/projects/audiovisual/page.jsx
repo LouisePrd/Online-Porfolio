@@ -14,9 +14,7 @@ export default function Audiovisual() {
 
       <h1 className="sub-title">Audiovisual Projects</h1>
 
-      <h2 className={styles.title}>
-        Le Making-Of Sauvage (The Wild Making-Of)
-      </h2>
+      <h2 className={styles.title}>Le Making-Of Sauvage</h2>
       <div className={styles.container}>
         <h3 className={styles.subtitle}>THEME & REALIZATION</h3>
         <p>
@@ -59,8 +57,10 @@ export default function Audiovisual() {
       <div className={styles.container}>
         <h3 className={styles.subtitle}>THEME & REALIZATION</h3>
         <p>
-          Theme: Truth<br />
-          Sub-theme: Transhumanism<br />
+          Theme: Truth
+          <br />
+          Sub-theme: Transhumanism
+          <br />
           Subject: Is our judgment always well-founded? Who holds the truth? Are
           we not all someone else's "ignorant person"?
           <br />
@@ -72,14 +72,17 @@ export default function Audiovisual() {
           thoughts via an algorithm that chooses the "best" and most "optimized"
           way to live one's life according to a defined norm. The world is
           completely unaware of this governance.
-          <br /><br />
-          External Point of View<br />
+          <br />
+          <br />
+          External Point of View
+          <br />
           We play conspiracy theorist characters filming a documentary to reveal
           to the world that they are actually controlled by AI. Except for us,
           none of the actors were aware that it was a staged performance.
           <br />
           <br />
-          Organization of Ideas<br />
+          Organization of Ideas
+          <br />
           At the end, we discover a second film crew making a documentary about
           the conspiracy theorists we had been following from the start. This
           crew is convinced they've played a trick on them and are mocking them,
@@ -102,18 +105,26 @@ export default function Audiovisual() {
       <div className={`${styles.container} ${styles.mix}`}>
         <h3 className={styles.subtitle}>MIXING</h3>
         <p>
-          The year at IMAC was very productive, and during the second semester, we had the opportunity to work on audio creation and mixing. For this project, we were tasked with creating a sound mix from a simplified multitrack version of Michael Jackson's Off The Wall, separated into 23 tracks. From there, we had free rein: cutting, reorganizing, playing with volume, effects, echoes, reverbs, etc. Here is the result of our work, created using ProTools.
+          The year at IMAC was very productive, and during the second semester,
+          we had the opportunity to work on audio creation and mixing. For this
+          project, we were tasked with creating a sound mix from a simplified
+          multitrack version of Michael Jackson's Off The Wall, separated into
+          23 tracks. From there, we had free rein: cutting, reorganizing,
+          playing with volume, effects, echoes, reverbs, etc. Here is the result
+          of our work, created using ProTools.
         </p>
-        <p id="ecoute-text">Enjoy listening!</p>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/WDdG63w81rQ"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-          className={styles.iframe}
-        ></iframe>
+        <div className={styles.videoWrapper}>
+          <p className={styles["ecoute-text"]}>Enjoy listening!</p>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/WDdG63w81rQ"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className={styles.iframe}
+          ></iframe>
+        </div>
       </div>
 
       <h2 className={styles.title}>Black Mirror: Reconnection</h2>
@@ -121,44 +132,62 @@ export default function Audiovisual() {
         <div className="left-container">
           <h3 className={styles.subtitle}>SUBJECT</h3>
           <p>
-            As part of a course called "Application Production Methodology," we had to produce a synopsis inspired by the famous Netflix series Black Mirror. This episode had to blend ethics and computer science, and I chose to work on the theme of the metaverse and artificial intelligence. The episode is titled "Reconnection".
+            As part of a course called "Application Production Methodology," we
+            had to produce a synopsis inspired by the famous Netflix series
+            Black Mirror. This episode had to blend ethics and computer science,
+            and I chose to work on the theme of the metaverse and artificial
+            intelligence. The episode is titled "Reconnection".
           </p>
           <h3 className={styles.subtitle}>WORK DONE</h3>
           <p>
-            We had to write a three-act synopsis and produce a teaser in any form. I chose to create a video teaser, various poster prototypes, and a potential casting list.
+            We had to write a three-act synopsis and produce a teaser in any
+            form. I chose to create a video teaser, various poster prototypes,
+            and a potential casting list.
           </p>
         </div>
 
         <div className="right-container">
           <h3 className={styles.subtitle}>EXPLANATION</h3>
           <p>
-            The goal of this scenario was to prompt reflection on our identity in the online space and the role we will give to artificial intelligence in the coming years. In this fictional episode, we follow a young man in his thirties whose identity is stolen by an AI in the metaverse. He falls into a blind rage, ready to do anything to eliminate his avatar.
-<br /><br />
-The teaser gives a glimpse of the metaverse through an interview with Facebook's General Manager, Laurent Solly, and introduces the inciting incident with a VR headset followed by an interview with the company's customer service. Classmates lent their voices for the acting. 
+            The goal of this scenario was to prompt reflection on our identity
+            in the online space and the role we will give to artificial
+            intelligence in the coming years. In this fictional episode, we
+            follow a young man in his thirties whose identity is stolen by an AI
+            in the metaverse. He falls into a blind rage, ready to do anything
+            to eliminate his avatar.
+            <br />
+            <br />
+            The teaser gives a glimpse of the metaverse through an interview
+            with Facebook's General Manager, Laurent Solly, and introduces the
+            inciting incident with a VR headset followed by an interview with
+            the company's customer service. Classmates lent their voices for the
+            acting.
           </p>
         </div>
 
-        <p className={styles["link-synopsis"]}>
-          You can find the french synopsis
-          <a
-            className={styles.link}
-            href="https://drive.google.com/file/d/1xAzSFQz5UXbIEEVPVjR_NfXK22VLxO8_/view?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            &nbsp; here
-          </a>
-          .
-        </p>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/jJwCwAOMsws"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-          className={styles.iframe}
-        ></iframe>
+        <div className={styles.videoWrapper}>
+          <p className={styles["link-synopsis"]}>
+            You can find the french synopsis
+            <a
+              className={styles.link}
+              href="https://drive.google.com/file/d/1xAzSFQz5UXbIEEVPVjR_NfXK22VLxO8_/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              &nbsp; here
+            </a>
+            .
+          </p>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/jJwCwAOMsws"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className={styles.iframe}
+          ></iframe>
+        </div>
       </div>
 
       <h2 className={styles.title}>Photography</h2>
