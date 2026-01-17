@@ -17,11 +17,10 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   gap: 2rem;
-  padding: 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .project-card {
@@ -73,6 +72,10 @@
 
 .associatif {
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.preWatch {
+  background-color: rgba(255, 69, 0, 0.5);
 }
 
 /* Media Queries */
