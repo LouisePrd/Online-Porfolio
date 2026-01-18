@@ -22,11 +22,12 @@ export default function Navbar() {
           PORTFOLIO<b>.</b>
         </Link>
 
-        <div className={`${styles.navLinks} ${isOpen ? styles.open : ""}`}>
-          <Link href="/projects" className={isActive("/projects")} onClick={closeMenu}>
-            All Projects
+
+          <Link href="/inspirations" className={isActive("/inspirations")} onClick={closeMenu}>
+            Inspirations
           </Link>
 
+        <div className={`${styles.navLinks} ${isOpen ? styles.open : ""}`}>
           <div className={styles.dropdown}>
             <span className={styles.dropdownLabel}>Categories ▾</span>
             <div className={styles.dropdownContent}>
@@ -44,10 +45,6 @@ export default function Navbar() {
               </Link>
             </div>
           </div>
-
-          <Link href="/inspirations" className={isActive("/inspirations")} onClick={closeMenu}>
-            Inspirations
-          </Link>
 
           <Link href="/cv" className={isActive("/cv")} onClick={closeMenu}>
             CV
