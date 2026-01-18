@@ -48,6 +48,10 @@ export default function Navbar() {
           <Link href="/inspirations" className={isActive("/inspirations")} onClick={closeMenu}>
             Inspirations
           </Link>
+
+          <Link href="/cv" className={isActive("/cv")} onClick={closeMenu}>
+            CV
+          </Link>
         </div>
 
         {/* Burger Menu */}
