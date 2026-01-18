@@ -22,12 +22,11 @@ export default function Navbar() {
           PORTFOLIO<b>.</b>
         </Link>
 
+        <div className={`${styles.navLinks} ${isOpen ? styles.open : ""}`}>
 
           <Link href="/inspirations" className={isActive("/inspirations")} onClick={closeMenu}>
             Inspirations
           </Link>
-
-        <div className={`${styles.navLinks} ${isOpen ? styles.open : ""}`}>
           <div className={styles.dropdown}>
             <span className={styles.dropdownLabel}>Categories ▾</span>
             <div className={styles.dropdownContent}>
