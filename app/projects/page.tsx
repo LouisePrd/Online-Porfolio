@@ -29,15 +29,6 @@ export default function Projects() {
         <source src="/audio/FeelGoodInc.mp3" type="audio/mpeg" />
       </audio>
 
-      <nav className={styles.navigation}>
-        <Link id="btnHome" href="/inspirations" className={styles.btnBack}>
-          ← Inspirations
-        </Link>
-        <Link id="btnProject" href="/" className={styles.btnHome}>
-          Home →
-        </Link>
-      </nav>
-
       <h1 className={styles["sub-title"]}>PROJECTS</h1>
 
       <div className={styles.cdContainer}>
