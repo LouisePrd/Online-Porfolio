@@ -65,13 +65,6 @@ const projects = [
 export default function ITProjects() {
   return (
     <main className={styles["main-content"]}>
-      <Link id="btnProject" href="/">
-        Home →
-      </Link>
-      <Link id="btnHome" href="/projects">
-        ← Projects
-      </Link>
-
       <h1 className="sub-title">IT Projects</h1>
 
       <section className={styles["projects-grid"]}>
@@ -79,6 +72,10 @@ export default function ITProjects() {
           <ProjectCard key={index} {...project} />
         ))}
       </section>
+
+            <a className={styles.ancre} href="#btnProject">
+        ↑ Back to top
+      </a>
     </main>
   );
 }
