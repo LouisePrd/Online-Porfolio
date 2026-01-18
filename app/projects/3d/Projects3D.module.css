@@ -1,0 +1,70 @@
+.main-content {
+    background-image: url("/imgs/backgrounds/pink.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll;
+    background-blend-mode: multiply;
+    background-color: rgba(28, 11, 73, 0.7);
+    display: block;
+    width: 100%;
+    overflow-y: auto;
+    height: 100vh;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.title {
+    font-size: var(--font-size-medium);
+    font-family: var(--police-titre2-btn);
+    color: var(--color-black);
+    background-color: var(--color-pink);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.4rem 1.5rem;
+    border-radius: 4px;
+}
+
+.gridContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.mediaCard {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mediaCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.mediaItem {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .gridContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mediaItem {
+        max-width: 100%;
+        height: auto;
+    }
+}
