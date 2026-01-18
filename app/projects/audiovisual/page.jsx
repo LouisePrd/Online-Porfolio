@@ -5,13 +5,6 @@ import styles from "./Audiovisual.module.css";
 export default function Audiovisual() {
   return (
     <main className={styles["main-content"]}>
-      <Link id="btnProject" href="/">
-        Home →
-      </Link>
-      <Link id="btnHome" href="/projects">
-        ← Projects
-      </Link>
-
       <h1 className="sub-title">Audiovisual Projects</h1>
 
       <h2 className={styles.title}>Le Making-Of Sauvage</h2>
