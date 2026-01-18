@@ -65,6 +65,16 @@ body {
   padding-left: 10px;
 }
 
+.ancre {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    font-family: var(--police-titre2-btn);
+    font-size: var(--font-size-xsmall);
+    text-decoration: none;
+    color: white;
+}
+
 /* Media queries */
 
 @media (max-width: 1200px) {

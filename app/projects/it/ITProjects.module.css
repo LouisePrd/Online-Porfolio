@@ -59,16 +59,6 @@ overflow-y: auto;
   background-color: rgba(255, 69, 0, 0.5);
 }
 
-.ancre {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    font-family: var(--police-titre2-btn);
-    font-size: var(--font-size-xsmall);
-    text-decoration: none;
-    color: white;
-}
-
 /* Media Queries */
 @media (max-width: 800px) {
   .projects-grid {

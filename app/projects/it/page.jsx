@@ -64,8 +64,8 @@ const projects = [
 
 export default function ITProjects() {
   return (
-    <main className={styles["main-content"]}>
-      <h1 className="sub-title">IT Projects</h1>
+    <main className={styles["main-content"]} >
+      <h1 className="sub-title" id="top">IT Projects</h1>
 
       <section className={styles["projects-grid"]}>
         {projects.map((project, index) => (
@@ -73,7 +73,7 @@ export default function ITProjects() {
         ))}
       </section>
 
-            <a className={styles.ancre} href="#btnProject">
+            <a className="ancre" href="#top">
         ↑ Back to top
       </a>
     </main>
