@@ -42,7 +42,7 @@ export default function Home() {
             In this portfolio, you will discover my inspirations and my various projects, which reflect my different sensibilities: enjoy your visit!
           </p>
           <div className={styles.startdiv}>
-            <Link className={styles.btnStart} href="/categories">Start</Link>
+            <Link className={styles.btnStart} href="/projects">Start</Link>
           </div>
         </div>
 

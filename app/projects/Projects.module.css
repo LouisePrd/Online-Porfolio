@@ -130,6 +130,9 @@ html {
     animation: none;
 }
 
+.container {
+    min-height: 100vh;
+}
 
 @media (max-width: 800px) {
     .categories {
