@@ -23,12 +23,10 @@ export default function Navbar() {
         </Link>
 
         <div className={`${styles.navLinks} ${isOpen ? styles.open : ""}`}>
-          {/* Lien simple */}
           <Link href="/projects" className={isActive("/projects")} onClick={closeMenu}>
             All Projects
           </Link>
 
-          {/* Groupe de sous-catégories */}
           <div className={styles.dropdown}>
             <span className={styles.dropdownLabel}>Categories ▾</span>
             <div className={styles.dropdownContent}>
