@@ -1,0 +1,202 @@
+.projectPage {
+    min-height: 100vh;
+    background-image: url("/imgs/backgrounds/pink.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgba(73, 11, 70, 0.7);
+    padding-bottom: 50px;
+}
+
+.auFilDuTemps {
+    background-color: rgba(41, 36, 36, 0.5);
+}
+
+.elixir {
+    background-color: rgba(181, 134, 5, 0.5);
+}
+
+.marieGobelins {
+    background-color: rgba(0, 255, 187, 0.5);
+}
+
+.pigeonGate {
+    background-color: rgb(253, 81, 210);
+}
+
+.rerAGate {
+    background-color: rgba(0, 216, 159, 0.5);
+}
+
+.averagePlayer {
+    background-color: rgba(3, 2, 2, 0.755);
+}
+
+.inusTale {
+    background-color: rgba(0, 120, 240, 0.5);
+}
+
+.associatif {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.preWatch {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.btnNav {
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    font-family: inherit;
+}
+
+.intro {
+    font-size: var(--font-size-small);
+    font-family: var(--police-titre2-btn);
+    text-align: center;
+    margin: 0 auto 2rem auto;
+    color: var(--color-black);
+    background-color: var(--color-pink);
+    width: fit-content;
+    padding: 0.2rem 1rem;
+}
+
+.projectContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffe9ff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.presentation,
+.description {
+    font-size: var(--font-size-xsmall);
+    font-family: var(--police-texte);
+    flex: 1;
+    min-width: 300px;
+    text-align: justify;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.btnLinks {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.btnLinks a {
+    font-size: var(--font-size-xsmall);
+    font-family: var(--police-titre2-btn);
+    color: white;
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: background 0.3s;
+}
+
+.btnLinks a:hover,
+.linkedinBtn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.linkedinBtn {
+    border-color: #0077b5 !important;
+}
+
+.sectionTitle {
+    font-size: var(--font-size-medium);
+    font-family: var(--police-titre2-btn);
+    color: var(--color-black);
+    background-color: var(--color-pink);
+    width: fit-content;
+    margin: 3rem auto 1rem auto;
+    padding: 0.2rem 1rem;
+    text-align: center;
+}
+
+.results {
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.verticalWrapper,
+.videoContainer {
+    width: calc(25% - 1rem);
+    min-width: 200px;
+}
+
+.videoContainer {
+    aspect-ratio: 9 / 16;
+    border-radius: 10px;
+    overflow: hidden;
+    background: black;
+}
+
+.videoContainer iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.panoramaWrapper {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.panoramaWrapper img,
+.verticalWrapper img,
+.imageWrapper img {
+    border-radius: 10px;
+    display: block;
+}
+
+.imageWrapper {
+    width: calc(50% - 1rem);
+}
+
+@media (max-width: 1024px) {
+
+    .verticalWrapper,
+    .videoContainer {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .projectContainer,
+    .verticalWrapper,
+    .videoContainer,
+    .imageWrapper {
+        width: 100%;
+    }
+
+    .results {
+        width: 95%;
+    }
+}
