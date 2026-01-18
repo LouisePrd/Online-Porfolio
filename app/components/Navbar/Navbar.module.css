@@ -1,0 +1,180 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 2rem;
+}
+
+.navContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.logo {
+    font-family: var(--police-titre2-btn);
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.logo b {
+    color: var(--color-pink);
+}
+
+.navLinks {
+    display: flex;
+    gap: 2rem;
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: white;
+    font-family: var(--police-texte);
+    font-size: 0.9rem;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navLinks a:hover,
+.active {
+    color: var(--color-pink) !important;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+
+.navLinks {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdownLabel {
+    cursor: default;
+    color: white;
+    font-family: var(--police-texte);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    min-width: 200px;
+    border-radius: 8px;
+    padding: 1rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+.dropdownContent a {
+    display: block;
+    padding: 0.8rem 1.5rem;
+    white-space: nowrap;
+    font-size: 0.85rem !important;
+}
+
+.dropdown:hover .dropdownContent {
+    display: block;
+}
+
+
+@media (max-width: 768px) {
+    .navLinks {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .dropdown {
+        text-align: center;
+    }
+
+    .dropdownContent {
+        position: static;
+        display: block;
+        background: none;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+    }
+
+    .dropdownLabel {
+        display: none;
+    }
+
+    .dropdownContent a {
+        padding: 0.5rem;
+        color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+
+    .navLinks {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.4s;
+    }
+
+    .navLinks.open {
+        right: 0;
+    }
+
+    .cross:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .cross:nth-child(2) {
+        opacity: 0;
+    }
+
+    .cross:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
