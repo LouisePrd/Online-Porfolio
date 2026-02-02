@@ -15,9 +15,49 @@ export interface Project {
   verticalImages?: string[];
   videoUrl?: string;
   panoramaImg?: string;
+  gifUrl?: string[];
 }
 
 export const projectsData: Record<string, Project> = {
+  "architech": {
+    title: "Architech",
+    intro: "A SaaS solution dedicated to architects for streamlining General Technical Diagnostic (DTG) reports.",
+    type: "Web Application / SaaS",
+    date: "2025",
+    context: "Pre-professional Group Project at IMAC",
+    technos: "Next.js, Firebase, Cloudinary, PDFMake",
+    description: "Architects spend hours creating DTGs without dedicated tools. Architech solves this by providing a complete web ecosystem to manage teams, onsite data collection, and complex forms. Built with Next.js and Firebase, the application focuses on optimizing the UX of heavy data entry. It features a hybrid NoSQL architecture, Cloudinary for photo management , and instant client-side PDF generation, drastically reducing report production time.",
+    styleClass: "architech",
+    githubUrl: "https://github.com/imac-web/architech-webapp",
+    reportUrl: "https://www.canva.com/design/DAG_QtTxkLg/d1r3yhwzDoAA43YF55tTIw/edit?utm_content=DAG_QtTxkLg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
+    websiteUrl : "architech-webapp.netlify.app/",
+    verticalImages: [
+      "/imgs/projects/architech/FirstScreen.webp",
+      "/imgs/projects/architech/HomeScreen.webp",
+      "/imgs/projects/architech/ProjectScreen.webp",
+      "/imgs/projects/architech/ElementScreen.webp",
+    ]
+  },
+  "piageon": {
+    title: "Piageon : L'Île aux Pigeons",
+    intro: "A political bird survival simulation blending AI and nature's laws.",
+    type: "Virtual World / Simulation",
+    date: "2026",
+    context: "Experimental project exploring algorithmic social interactions",
+    technos: "Three.js, Cellular Automata, Genetic Algorithms, Boids, L-Systems",
+    websiteUrl: "https://piageon.netlify.app/",
+    description: "Piageon is a virtual ecosystem designed to explore the interaction between multiple algorithmic models. In this low-poly world, autonomous pigeons evolve, organize, and clash over political ideologies. The simulation integrates Life-like Cellular Automata for social layers, Boids for movement, and Genetic Algorithms for evolution. The procedural island is sculpted using Mandelbrot fractals and Perlin noise, while vegetation grows via L-Systems.",
+    styleClass: "piageon",
+    images: [
+      "/imgs/projects/piageon/loading.webp",
+      "/imgs/projects/piageon/isle.webp",
+      "/imgs/projects/piageon/top-isle.webp",
+    ],
+    gifUrl: ["/imgs/projects/piageon/idle.gif",
+      "/imgs/projects/piageon/die.gif",
+    ],
+    reportUrl: "https://www.figma.com/deck/DUGsyRDwxaQwB1xq0HdGjF/PIAGEON?node-id=1-42&t=nFXCsQVsOrCzKDZA-1"
+  },
   "auFilDuTemps": {
     title: "Au Fil du Temps",
     intro: "Graphic introspection on the emotions of Gobelins' BDDI 2023 class.",
