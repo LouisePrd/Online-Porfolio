@@ -8,11 +8,11 @@ export default function Projects3D() {
     { type: "img", src: "/imgs/projects/3d/trophees.png", alt: "trophees" },
     { type: "img", src: "/imgs/projects/3d/Trophee-film.png", alt: "trophée" },
     { type: "img", src: "/imgs/projects/3d/switch.png", alt: "switch" },
-    { type: "img", src: "/imgs/projects/3d/ex-1.png", alt: "logo IMAC" },
     { type: "img", src: "/imgs/projects/3d/cat-wip.png", alt: "cat" },
     { type: "video", src: "/imgs/projects/3d/animation.mp4" },
     { type: "video", src: "/imgs/projects/3d/kirby.mp4" },
     { type: "video", src: "/imgs/projects/3d/pigeon.mp4" },
+    { type: "video", src: "/imgs/projects/3d/pigeon-die.mp4" },
   ];
 
   return (
