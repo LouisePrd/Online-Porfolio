@@ -179,6 +179,21 @@
     width: calc(50% - 1rem);
 }
 
+.gifWrapper {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.gifImage {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    display: block;
+}
+
 @media (max-width: 1024px) {
 
     .verticalWrapper,
