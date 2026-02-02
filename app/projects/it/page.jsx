@@ -4,6 +4,20 @@ import styles from "./ITProjects.module.css";
 
 const projects = [
   {
+    href: "/projects/it/architech",
+    src: "/imgs/projects/architech/overview.png",
+    alt: "ArchiTech",
+    technos: "Next.js, Firebase, Cloudinary",
+    styleClass: "ArchiTech",
+  },
+  {
+    href: "/projects/it/piageon",
+    src: "/imgs/projects/piageon/preview.webp",
+    alt: "Piageon",
+    technos: "React.js, Three.js, Blender",
+    styleClass: "piageon",
+  },
+  {
     href: "/projects/it/preWatch",
     src: "/imgs/projects/preWatch/preWatch-demo.webp",
     alt: "preWatch",
@@ -24,20 +38,12 @@ const projects = [
     technos: "WebXR, ThreeJS, DALL-E",
     styleClass: "marieGobelins",
   },
-
   {
     href: "/projects/it/rerAGate",
     src: "/imgs/projects/rerAGate/rer-a-gate.png",
     alt: "RER A Gate",
     technos: "C++, CMake, OpenGL",
     styleClass: "rerAGate",
-  },
-  {
-    href: "/projects/it/averagePlayer",
-    src: "/imgs/projects/averagePlayer/Champions.png",
-    alt: "Average Player",
-    technos: "React.js, Supabase",
-    styleClass: "averagePlayer",
   },
   {
     href: "/projects/it/pigeonGate",
@@ -64,8 +70,10 @@ const projects = [
 
 export default function ITProjects() {
   return (
-    <main className={styles["main-content"]} >
-      <h1 className="sub-title" id="top">IT Projects</h1>
+    <main className={styles["main-content"]}>
+      <h1 className="sub-title" id="top">
+        IT Projects
+      </h1>
 
       <section className={styles["projects-grid"]}>
         {projects.map((project, index) => (
@@ -73,7 +81,7 @@ export default function ITProjects() {
         ))}
       </section>
 
-            <a className="ancre" href="#top">
+      <a className="ancre" href="#top">
         ↑ Back to top
       </a>
     </main>
