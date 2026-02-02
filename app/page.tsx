@@ -17,8 +17,8 @@ export default function Home() {
           <span className={styles.dropdownLabel}>Projects ▾</span>
           <div className={styles.dropdownContent}>
             <Link href="/projects/it">IT Projects</Link>
-            <Link href="/projects/audiovisual">Audiovisual</Link>
             <Link href="/projects/3d">3D</Link>
+            <Link href="/projects/audiovisual">Audiovisual</Link>
             <Link href="/projects/associative">Associative</Link>
           </div>
         </div>
