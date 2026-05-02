@@ -36,7 +36,7 @@ export default function ProfessionalExperiences() {
             </ul>
           </div>
           <div className={styles.techStack}>
-            {["React", "Next.js", "Node.js", "UI/UX"].map((tech) => (
+            {["React", "Node.js", "MongoDB", "AI"].map((tech) => (
               <span key={tech} className={styles.techBadge}>
                 {tech}
               </span>
@@ -86,7 +86,7 @@ export default function ProfessionalExperiences() {
             </ul>
           </div>
           <div className={styles.techStack}>
-            {["WebGL", "3DGS", "PlayCanvas", "VR", "GitHub Actions"].map(
+            {["WebGL", "3DGS", "PlayCanvas", "VR", "Next.js"].map(
               (tech) => (
                 <span key={tech} className={styles.techBadge}>
                   {tech}
@@ -135,7 +135,7 @@ export default function ProfessionalExperiences() {
             </ul>
           </div>
           <div className={styles.techStack}>
-            {["JIRA", "AB Tasty", "Marketing Digital"].map((tech) => (
+            {["JIRA", "AB Tasty", "WordPress", "Marketing Digital"].map((tech) => (
               <span key={tech} className={styles.techBadge}>
                 {tech}
               </span>
