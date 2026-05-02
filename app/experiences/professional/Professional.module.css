@@ -1,0 +1,125 @@
+.mainContent {
+    background-image: url("/imgs/backgrounds/pink.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.7);
+    min-height: 100vh;
+    padding-bottom: 50px;
+    color: white;
+    font-family: var(--police-texte);
+}
+
+.centralContainer {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.contentCard {
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.5s ease-out forwards;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.contentCard:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-pink);
+    background: rgba(30, 30, 30, 0.75);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.dateBadge {
+    background: var(--color-pink);
+    color: black;
+    font-weight: bold;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.location {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.companyTitle {
+    font-family: var(--police-titre2-btn);
+    font-size: 1.8rem;
+    margin: 0.5rem 0;
+}
+
+.roleTitle {
+    color: var(--color-pink);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.list {
+    list-style-type: "→ ";
+    padding-left: 1rem;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.list li { margin-bottom: 0.8rem; }
+
+.list > li > strong:first-child {
+    color: white; 
+    font-weight: 700;
+}
+
+.bodyText strong {
+    color: var(--color-pink);
+    font-weight: 600;
+}
+
+.techStack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.techBadge {
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.techBadge:hover {
+    background: var(--color-pink);
+    color: black;
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .cardHeader { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+}
