@@ -54,19 +54,31 @@ export default function Navbar() {
               >
                 Audiovisual
               </Link>
+            </div>
+          </div>
+
+          <div className={styles.dropdown}>
+            <span className={styles.dropdownLabel}>Experiences ▾</span>
+            <div className={styles.dropdownContent}>
               <Link
-                href="/projects/associative"
-                className={isActive("/projects/associative")}
+                href="/experiences/professional"
+                className={isActive("/experiences/professional")}
+                onClick={closeMenu}
+              >
+                Professional
+              </Link>
+              <Link
+                href="/experiences/associative"
+                className={isActive("/experiences/associative")}
                 onClick={closeMenu}
               >
                 Associative
               </Link>
+              <Link href="/experiences/cv" className={isActive("/experiences/cv")} onClick={closeMenu}>
+                Full CV
+              </Link>
             </div>
           </div>
-
-          <Link href="/cv" className={isActive("/cv")} onClick={closeMenu}>
-            CV
-          </Link>
         </div>
 
         {/* Burger Menu */}

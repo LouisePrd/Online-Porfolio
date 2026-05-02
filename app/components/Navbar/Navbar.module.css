@@ -70,7 +70,7 @@
 
 .navLinks {
     display: flex;
-    gap: 2.5rem;
+    gap: 3.5rem;
     align-items: center;
 }
 
@@ -92,15 +92,16 @@
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    right: 0;
     background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px);
-    min-width: 200px;
+    min-width: 140px;
     border-radius: 8px;
     padding: 1rem 0;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     z-index: 10;
+    text-align: right;
 }
 
 .dropdownContent a {
