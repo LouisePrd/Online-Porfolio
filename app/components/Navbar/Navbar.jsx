@@ -31,7 +31,7 @@ export default function Navbar() {
             Inspirations
           </Link>
           <div className={styles.dropdown}>
-            <span className={styles.dropdownLabel}>Categories ▾</span>
+            <span className={styles.dropdownLabel}>Project Categories ▾</span>
             <div className={styles.dropdownContent}>
               <Link
                 href="/projects/it"

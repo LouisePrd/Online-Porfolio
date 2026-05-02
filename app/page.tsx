@@ -14,17 +14,22 @@ export default function Home() {
           Inspirations
         </Link>
         <div className={styles.dropdown}>
-          <span className={styles.dropdownLabel}>Projects ▾</span>
+          <span className={styles.dropdownLabel}>Project Categories ▾</span>
           <div className={styles.dropdownContent}>
             <Link href="/projects/it">IT Projects</Link>
             <Link href="/projects/3d">3D</Link>
             <Link href="/projects/audiovisual">Audiovisual</Link>
-            <Link href="/projects/associative">Associative</Link>
           </div>
         </div>
-        <Link href="/cv" className={styles["nav-link"]}>
-          CV
-        </Link>
+        <div className={styles.dropdown}>
+          <span className={styles.dropdownLabel}>Experiences ▾</span>
+          <div className={styles.dropdownContent}>
+            <Link href="/experiences/professional">Professional</Link>
+            <Link href="/experiences/associative">Associative</Link>
+            <Link href="/experiences/cv"> Full CV</Link>
+          </div>
+        </div>
+        
       </nav>
 
       <div className={styles["presentation-container"]}>

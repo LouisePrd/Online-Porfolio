@@ -45,7 +45,7 @@ body {
 .nav {
     display: flex;
     flex-direction: row;
-    gap: 1.7rem;
+    gap: 1.4rem;
     position: absolute;
     top: 2rem;
     right: 3rem;
@@ -61,6 +61,7 @@ body {
     font-size: var(--font-size-xsmall);
     cursor: pointer;
     transition: 0.3s;
+    text-shadow: 0 0 3px rgba(75, 0, 52, 1);
 }
 
 .nav-link:hover,
