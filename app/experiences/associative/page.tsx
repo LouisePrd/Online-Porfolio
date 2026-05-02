@@ -3,7 +3,7 @@
 import Image from "next/image";
 import styles from "./Associative.module.css";
 import { useState, useEffect, useCallback, MouseEvent } from "react";
-import Link from 'next/link';
+import Link from "next/link";
 
 interface GicPhoto {
   src: string;
@@ -80,8 +80,16 @@ export default function AssociativeProjects() {
             <p>
               As Vice-President of the ESIEE Paris Arts Office, I co-directed
               the association's strategy to promote arts and culture on campus.
-              My work included developing the website <Link className={styles.linkAsso} href="https://bda-esiee.fr" target="_blank" rel="noopener noreferrer">bda-esiee.fr</Link> and helping
-              to organise artistic events, while also managing the
+              My work included developing the website{" "}
+              <Link
+                className={styles.linkAsso}
+                href="https://bda-esiee.fr"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                bda-esiee.fr
+              </Link>{" "}
+              and helping to organise artistic events, while also managing the
               organisation's administrative tasks.
             </p>
           </div>
@@ -223,7 +231,10 @@ export default function AssociativeProjects() {
         </div>
       )}
 
-      <a className="ancre" href="#top">
+      <a
+        className="ancre"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
         ↑ Back to top
       </a>
     </main>

@@ -160,7 +160,10 @@ export default function Audiovisual() {
         />
       </div>
 
-      <a className="ancre" href="#top">
+      <a
+        className="ancre"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
         ↑ Back to top
       </a>
     </main>
