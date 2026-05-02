@@ -39,6 +39,7 @@ export default function Projects() {
           width={300}
           height={300}
           onClick={togglePlay}
+          loading="eager"
           style={{ 
             transform: isPlaying ? "rotate(140deg)" : "rotate(180deg)",
             cursor: "pointer",
@@ -49,6 +50,7 @@ export default function Projects() {
           className={`${styles.cd} ${isPlaying ? styles.play : styles.pause}`}
           src="/imgs/props/cd-gorillaz.png"
           alt="cd"
+          loading="eager"
           width={200}
           height={200}
         />
@@ -57,8 +59,8 @@ export default function Projects() {
       <div className={styles.categories}>
         <Link className={styles.category} href="/projects/it">Development</Link>
         <Link className={styles.category} href="/projects/audiovisual">Audiovisual</Link>
-        <Link className={styles.category} href="/projects/3D">3D & Design</Link>
-        <Link className={styles.category} href="/projects/associations">Associations</Link>
+        <Link className={styles.category} href="/projects/3d">3D & Design</Link>
+        <Link className={styles.category} href="/experiences/professional">Experiences</Link>
       </div>
 
       <Image

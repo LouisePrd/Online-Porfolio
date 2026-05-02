@@ -1,3 +1,5 @@
+"use client";
+
 import ProjectCard from "../../components/CardProject/CardProject";
 import Link from "next/link";
 import styles from "./ITProjects.module.css";

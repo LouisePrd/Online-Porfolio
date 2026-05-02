@@ -1,3 +1,5 @@
+"use client";
+
 import { projectsData, Project } from "../../../data/projects";
 import Image from "next/image";
 import styles from "./ProjectTemplate.module.css";
