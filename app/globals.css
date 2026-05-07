@@ -73,6 +73,13 @@ body {
     font-size: var(--font-size-xsmall);
     text-decoration: none;
     color: white;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+
+.ancre:hover {
+    opacity: 1;
 }
 
 /* Media queries */

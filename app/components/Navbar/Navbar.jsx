@@ -14,6 +14,8 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
   const isActive = (path) => (pathname === path ? styles.active : "");
+  const isCategoryActive = (basePath) =>
+    pathname.startsWith(basePath) ? styles.active : "";
 
   return (
     <nav className={styles.navbar}>
@@ -31,7 +33,11 @@ export default function Navbar() {
             Inspirations
           </Link>
           <div className={styles.dropdown}>
-            <span className={styles.dropdownLabel}>Project Categories ▾</span>
+            <span
+              className={`${styles.dropdownLabel} ${isCategoryActive("/projects")}`}
+            >
+              Project Categories ▾
+            </span>
             <div className={styles.dropdownContent}>
               <Link
                 href="/projects/it"
@@ -58,7 +64,11 @@ export default function Navbar() {
           </div>
 
           <div className={styles.dropdown}>
-            <span className={styles.dropdownLabel}>Experiences ▾</span>
+            <span
+              className={`${styles.dropdownLabel} ${isCategoryActive("/experiences")}`}
+            >
+              Experiences ▾
+            </span>
             <div className={styles.dropdownContent}>
               <Link
                 href="/experiences/professional"
@@ -74,7 +84,11 @@ export default function Navbar() {
               >
                 Associative
               </Link>
-              <Link href="/experiences/cv" className={isActive("/experiences/cv")} onClick={closeMenu}>
+              <Link
+                href="/experiences/cv"
+                className={isActive("/experiences/cv")}
+                onClick={closeMenu}
+              >
                 Full CV
               </Link>
             </div>
