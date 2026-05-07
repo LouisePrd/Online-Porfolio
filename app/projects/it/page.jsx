@@ -1,4 +1,6 @@
 "use client";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 
 import ProjectCard from "../../components/CardProject/CardProject";
 import Link from "next/link";
@@ -70,22 +72,68 @@ const projects = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.25,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { 
+    opacity: 0, 
+    y: 30,
+    scale: 0.95 
+  },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    scale: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut"
+    }
+  },
+};
+
 export default function ITProjects() {
+  const scrollRef = useRef(null);
+
+  const scrollToTop = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  };
   return (
-    <main className={styles["main-content"]}>
+    <main 
+    ref={scrollRef}
+    className={styles["main-content"]}>
       <h1 className="sub-title" id="top">
         IT Projects
       </h1>
 
-      <section className={styles["projects-grid"]}>
+      <motion.section 
+        className={styles["projects-grid"]}
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
+          <motion.div key={index} variants={itemVariants}>
+            <ProjectCard {...project} />
+          </motion.div>
         ))}
-      </section>
+      </motion.section>
 
       <a
         className="ancre"
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        onClick={scrollToTop}
       >
         ↑ Back to top
       </a>

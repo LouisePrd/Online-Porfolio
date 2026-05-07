@@ -1,15 +1,60 @@
 "use client";
 
+import { useRef } from "react";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "./Audiovisual.module.css";
 
+const sectionVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" }
+  }
+};
+
+const photoContainerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.1 }
+  }
+};
+
+const photoVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.4 } }
+};
+
 export default function Audiovisual() {
+  const scrollRef = useRef(null);
+
+  const scrollToTop = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
-    <main className={styles["main-content"]}>
-      <h1 className="sub-title" id="top">
+    <main ref={scrollRef} className={styles["main-content"]}>
+      <motion.h1 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="sub-title" 
+        id="top"
+      >
         Audiovisual Projects
-      </h1>
-      <section className={styles.projectSection}>
+      </motion.h1>
+
+      {/* Section 1 */}
+      <motion.section 
+        className={styles.projectSection}
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
         <h2 className={styles.title}>Le Making-Of Sauvage</h2>
         <div className={styles.container}>
           <div className={styles.textContent}>
@@ -34,15 +79,18 @@ export default function Audiovisual() {
             ></iframe>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <section className={styles.projectSection}>
+      {/* Section 2 */}
+      <motion.section 
+        className={styles.projectSection}
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
         <h2 className={styles.title}>
-          The Great Worldw
-          <b>
-            <u>AI</u>
-          </b>
-          de Conspiracy
+          The Great Worldw<b><u>AI</u></b>de Conspiracy
         </h2>
         <div className={styles.container}>
           <div className={styles.videoContent}>
@@ -67,18 +115,24 @@ export default function Audiovisual() {
             </p>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <section className={styles.projectSection}>
+      {/* Section 3 */}
+      <motion.section 
+        className={styles.projectSection}
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
         <h2 className={styles.title}>Newton's Binomial</h2>
-        <div className={`${styles.container} ${styles.mix}`}>
+        <div className={styles.container}>
           <div className={styles.textContent}>
             <h3 className={styles.subtitle}>MIXING</h3>
             <p>
               Creation of a sound mix from a simplified multitrack version of
-              Michael Jackson's
-              <i> Off The Wall</i>. We had free rein on effects, echoes, and
-              reverbs using ProTools.
+              Michael Jackson's <i>Off The Wall</i>. We had free rein on effects, 
+              echoes, and reverbs using ProTools.
             </p>
             <p className={styles.enjoyText}>Enjoy listening! ↓</p>
           </div>
@@ -91,9 +145,16 @@ export default function Audiovisual() {
             ></iframe>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <section className={styles.projectSection}>
+      {/* Section 4 */}
+      <motion.section 
+        className={styles.projectSection}
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
+      >
         <h2 className={styles.title}>Black Mirror: Reconnection</h2>
         <div className={styles.container}>
           <div className={styles.videoContent}>
@@ -125,47 +186,45 @@ export default function Audiovisual() {
             </a>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      {/* PHOTOS */}
-      <h2 className={styles.title}>Photography</h2>
-      <div className={styles["photo-container"]}>
-        <Image
-          src="/imgs/projects/photo/metro.jpg"
-          alt="Metro"
-          width={400}
-          height={300}
-        />
-        <Image
-          src="/imgs/projects/photo/paris.jpg"
-          alt="Paris"
-          width={400}
-          height={300}
-        />
-        <Image
-          src="/imgs/projects/photo/toit.jpg"
-          alt="Rooftops"
-          width={400}
-          height={300}
-        />
-        <Image
-          src="/imgs/projects/photo/palaisTokyo.jpg"
-          alt="Palais"
-          width={400}
-          height={300}
-        />
-        <Image
-          src="/imgs/projects/photo/archi.jpg"
-          alt="Architecture"
-          width={400}
-          height={300}
-        />
-      </div>
-
-      <a
-        className="ancre"
-        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      {/* PHOTOS avec Animation Stagger */}
+      <motion.h2 
+        className={styles.title}
+        variants={sectionVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
       >
+        Photography
+      </motion.h2>
+
+      <motion.div 
+        className={styles["photo-container"]}
+        variants={photoContainerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        {[
+          { src: "/imgs/projects/photo/metro.jpg", alt: "Metro" },
+          { src: "/imgs/projects/photo/paris.jpg", alt: "Paris" },
+          { src: "/imgs/projects/photo/toit.jpg", alt: "Rooftops" },
+          { src: "/imgs/projects/photo/palaisTokyo.jpg", alt: "Palais" },
+          { src: "/imgs/projects/photo/archi.jpg", alt: "Architecture" }
+        ].map((photo, index) => (
+          <motion.div key={index} variants={photoVariants}>
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              width={400}
+              height={300}
+            />
+          </motion.div>
+        ))}
+      </motion.div>
+
+      <a className="ancre" onClick={scrollToTop}>
         ↑ Back to top
       </a>
     </main>
