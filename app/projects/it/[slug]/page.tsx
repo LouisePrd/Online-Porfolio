@@ -1,5 +1,3 @@
-"use client";
-
 import { projectsData, Project } from "../../../data/projects";
 import Image from "next/image";
 import styles from "./ProjectTemplate.module.css";
@@ -136,6 +134,7 @@ export default async function ProjectPage({ params }: Props) {
           ))}
         </div>
       </div>
+    
     </main>
   );
 }
