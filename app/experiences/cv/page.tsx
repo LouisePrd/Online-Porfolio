@@ -5,7 +5,7 @@ export default function CVPage() {
     <main className={styles.mainContent}>
       <h1 className="sub-title">Curriculum vitae</h1>
 
-      <div className={styles.download}>
+      {/* <div className={styles.download}>
         <p>
           You can download my CV in PDF format by clicking{" "}
           <a href="/imgs/socials/CV-PERIDY_Louise.pdf" download>
@@ -17,14 +17,19 @@ export default function CVPage() {
             this link
           </a>.
         </p>
-      </div>
+      </div>*/}
 
       <div className={styles.cvContainer}>
-        <embed
+        {/* <embed
           src="/imgs/socials/CV-PERIDY_Louise.pdf#view=Fit"
           type="application/pdf"
           className={styles.cvPdf}
-        />
+        /> */}
+      </div>
+
+      <div className={styles.wip}>
+        <p>🚧 Currently updating my CV, check back soon! 🚧</p>
+        <img src="/imgs/randomStuff/wip.webp" alt="Work in progress"/>
       </div>
     </main>
   );
