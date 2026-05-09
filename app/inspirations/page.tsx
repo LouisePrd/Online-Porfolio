@@ -2,22 +2,21 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import styles from "./Inspirations.module.css";
 
 const inspirations = [
-  { title: "Vewn", url: "https://www.youtube.com/@vewn", src: "/imgs/inspos/vewn.png" },
+  { title: "Vewn", url: "https://www.youtube.com/@vewn", src: "/imgs/inspos/vewn.webp" },
   { title: "The end of the f** world", url: "https://www.allocine.fr/series/ficheserie_gen_cserie=22881.html", src: "/imgs/inspos/teofw.png" },
-  { title: "Onehaaaa", url: "https://www.instagram.com/onehaaaa/", src: "/imgs/inspos/onehaaaa.png" },
-  { title: "Vice", url: "https://www.vice.com/fr", src: "/imgs/inspos/vice.png" },
-  { title: "Plastic Beach", url: "https://www.youtube.com/channel/UCfIXdjDQH9Fau7y99_Orpjw", src: "/imgs/inspos/plastic-beach.jpg" },
+  { title: "Onehaaaa", url: "https://www.instagram.com/onehaaaa/", src: "/imgs/inspos/onehaaaa.webp" },
+  { title: "Vice", url: "https://www.vice.com/fr", src: "/imgs/inspos/vice.webp" },
+  { title: "Plastic Beach", url: "https://www.youtube.com/channel/UCfIXdjDQH9Fau7y99_Orpjw", src: "/imgs/inspos/plastic-beach.webp" },
   { title: "59 Rivoli", url: "https://www.59rivoli.org/accueil/", src: "/imgs/inspos/rivoli.jpg" },
-  { title: "Blink 182", url: "https://www.youtube.com/@blink182VEVO", src: "/imgs/inspos/blink-182.jpg" },
-  { title: "Boris Vian", url: "https://www.babelio.com/livres/Vian-Je-voudrais-pas-crever/3990", src: "/imgs/inspos/boris-vian-poeme.jpg" },
-  { title: "Odezenne", url: "https://www.youtube.com/watch?v=b97GGASOcwg", src: "/imgs/inspos/odezenne.png" },
+  { title: "Blink 182", url: "https://www.youtube.com/@blink182VEVO", src: "/imgs/inspos/blink-182.webp" },
+  { title: "Boris Vian", url: "https://www.babelio.com/livres/Vian-Je-voudrais-pas-crever/3990", src: "/imgs/inspos/boris-vian-poeme.webp" },
+  { title: "Odezenne", url: "https://www.youtube.com/watch?v=b97GGASOcwg", src: "/imgs/inspos/odezenne.webp" },
   { title: "Sex Pistols", url: "https://www.theguardian.com/artanddesign/gallery/2016/nov/07/god-save-sex-pistols-book", src: "/imgs/inspos/sex-pistols.png" },
   { title: "Nikon - Imagine", url: "https://www.youtube.com/watch?v=Fj8-CGbi2XM", src: "/imgs/inspos/imagine-nikon.png" },
-  { title: "Siames", url: "https://www.youtube.com/watch?v=hM7Eh0gGNKA", src: "/imgs/inspos/siames.png" },
+  { title: "Siames", url: "https://www.youtube.com/watch?v=hM7Eh0gGNKA", src: "/imgs/inspos/siames.webp" },
 ];
 
 export default function InspirationsPage() {

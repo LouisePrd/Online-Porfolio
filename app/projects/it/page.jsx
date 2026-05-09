@@ -44,7 +44,7 @@ const projects = [
   },
   {
     href: "/projects/it/rerAGate",
-    src: "/imgs/projects/rerAGate/rer-a-gate.png",
+    src: "/imgs/projects/rerAGate/rer-a-gate.webp",
     alt: "RER A Gate",
     technos: "C++, CMake, OpenGL",
     styleClass: "rerAGate",

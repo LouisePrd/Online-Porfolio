@@ -29,10 +29,10 @@ export default function Projects3D() {
   const medias: Array<
     { type: "img"; src: string; alt: string } | { type: "video"; src: string }
   > = [
-    { type: "img", src: "/imgs/projects/3d/trophees.png", alt: "trophees" },
+    { type: "img", src: "/imgs/projects/3d/trophees.webp", alt: "trophees" },
     { type: "img", src: "/imgs/projects/3d/Trophee-film.png", alt: "trophée" },
     { type: "img", src: "/imgs/projects/3d/switch.png", alt: "switch" },
-    { type: "img", src: "/imgs/projects/3d/cat-wip.png", alt: "cat" },
+    { type: "img", src: "/imgs/projects/3d/cat-wip.webp", alt: "cat" },
     { type: "video", src: "/imgs/projects/3d/animation.mp4" },
     { type: "video", src: "/imgs/projects/3d/kirby.mp4" },
     { type: "video", src: "/imgs/projects/3d/pigeon.mp4" },

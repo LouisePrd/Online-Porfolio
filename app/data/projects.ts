@@ -135,8 +135,8 @@ export const projectsData: Record<string, Project> = {
     description: "To celebrate the RER A, we created a Tower Defense game in its honor. Build your own stations and defend them against nasty ticket inspectors and sneaky grandmas. The player must use their budget to place towers with specific attributes to survive waves of increasingly difficult enemies.",
     styleClass: "rerAGate",
     images: [
-      "/imgs/projects/rerAGate/rer-a-gate.png",
-      "/imgs/projects/rerAGate/rer-a-play.png"
+      "/imgs/projects/rerAGate/rer-a-gate.webp",
+      "/imgs/projects/rerAGate/rer-a-play.webp"
     ]
   },
   "averagePlayer": {
