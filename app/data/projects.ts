@@ -30,7 +30,7 @@ export const projectsData: Record<string, Project> = {
     styleClass: "architech",
     githubUrl: "https://github.com/imac-web/architech-webapp",
     reportUrl: "https://www.canva.com/design/DAG_QtTxkLg/d1r3yhwzDoAA43YF55tTIw/edit?utm_content=DAG_QtTxkLg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
-    websiteUrl : "architech-webapp.netlify.app/",
+    websiteUrl : "http://architech-webapp.netlify.app/",
     verticalImages: [
       "/imgs/projects/architech/FirstScreen.webp",
       "/imgs/projects/architech/HomeScreen.webp",
