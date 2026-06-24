@@ -193,8 +193,8 @@ export default function ProfessionalExperiences() {
               <Image 
                 src="/imgs/logos/cardonnel.webp" 
                 alt="CARDONNEL Ingénierie logo" 
-                width={60} 
-                height={60}
+                width={90} 
+                height={90}
                 className={styles.companyLogo}
               />
             </div>
