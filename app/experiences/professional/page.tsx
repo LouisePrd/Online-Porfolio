@@ -25,8 +25,8 @@ export default function ProfessionalExperiences() {
             <Image 
               src="/imgs/logos/limpide.webp" 
               alt="Limpide logo" 
-              width={60} 
-              height={60}
+              width={70} 
+              height={70}
               className={styles.companyLogo}
             />
           </div>
@@ -74,8 +74,8 @@ export default function ProfessionalExperiences() {
               <Image 
                 src="/imgs/logos/prewatch.webp" 
                 alt="prewatch-lab logo" 
-                width={60} 
-                height={60}
+                width={70} 
+                height={70}
                 className={styles.companyLogo}
               />
             </div>
@@ -137,8 +137,8 @@ export default function ProfessionalExperiences() {
               <Image 
                 src="/imgs/logos/pointp.webp" 
                 alt="POINT.P logo" 
-                width={60} 
-                height={60}
+                width={70} 
+                height={70}
                 className={styles.companyLogo}
               />
             </div>
