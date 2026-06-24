@@ -15,7 +15,7 @@ export default function ProfessionalExperiences() {
         >
           <div className={styles.cardHeader}>
             <span className={styles.dateBadge}>March 2026 — Sept. 2026</span>
-            <span className={styles.location}>📍 Prague, CZ • On-site</span>
+            <span className={styles.location}>Prague, CZ - On-site</span>
           </div>
           <h2 className={styles.companyTitle}>Limpide.net</h2>
           <h3 className={styles.roleTitle}>Fullstack Developer (Internship)</h3>
@@ -53,7 +53,7 @@ export default function ProfessionalExperiences() {
             <span className={styles.dateBadge}>
               April 2025 — Jan. 2026 (10 months)
             </span>
-            <span className={styles.location}>📍 Paris, FR • Hybrid</span>
+            <span className={styles.location}>Paris, FR - Hybrid</span>
           </div>
           <h2 className={styles.companyTitle}>prewatch-lab</h2>
           <h3 className={styles.roleTitle}>
@@ -104,7 +104,7 @@ export default function ProfessionalExperiences() {
           <div className={styles.cardHeader}>
             <span className={styles.dateBadge}>Sept. 2022 — Aug. 2023</span>
             <span className={styles.location}>
-              📍 Courbevoie, FR • Apprenticeship
+              Courbevoie, FR - Apprenticeship
             </span>
           </div>
           <h2 className={styles.companyTitle}>POINT.P - SGDB France</h2>
@@ -150,7 +150,7 @@ export default function ProfessionalExperiences() {
         >
           <div className={styles.cardHeader}>
             <span className={styles.dateBadge}>April 2022 — July 2022</span>
-            <span className={styles.location}>📍 Lieusaint, FR • On-site</span>
+            <span className={styles.location}>Lieusaint, FR - On-site</span>
           </div>
           <h2 className={styles.companyTitle}>CARDONNEL Ingénierie</h2>
           <h3 className={styles.roleTitle}>
