@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import styles from "./Professional.module.css";
 
 export default function ProfessionalExperiences() {
@@ -17,7 +19,18 @@ export default function ProfessionalExperiences() {
             <span className={styles.dateBadge}>March 2026 — Sept. 2026</span>
             <span className={styles.location}>Prague, CZ - On-site</span>
           </div>
+          <div className={styles.companyRow}>
           <h2 className={styles.companyTitle}>Limpide.net</h2>
+          <div className={styles.logoWrapper}>
+            <Image 
+              src="/imgs/logos/limpide.webp" 
+              alt="Limpide logo" 
+              width={60} 
+              height={60}
+              className={styles.companyLogo}
+            />
+          </div>
+          </div>
           <h3 className={styles.roleTitle}>Fullstack Developer (Internship)</h3>
           <div className={styles.bodyText}>
             <ul className={styles.list}>
@@ -55,7 +68,18 @@ export default function ProfessionalExperiences() {
             </span>
             <span className={styles.location}>Paris, FR - Hybrid</span>
           </div>
-          <h2 className={styles.companyTitle}>prewatch-lab</h2>
+          <div className={styles.companyRow}>
+            <h2 className={styles.companyTitle}>prewatch-lab</h2>
+            <div className={styles.logoWrapper}>
+              <Image 
+                src="/imgs/logos/prewatch.webp" 
+                alt="prewatch-lab logo" 
+                width={60} 
+                height={60}
+                className={styles.companyLogo}
+              />
+            </div>
+          </div>
           <h3 className={styles.roleTitle}>
             WebGL Developer (Freelance & Internship)
           </h3>
@@ -107,7 +131,18 @@ export default function ProfessionalExperiences() {
               Courbevoie, FR - Apprenticeship
             </span>
           </div>
-          <h2 className={styles.companyTitle}>POINT.P - SGDB France</h2>
+          <div className={styles.companyRow}>
+            <h2 className={styles.companyTitle}>POINT.P - SGDB France</h2>
+            <div className={styles.logoWrapper}>
+              <Image 
+                src="/imgs/logos/pointp.webp" 
+                alt="POINT.P logo" 
+                width={60} 
+                height={60}
+                className={styles.companyLogo}
+              />
+            </div>
+          </div>
           <h3 className={styles.roleTitle}>Assistant Web Project Lead</h3>
 
           <div className={styles.bodyText}>
@@ -152,7 +187,18 @@ export default function ProfessionalExperiences() {
             <span className={styles.dateBadge}>April 2022 — July 2022</span>
             <span className={styles.location}>Lieusaint, FR - On-site</span>
           </div>
-          <h2 className={styles.companyTitle}>CARDONNEL Ingénierie</h2>
+          <div className={styles.companyRow}>
+            <h2 className={styles.companyTitle}>CARDONNEL Ingénierie</h2>
+            <div className={styles.logoWrapper}>
+              <Image 
+                src="/imgs/logos/cardonnel.webp" 
+                alt="CARDONNEL Ingénierie logo" 
+                width={60} 
+                height={60}
+                className={styles.companyLogo}
+              />
+            </div>
+          </div>
           <h3 className={styles.roleTitle}>
             Full-stack Developer (Internship)
           </h3>

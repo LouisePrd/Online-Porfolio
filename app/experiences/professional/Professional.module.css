@@ -69,6 +69,39 @@
     margin: 0.5rem 0;
 }
 
+.companyRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.5rem 0;
+}
+
+.companyTitle {
+    font-family: var(--police-titre2-btn);
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.logoWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+}
+
+.companyLogo {
+    object-fit: contain;
+}
+
+/* Ajustement mobile */
+@media (max-width: 480px) {
+    .companyRow {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+    }
+}
+
 .roleTitle {
     color: var(--color-pink);
     font-size: 1.1rem;
