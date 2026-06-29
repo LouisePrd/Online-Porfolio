@@ -101,7 +101,6 @@ body {
     backdrop-filter: blur(10px);
     min-width: 100px;
     border-radius: 8px;
-    padding: 0.5rem 0;
     border: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
@@ -109,7 +108,7 @@ body {
 .dropdownContent a {
     display: block;
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.8rem;
     text-decoration: none;
     font-family: var(--police-texte);
     font-size: var(--font-size-xxsmall);
