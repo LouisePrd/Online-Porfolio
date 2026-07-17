@@ -138,9 +138,7 @@ export default function AssociativeProjects() {
               </li>
             </ul>
           </div>
-        </section>
-
-        <section className={styles.contentCard}>
+          <br></br>
           <div className={styles.roleHeader}>
             <span className={styles.date}>July 2024 — Jan. 2025</span>
             <h3 className={styles.roleTitle}>Events Coordinator</h3>
