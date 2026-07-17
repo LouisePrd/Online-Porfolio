@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     overflow-y: visible;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     scroll-behavior: smooth;
 }
 
@@ -22,7 +22,7 @@
 .card {
   display: inline-block;
   width: 100%;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   text-decoration: none;
   opacity: 0;
   visibility: hidden;
@@ -35,18 +35,18 @@
 }
 
 .glassEffect {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(42, 32, 32, 0.8);
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(60px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
-  padding: 5px;
+  border-radius: 10px;
+  padding: 4px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   transition: all 0.3s ease;
 }
 
 .card:hover .glassEffect {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(55, 43, 43, 0.9);
   transform: rotate(0deg) scale(1.02);
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
@@ -66,13 +66,13 @@
 }
 
 .label {
-  margin: 12px 0 5px 0;
+  margin: 10px 0 2px 0;
   color: white;
   font-size: 0.9rem;
   text-align: center;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 

@@ -17,8 +17,7 @@
 }
 
 .contentCard {
-    background: rgba(20, 20, 20, 0.2);
-    backdrop-filter: blur(20px);
+    background: rgba(20, 20, 20, 0.8);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 2.5rem;
@@ -31,9 +30,8 @@
 }
 
 .contentCard:hover {
-    transform: translateY(-5px);
     border-color: var(--color-pink);
-    background: rgba(30, 30, 30, 0.50);
+    background: rgba(20, 20, 20, 1);
     transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
 }
 

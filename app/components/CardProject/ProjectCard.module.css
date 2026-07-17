@@ -3,10 +3,10 @@
   flex-direction: column;
   text-decoration: none;
   color: white;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(42, 32, 32, 0.8);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -14,9 +14,8 @@
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: rgba(42, 32, 32, 1);
+  border: 2px solid var(--color-pink);
 }
 
 .image-wrapper {
@@ -35,7 +34,7 @@
 
 .card-content {
   padding: 10px 15px;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(42, 32, 32, 0.8);
   display: flex;
   gap: 10px;
 }
