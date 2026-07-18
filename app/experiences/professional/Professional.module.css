@@ -43,16 +43,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .dateBadge {
     background: var(--color-pink);
     color: black;
     font-weight: bold;
-    padding: 0.3rem 1rem;
+    padding: 0.2rem 0.5rem;
     border-radius: 5px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
 }
 
@@ -64,28 +64,19 @@
 .companyTitle {
     font-family: var(--police-titre2-btn);
     font-size: 1.8rem;
-    margin: 0.5rem 0;
+    margin: 0;
 }
 
 .companyRow {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
-    margin: 0.5rem 0;
-}
-
-.companyTitle {
-    font-family: var(--police-titre2-btn);
-    font-size: 1.8rem;
-    margin: 0;
 }
 
 .logoWrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4px;
 }
 
 .companyLogo {
@@ -103,8 +94,8 @@
 .roleTitle {
     color: var(--color-pink);
     font-size: 1.1rem;
-    margin-bottom: 1.3rem;
     font-weight: 500;
+    margin: 0.5rem 0;
 }
 
 .list {

@@ -33,10 +33,14 @@ export default function ProfessionalExperiences() {
           </div>
           <h3 className={styles.roleTitle}>Fullstack Developer (Internship)</h3>
           <div className={styles.bodyText}>
+                          <p className={styles.description}>
+              <em>
+                French startup developping a CRM solution for energy brokers and suppliers.
+              </em>
+            </p>
             <ul className={styles.list}>
               <li>
-                <strong>Back-end & Data:</strong> Architecture of{" "}
-                <strong>CMS solutions</strong>.
+                <strong>Back-end & Data:</strong> API and data management.
               </li>
               <li>
                 <strong>Front-end & UI:</strong> Redesign and optimization for
@@ -49,7 +53,7 @@ export default function ProfessionalExperiences() {
             </ul>
           </div>
           <div className={styles.techStack}>
-            {["React", "Node.js", "MongoDB", "AI"].map((tech) => (
+            {["React", "Node.js", "MongoDB", "Express", "AI"].map((tech) => (
               <span key={tech} className={styles.techBadge}>
                 {tech}
               </span>
