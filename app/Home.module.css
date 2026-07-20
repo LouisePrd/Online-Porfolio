@@ -61,8 +61,8 @@ body {
     font-size: var(--font-size-xsmall);
     cursor: pointer;
     transition: 0.3s;
-    text-shadow: 0 0 3px rgba(75, 0, 52, 1);
     position: relative;
+    text-transform: uppercase;
 }
 
 .nav-link:hover,
@@ -130,7 +130,8 @@ body {
     flex-wrap: wrap;
     align-content: flex-start;
     box-sizing: border-box;
-    border: 6vh solid rgb(0 0 0 / 0.9);
+    border-top: 6vh solid rgb(0 0 0 / 0.9);
+    border-bottom: 6vh solid rgb(0 0 0 / 0.9);
 }
 
 .presentation-container {
