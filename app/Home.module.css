@@ -47,7 +47,7 @@ body {
     flex-direction: row;
     gap: 1.4rem;
     position: absolute;
-    top: 2rem;
+    top: 0.8rem;
     right: 3rem;
     z-index: 100;
     align-items: center;
@@ -101,8 +101,6 @@ body {
     backdrop-filter: blur(10px);
     min-width: 100px;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .dropdownContent a {
@@ -132,7 +130,7 @@ body {
     flex-wrap: wrap;
     align-content: flex-start;
     box-sizing: border-box;
-    border: 3vh solid var(--color-black);
+    border: 6vh solid rgb(0 0 0 / 0.9);
 }
 
 .presentation-container {
@@ -243,7 +241,7 @@ body {
 .social-media img {
     width: 40px;
     height: 40px;
-    margin: 0.5em;
+    margin: 0.7em;
 }
 
 .social-media img:hover {
