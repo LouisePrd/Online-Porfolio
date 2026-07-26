@@ -1,4 +1,4 @@
-# Online-Portfolio-V2
+# Online-Portfolio
 
 _Next.js version to optimize my old basic html/css portfolio_
 
