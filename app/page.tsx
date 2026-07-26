@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Home.module.css";
+import Navbar from "./components/Navbar/Navbar";
 
 export default function Home() {
   return (
@@ -17,8 +18,8 @@ export default function Home() {
           <span className={styles.dropdownLabel}>Project Categories ▾</span>
           <div className={styles.dropdownContent}>
             <Link href="/projects/it">IT Projects</Link>
-            <Link href="/projects/3d">3D</Link>
-            <Link href="/projects/audiovisual">Audiovisual</Link>
+            <Link href="/projects/3d">3D & Animation</Link>
+            <Link href="/projects/playground">Playground</Link>
           </div>
         </div>
         <div className={styles.dropdown}>

@@ -54,11 +54,11 @@ export default function Navbar() {
                 3D Animation
               </Link>
               <Link
-                href="/projects/audiovisual"
-                className={isActive("/projects/audiovisual")}
+                href="/projects/playground"
+                className={isActive("/projects/playground")}
                 onClick={closeMenu}
               >
-                Audiovisual
+                Playground
               </Link>
             </div>
           </div>
