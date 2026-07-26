@@ -1,0 +1,56 @@
+.main-content {
+  background-image: url("/imgs/backgrounds/pink.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: scroll; 
+  background-blend-mode: multiply;
+  background-color: rgba(73, 11, 70, 0.7);
+  display: block;
+  min-height: 100vh;
+  width: 100%;
+  overflow-y: auto;
+  height: 100vh;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
+  gap: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.plyConverter {
+  background-color: rgba(41, 36, 36, 0.5);
+}
+
+.makingOfSauvage {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.sub-sub-title {
+  color: white;
+  font-family: var(--police-texte);
+  font-size: var(--font-size-xsmall);
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto 2rem auto;
+  font-style: italic;
+}
+
+.sub-sub-title a {
+  color: var(--color-pink);
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 800px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
