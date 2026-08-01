@@ -42,7 +42,7 @@ const projects = [
     href: "/projects/it/girlyChaos",
     src: "/imgs/projects/girlyChaos/chess-overview.webp",
     alt: "Girly Chaos",
-    technos: "C#, OpenGL, GLSL",
+    technos: "C++, OpenGL, GLSL",
     styleClass: "girlyChaos",
     category: "software",
   },
