@@ -38,6 +38,22 @@ export const projectsData: Record<string, Project> = {
       "/imgs/projects/architech/ElementScreen.webp",
     ]
   },
+    "regard": {
+    title: "Regard",
+    intro: "A mobile app to discover how your loved ones perceive you.",
+    type: "Mobile Application",
+    date: "2025",
+    context: "Group-based mentoring project for second-year engineering students (bac +4)",
+    technos: "Unity, C#, Next.js API, Blender",
+    description: "A mobile app designed to visually express, through generative art, the contrast between how others see us and how we see ourselves. Each user has a dedicated visual space: a page featuring a 3D sphere surrounded by a unique environment. In fact, the appearance of this sphere—the colors surrounding it, the number of particles, its brightness, and its soundscape—will all be determined by algorithms that use as input… the perceptions of others.",
+    styleClass: "regard",
+    githubUrl: "https://github.com/REG-RD",
+    reportUrl: "https://drive.google.com/file/d/1gD_S1r4MI6pO2nQb7feqqenLv3u_mohs/view?usp=sharing",
+    //videoUrl: "https://www.youtube.com/embed/2gZwbwUYGC0?si=8u8E8UHDJDnXWmli",
+    images: [
+      "/imgs/projects/regard/regard-overview.webp",
+    ]
+  },
   "piageon": {
     title: "Piageon : L'Île aux Pigeons",
     intro: "A political bird survival simulation blending AI and nature's laws.",

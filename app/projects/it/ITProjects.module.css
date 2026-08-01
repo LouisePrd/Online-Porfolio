@@ -59,6 +59,43 @@
   background-color: rgba(255, 69, 0, 0.5);
 }
 
+.regard {
+  background-color: rgba(149, 222, 255, 0.5);
+}
+
+.filterContainer {
+  display: flex;
+  justify-content: right;
+  gap: 0.2rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  font-family: var(--police-texte);
+}
+
+.filterBtn {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.filterBtn:hover {
+  background: rgba(0, 0, 0, 0.15);
+  border-color: var(--color-pink, #fd51d2);
+}
+
+.filterBtn.active {
+  background: var(--color-pink, #fd51d2);
+  color: #000;
+  font-weight: bold;
+  border-color: var(--color-pink, #fd51d2);
+}
+
 /* Media Queries */
 @media (max-width: 800px) {
   .projects-grid {
