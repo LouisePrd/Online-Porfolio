@@ -154,14 +154,14 @@ export default function ITProjects() {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        key={activeTab} // Force la réanimation au changement d'onglet
+        key={activeTab}
       >
         <AnimatePresence mode="popLayout">
           {filteredProjects.map((project) => (
             <motion.div 
               key={project.href} 
               variants={itemVariants}
-              layout // Transition fluide du repositionnement des cartes restantes
+              layout
             >
               <ProjectCard {...project} />
             </motion.div>

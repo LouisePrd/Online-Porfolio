@@ -49,7 +49,7 @@ export const projectsData: Record<string, Project> = {
     styleClass: "regard",
     githubUrl: "https://github.com/REG-RD",
     reportUrl: "https://drive.google.com/file/d/1gD_S1r4MI6pO2nQb7feqqenLv3u_mohs/view?usp=sharing",
-    //videoUrl: "https://www.youtube.com/embed/2gZwbwUYGC0?si=8u8E8UHDJDnXWmli",
+    videoUrl: "https://www.youtube.com/embed/2gZwbwUYGC0?si=8u8E8UHDJDnXWmli",
     images: [
       "/imgs/projects/regard/regard-overview.webp",
     ]

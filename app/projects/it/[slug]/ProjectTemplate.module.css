@@ -144,14 +144,12 @@
     justify-content: center;
 }
 
-.verticalWrapper,
-.videoContainer {
+.verticalWrapper {
     width: calc(25% - 1rem);
     min-width: 200px;
 }
 
 .videoContainer {
-    aspect-ratio: 9 / 16;
     border-radius: 10px;
     overflow: hidden;
     background: black;
