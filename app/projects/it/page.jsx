@@ -39,6 +39,14 @@ const projects = [
     category: "software",
   },
   {
+    href: "/projects/it/girlyChaos",
+    src: "/imgs/projects/girlyChaos/chess-overview.webp",
+    alt: "Girly Chaos",
+    technos: "C#, OpenGL, GLSL",
+    styleClass: "girlyChaos",
+    category: "software",
+  },
+  {
     href: "/projects/it/auFilDuTemps",
     src: "/imgs/projects/auFilDuTemps/AuFilDuTemps1.png",
     alt: "Au Fil Du Temps",
