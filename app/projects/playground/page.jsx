@@ -9,7 +9,7 @@ import styles from "./PlaygroundProjects.module.css";
 const projects = [
     {
     href: "/projects/playground/quantum-art",
-    src: "/imgs/projects/quantum-art/minia-quantum.jpg",
+    src: "/imgs/projects/quantum-art/minia-quantum.webp",
     alt: "Quantum Art",
     technos: "Python, Matplotlib",
     styleClass: "quantum-art",

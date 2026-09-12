@@ -153,6 +153,7 @@ export default async function ProjectPage({ params }: Props) {
               unoptimized
               style={{ width: "100%", height: "auto" }}
               className={styles.gifImage}
+              loading="eager"
             />
           ))}
 
