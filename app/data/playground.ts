@@ -15,6 +15,7 @@ export interface Project {
   verticalImages?: string[];
   videoUrl?: string;
   iFrame?: string;
+  canvaEmbedUrl?: string;
   panoramaImg?: string;
   gifUrl?: string[];
 }
@@ -46,4 +47,20 @@ export const projectsData: Record<string, Project> = {
     styleClass: "makingOfSauvage",
     iFrame : "https://www.youtube.com/embed/MTOJBfGEMDM",
   },
+  "quantum-art": {
+    title: "Quantum Art",
+    intro: "A generative art project using quantum computing.",
+    type: "Generative Art / Algorithmic",
+    date: "2026",
+    context: "Introduction to the use of quantum computing in the creation of generative art.",
+    technos: "Python, Matplotlib",
+    description: "This project explores the procedural generation of optical art, inspired by Victor Vasarely, by integrating quantum computing concepts. The goal is to link the mathematical logic of qubits to the generation of deformed graphical grids.",
+    styleClass: "quantum-art",
+    gifUrl: [
+      "/imgs/projects/quantum-art/vasarely_entanglement.gif",
+      "/imgs/projects/quantum-art/vasarely_quantum_pulse.gif"
+    ],
+    reportUrl: "https://canva.link/mq70cqahrigg000",
+    canvaEmbedUrl: "https://www.canva.com/design/DAG_m1MBaYg/sqxutPoqpSarshD5KnnXfA/view?embed",
+  }
 };

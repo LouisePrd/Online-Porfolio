@@ -108,12 +108,12 @@
 }
 
 .results {
-    width: 85%;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     margin: 0 auto;
     justify-content: center;
+    margin-top: 1.5rem;
 }
 
 .verticalWrapper,
@@ -157,19 +157,21 @@
     display: flex;
     justify-content: center;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .gifImage {
     width: 100%;
-    max-width: 500px;
+    max-width: 350px;
+    height: auto;
     border-radius: 10px;
     display: block;
 }
 
 .iFrameWrapper {
-    width: 35%;
+    width: 55%;
     aspect-ratio: 16 / 9;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -177,6 +179,19 @@
 .iFrameWrapper iframe {
     width: 100%;
     height: 100%;
+    border: none;
+}
+
+.canvaWrapper {
+    width: 40%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.canvaWrapper iframe {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border: none;
 }
 

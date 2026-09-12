@@ -7,6 +7,13 @@ import Link from "next/link";
 import styles from "./PlaygroundProjects.module.css";
 
 const projects = [
+    {
+    href: "/projects/playground/quantum-art",
+    src: "/imgs/projects/quantum-art/minia-quantum.jpg",
+    alt: "Quantum Art",
+    technos: "Python, Matplotlib",
+    styleClass: "quantum-art",
+  },
   {
     href: "/projects/playground/ply-converter",
     src: "/imgs/projects/plyConverter/ply-converter.webp",

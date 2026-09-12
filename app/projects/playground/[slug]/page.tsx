@@ -155,6 +155,22 @@ export default async function ProjectPage({ params }: Props) {
               className={styles.gifImage}
             />
           ))}
+
+          {project.canvaEmbedUrl && (
+            <div className={styles.canvaWrapper}>
+              <iframe
+                loading="lazy"
+                style={{
+                  position: "relative",
+                  width: "100%",
+                }}
+                src={project.canvaEmbedUrl}
+                allowFullScreen
+                allow="fullscreen"
+              />
+            </div>
+            
+          )}
         </div>
       </div>
     </main>
