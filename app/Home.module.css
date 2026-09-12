@@ -29,7 +29,7 @@ body {
     background-color: var(--color-pink);
     padding-left: 0.2em;
     padding-right: 0.2em;
-    margin-top: 0.5em;
+    margin-top: 0.9em;
     margin-left: 0.3em;
     width: fit-content;
     border: 0.08em solid var(--color-black);
@@ -44,10 +44,10 @@ body {
 .nav {
     display: flex;
     flex-direction: row;
-    gap: 1.4rem;
+    gap: 0.5rem;
     position: absolute;
     top: 0.8rem;
-    right: 3rem;
+    right: 1rem;
     z-index: 100;
     align-items: center;
 }
@@ -57,11 +57,14 @@ body {
     text-decoration: none;
     color: #ffe9ff;
     font-family: var(--police-texte);
-    font-size: var(--font-size-xsmall);
+    font-size: var(--font-size-xxsmall);
     cursor: pointer;
     transition: 0.3s;
     position: relative;
     text-transform: uppercase;
+    padding: 0.2rem 0.4rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
 }
 
 .nav-link:hover,
@@ -129,8 +132,6 @@ body {
     flex-wrap: wrap;
     align-content: flex-start;
     box-sizing: border-box;
-    border-top: 6vh solid rgb(0 0 0 / 0.9);
-    border-bottom: 6vh solid rgb(0 0 0 / 0.9);
 }
 
 .presentation-container {
