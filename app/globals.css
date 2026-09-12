@@ -90,6 +90,9 @@ body {
     --font-size-very-large: 5em;
     --font-size-large: 3.5em;
     --font-size-medium: 2em;
+    --font-size-small: 1.5em;
+    --font-size-xsmall: 1.2em;
+    --font-size-xxsmall: 1em;
   }
 }
 
@@ -99,6 +102,9 @@ body {
     --font-size-very-large: 4em;
     --font-size-large: 3em;
     --font-size-medium: 1.8em;
+    --font-size-small: 1.5em;
+    --font-size-xsmall: 1.2em;
+    --font-size-xxsmall: 1em;
   }
 
     .sub-title {
@@ -112,6 +118,9 @@ body {
     --font-size-very-large: 3em;
     --font-size-large: 2.5em;
     --font-size-medium: 1.5em;
+    --font-size-small: 1.1em;
+    --font-size-xsmall: 1em;
+    --font-size-xxsmall: 0.8em;
   }
 
 }

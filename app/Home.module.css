@@ -1,5 +1,5 @@
 html {
-    background-image: url("/imgs/backgrounds/pink1.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("/imgs/backgrounds/pink1.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -154,6 +154,7 @@ body {
     max-width: 20%;
     justify-content: center;
     align-items: center;
+    font-size: var(--font-size-xxsmall);
 }
 
 .name {
@@ -269,18 +270,25 @@ body {
 
     .first-title {
         margin-top: 1em;
+        font-size: var(--font-size-large);
     }
 
     .presentation-container {
-        flex-direction: column;
         align-items: center;
-        margin-top: 2em;
+        margin-top: 1em;
     }
 
     .presentation {
         max-width: 80%;
         margin-bottom: 1em;
         width: 100%;
+        flex-direction: row;
+        justify-content: right;
+    }
+
+    .presentation img {
+        width: 15%;
+        height: auto;
     }
 
     .text-presentation {
@@ -293,6 +301,7 @@ body {
         margin-top: 2em;
         margin-bottom: 1em;
         flex-direction: row;
+        justify-content: center;
         align-items: center;
 
     }
@@ -307,7 +316,7 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
     html {
         background-image: url("/imgs/backgrounds/pink-mobile.jpg");
     }
@@ -319,18 +328,26 @@ body {
     }
 
     .first-title {
-        margin-top: 1.5em;
-        font-size: var(--font-size-large);
+        margin-top: 3em;
+        font-size: var(--font-size-medium);
+        margin-left: 50%;
+        transform: translateX(-50%) rotate(-3deg);
     }
 
     .presentation {
         max-width: 80%;
-        margin-bottom: 1em;
+        margin-bottom: 0.2em;
         width: 100%;
+        justify-content: center;
+        margin-bottom: 1em;
+    }
+
+    .presentation img {
+        display: none;
     }
 
     .text-presentation {
-        width: 80%;
+        width: 70%;
     }
 
     .social-media {
