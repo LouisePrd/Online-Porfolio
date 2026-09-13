@@ -10,7 +10,7 @@ const inspirations = [
   { title: "Onehaaaa", url: "https://www.instagram.com/onehaaaa/", src: "/imgs/inspos/onehaaaa.webp" },
   { title: "Vice", url: "https://www.vice.com/fr", src: "/imgs/inspos/vice.webp" },
   { title: "Plastic Beach", url: "https://www.youtube.com/channel/UCfIXdjDQH9Fau7y99_Orpjw", src: "/imgs/inspos/plastic-beach.webp" },
-  { title: "59 Rivoli", url: "https://www.59rivoli.org/accueil/", src: "/imgs/inspos/rivoli.jpg" },
+  { title: "59 Rivoli", url: "https://www.59rivoli.org/accueil/", src: "/imgs/inspos/rivoli.webp" },
   { title: "Blink 182", url: "https://www.youtube.com/@blink182VEVO", src: "/imgs/inspos/blink-182.webp" },
   { title: "Boris Vian", url: "https://www.babelio.com/livres/Vian-Je-voudrais-pas-crever/3990", src: "/imgs/inspos/boris-vian-poeme.webp" },
   { title: "Odezenne", url: "https://www.youtube.com/watch?v=b97GGASOcwg", src: "/imgs/inspos/odezenne.webp" },

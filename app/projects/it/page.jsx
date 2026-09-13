@@ -8,7 +8,7 @@ import styles from "./ITProjects.module.css";
 const projects = [
   {
     href: "/projects/it/architech",
-    src: "/imgs/projects/architech/overview.png",
+    src: "/imgs/projects/architech/overview.webp",
     alt: "ArchiTech",
     technos: "Next.js, Firebase, Cloudinary",
     styleClass: "ArchiTech",

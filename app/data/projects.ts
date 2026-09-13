@@ -106,8 +106,8 @@ export const projectsData: Record<string, Project> = {
     images: [
       "/imgs/projects/auFilDuTemps/AuFilDuTemps1.png",
       "/imgs/projects/auFilDuTemps/AuFilDuTemps2.png",
-      "/imgs/projects/auFilDuTemps/AuFilDuTemps4.png",
-      "/imgs/projects/auFilDuTemps/AuFilDuTemps3.png"
+      "/imgs/projects/auFilDuTemps/AuFilDuTemps4.webp",
+      "/imgs/projects/auFilDuTemps/AuFilDuTemps3.webp"
     ]
   },
   "preWatch": {
@@ -184,10 +184,10 @@ export const projectsData: Record<string, Project> = {
     description: "Use your League of Legends knowledge to learn about characters and skills through quizzes. Climb the rankings and show everyone your lore expertise. Includes a 'Smash or Pass' bonus mode with community statistics.",
     styleClass: "averagePlayer",
     images: [
-      "/imgs/projects/averagePlayer/Champions.png",
+      "/imgs/projects/averagePlayer/Champions.webp",
       "/imgs/projects/averagePlayer/Guesser.png",
       "/imgs/projects/averagePlayer/Scoreboard.png",
-      "/imgs/projects/averagePlayer/SmashOrPass.png"
+      "/imgs/projects/averagePlayer/SmashOrPass.webp"
     ]
   },
   "elixir": {
