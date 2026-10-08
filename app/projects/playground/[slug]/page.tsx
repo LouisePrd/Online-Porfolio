@@ -1,4 +1,4 @@
-import { projectsData, Project } from "../../../data/playground";
+import { projectsData } from "../../../data/playground";
 import Image from "next/image";
 import styles from "./ProjectTemplate.module.css";
 import { notFound } from "next/navigation";

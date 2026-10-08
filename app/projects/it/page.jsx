@@ -1,6 +1,6 @@
 "use client";
 import { motion, AnimatePresence } from "framer-motion";
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 import ProjectCard from "../../components/CardProject/CardProject";
 import styles from "./ITProjects.module.css";
@@ -116,7 +116,6 @@ const itemVariants = {
 };
 
 export default function ITProjects() {
-  const scrollRef = useRef(null);
   const [activeTab, setActiveTab] = useState("all");
 
   const filteredProjects = projects.filter(
@@ -124,13 +123,11 @@ export default function ITProjects() {
   );
 
   const scrollToTop = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <main ref={scrollRef} className={styles["main-content"]}>
+    <main className={styles["main-content"]}>
       <h1 className="sub-title" id="top">
         IT Projects
       </h1>

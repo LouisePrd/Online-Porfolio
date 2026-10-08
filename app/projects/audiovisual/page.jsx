@@ -1,6 +1,5 @@
 "use client";
 
-import { useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "./Audiovisual.module.css";
@@ -28,16 +27,12 @@ const photoVariants = {
 };
 
 export default function Audiovisual() {
-  const scrollRef = useRef(null);
-
   const scrollToTop = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <main ref={scrollRef} className={styles["main-content"]}>
+    <main className={styles["main-content"]}>
       <motion.h1 
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -125,13 +120,13 @@ export default function Audiovisual() {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
       >
-        <h2 className={styles.title}>Newton's Binomial</h2>
+        <h2 className={styles.title}>Newton&apos;s Binomial</h2>
         <div className={styles.container}>
           <div className={styles.textContent}>
             <h3 className={styles.subtitle}>MIXING</h3>
             <p>
               Creation of a sound mix from a simplified multitrack version of
-              Michael Jackson's <i>Off The Wall</i>. We had free rein on effects, 
+              Michael Jackson&apos;s <i>Off The Wall</i>. We had free rein on effects,
               echoes, and reverbs using ProTools.
             </p>
             <p className={styles.enjoyText}>Enjoy listening! ↓</p>
@@ -139,7 +134,7 @@ export default function Audiovisual() {
           <div className={styles.videoContent}>
             <iframe
               src="https://www.youtube.com/embed/WDdG63w81rQ"
-              title="Newton's Binomial"
+              title="Newton&apos;s Binomial"
               allowFullScreen
               className={styles.iframe}
             ></iframe>

@@ -1,4 +1,4 @@
-import { projectsData, Project } from "../../../data/projects";
+import { projectsData } from "../../../data/projects";
 import Image from "next/image";
 import styles from "./ProjectTemplate.module.css";
 import { notFound } from "next/navigation";

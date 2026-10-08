@@ -1,6 +1,5 @@
 "use client";
 
-import { useRef } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "./Projects3D.module.css";
@@ -24,8 +23,6 @@ const itemVariants = {
 };
 
 export default function Projects3D() {
-  const scrollRef = useRef<HTMLElement>(null);
-
   const medias: Array<
     { type: "img"; src: string; alt: string } | { type: "video"; src: string }
   > = [
@@ -40,13 +37,11 @@ export default function Projects3D() {
   ];
 
   const scrollToTop = () => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTo({ top: 0, behavior: "smooth" });
-    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <main ref={scrollRef} className={styles["main-content"]}>
+    <main className={styles["main-content"]}>
       <h1 className="sub-title" id="top">
         3D Projects
       </h1>
