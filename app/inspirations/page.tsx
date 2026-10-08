@@ -23,11 +23,15 @@ export default function InspirationsPage() {
   const [visibleItems, setVisibleItems] = useState<number[]>([]);
 
   useEffect(() => {
-    inspirations.forEach((_, index) => {
-      setTimeout(() => {
-        setVisibleItems((prev) => [...prev, index]);
-      }, index * 200);
-    });
+    const timers = inspirations.map((_, index) =>
+      window.setTimeout(() => {
+        setVisibleItems((prev) =>
+          prev.includes(index) ? prev : [...prev, index],
+        );
+      }, index * 200),
+    );
+
+    return () => timers.forEach((timer) => window.clearTimeout(timer));
   }, []);
 
   return (
