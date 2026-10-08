@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Home.module.css";
-import Navbar from "./components/Navbar/Navbar";
 
 export default function Home() {
   return (
@@ -60,7 +59,7 @@ export default function Home() {
             <br />
             My name is Louise PERIDY, I am 24 years old and after completing a
             DUT in computer science at the IUT PARIS Descartes, I spent a year
-            at Gobelins studying for a bachelor's degree in web & mobile
+            at Gobelins studying for a bachelor&apos;s degree in web & mobile
             development, where I obtained my diploma. I then enrolled in the
             IMAC engineering program at ESIEE Paris in September 2023 and will
             complete my studies in the summer of 2026.

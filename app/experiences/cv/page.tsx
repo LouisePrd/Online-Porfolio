@@ -1,3 +1,4 @@
+import Image from "next/image";
 import styles from "./CV.module.css";
 
 export default function CVPage() {
@@ -29,7 +30,12 @@ export default function CVPage() {
 
       <div className={styles.wip}>
         <p>🚧 Currently updating my CV, check back soon! 🚧</p>
-        <img src="/imgs/randomStuff/wip.webp" alt="Work in progress"/>
+        <Image
+          src="/imgs/randomStuff/wip.webp"
+          alt="Work in progress"
+          width={300}
+          height={300}
+        />
       </div>
     </main>
   );

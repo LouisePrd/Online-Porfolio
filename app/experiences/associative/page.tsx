@@ -79,7 +79,7 @@ export default function AssociativeProjects() {
           <div className={styles.bodyText}>
             <p>
               As Vice-President of the ESIEE Paris Arts Office, I co-directed
-              the association's strategy to promote arts and culture on campus.
+              the association&apos;s strategy to promote arts and culture on campus.
               My work included developing the website{" "}
               <Link
                 className={styles.linkAsso}
@@ -90,7 +90,7 @@ export default function AssociativeProjects() {
                 bda-esiee.fr
               </Link>{" "}
               and helping to organise artistic events, while also managing the
-              organisation's administrative tasks.
+              organisation&apos;s administrative tasks.
             </p>
           </div>
         </section>
@@ -119,7 +119,7 @@ export default function AssociativeProjects() {
           <div className={styles.bodyText}>
             <p>
               As president, I led a team to revitalize student life following
-              the university merger. I managed the association's growth,
+              the university merger. I managed the association&apos;s growth,
               institutional relations, and the global coordination of major
               events.
             </p>
