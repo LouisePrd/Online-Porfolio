@@ -29,14 +29,6 @@
 }
 
 
-html {
-    background-image: url("/imgs/backgrounds/pink.jpg");
-    overflow: hidden;
-    background-blend-mode: multiply;
-    background-color: rgba(73, 11, 70, 0.7);
-    scroll-behavior: smooth;
-}
-
 .audioRef {
     display: none;
 }
@@ -131,7 +123,12 @@ html {
 }
 
 .container {
-    min-height: 100vh;
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    background-image: url("/imgs/backgrounds/pink.jpg");
+    background-blend-mode: multiply;
+    background-color: rgba(73, 11, 70, 0.7);
 }
 
 @media (max-width: 800px) {
