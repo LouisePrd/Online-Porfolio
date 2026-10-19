@@ -57,17 +57,18 @@ export default function Home() {
           <p>
             Who am I? <br />
             <br />
-            My name is Louise PERIDY, I am 24 years old and after completing a
-            DUT in computer science at the IUT PARIS Descartes, I spent a year
-            at Gobelins studying for a bachelor&apos;s degree in web & mobile
-            development, where I obtained my diploma. I then enrolled in the
-            IMAC engineering program at ESIEE Paris in September 2023 and will
-            complete my studies in the summer of 2026.
+            My name is Louise PERIDY. After completing a DUT in computer
+            science at the IUT PARIS Descartes, I spent a year at Gobelins
+            studying for a bachelor&apos;s degree in web & mobile development,
+            where I obtained my diploma. I then joined the IMAC engineering
+            program at ESIEE Paris, where I graduated as an engineer in 2026.
+            I am now pursuing a Master&apos;s degree (M2) in Digital Creation
+            at the Sorbonne, as a work-study student at TV5MONDE.
             <br />
             <br />
             I have always been torn between an interest in computer science and
-            a curiosity for the arts, which is why I chose to continue my
-            studies at this school, which combines these two fields.
+            a curiosity for the arts, which is why I chose studies that
+            combine these two fields.
             <br />
             <br />
             In this portfolio, you will discover my inspirations and my various
