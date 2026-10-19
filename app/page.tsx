@@ -54,25 +54,22 @@ export default function Home() {
         </div>
 
         <div className={styles["text-presentation"]}>
+          <p>Who am I? </p>
           <p>
-            Who am I? <br />
-            <br />
-            My name is Louise PERIDY. After completing a DUT in computer
-            science at the IUT PARIS Descartes, I spent a year at Gobelins
-            studying for a bachelor&apos;s degree in web & mobile development,
-            where I obtained my diploma. I then joined the IMAC engineering
-            program at ESIEE Paris, where I graduated as an engineer in 2026.
-            I am now pursuing a Master&apos;s degree (M2) in Digital Creation
-            at the Sorbonne, as a work-study student at TV5MONDE.
-            <br />
-            <br />
-            I have always been torn between an interest in computer science and
-            a curiosity for the arts, which is why I chose studies that
-            combine these two fields.
-            <br />
-            <br />
-            In this portfolio, you will discover my inspirations and my various
-            projects, which reflect my different sensibilities: enjoy your
+            Hi ! I'm Louise, a french woman who has always been torn between <strong>code</strong> and{" "}
+            <strong>art</strong>, so I decided to stop choosing. After a DUT in
+            computer science and a bachelor&apos;s in web development at
+            Gobelins, I became an engineer at <strong>IMAC</strong>, a program
+            where both worlds meet.
+          </p>
+          <p>
+            Today, I&apos;m doing a Master&apos;s (M2) in Digital Creation at the{" "}
+            <strong>Sorbonne</strong>, while working at{" "}
+            <strong>TV5MONDE</strong> as a work-study student.
+          </p>
+          <p>
+            In this portfolio, you will discover my inspirations and my
+            projects, which reflect my different sensibilities. Enjoy your
             visit!
           </p>
           <div className={styles.startdiv}>
