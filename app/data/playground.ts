@@ -21,6 +21,23 @@ export interface Project {
 }
 
 export const projectsData: Record<string, Project> = {
+  "les-nananimaux": {
+    title: "Les Nananimaux",
+    intro: "A generative 3D art project inspired by Niki de Saint Phalle's Nanas.",
+    type: "Generative Art / Interactive 3D",
+    date: "2026",
+    context: "Pair project for the generative art course at Sorbonne Paris",
+    technos: "Three.js, Vite, JavaScript",
+    description: "An interactive family of hybrid creatures combining the colorful silhouettes of Niki de Saint Phalle's Nanas with animal attributes. Each generation is unique, with customizable poses, patterns, palettes and silhouettes, as well as a gallery and swarm mode.",
+    styleClass: "nananimaux",
+    githubUrl: "https://github.com/LouisePrd/les-nananimaux",
+    reportUrl: "https://canva.link/tyggqsz9scrbp8v",
+    canvaEmbedUrl: "https://www.canva.com/design/DAHZMEUW1Us/SZv7eoQNTVsayo31x-D_3A/view?embed",
+    images: [
+      "/imgs/projects/nananimaux/generation.png",
+      "/imgs/projects/nananimaux/essaim.png",
+    ],
+  },
   "ply-converter": {
     title: "Ply Converter",
     intro: "A tool for converting PLY files to other formats.",

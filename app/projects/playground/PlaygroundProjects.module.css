@@ -28,6 +28,10 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+.nananimaux {
+  background-color: rgba(104, 35, 83, 0.7);
+}
+
 .sub-sub-title {
   color: white;
   font-family: var(--police-texte);

@@ -17,6 +17,10 @@
     background-color: rgba(0, 0, 0, 0.7);
 }
 
+.nananimaux {
+    background-color: rgba(104, 35, 83, 0.7);
+}
+
 .nav {
     display: flex;
     justify-content: space-between;

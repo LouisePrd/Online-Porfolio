@@ -6,6 +6,13 @@ import Link from "next/link";
 import styles from "./PlaygroundProjects.module.css";
 
 const projects = [
+  {
+    href: "/projects/playground/les-nananimaux",
+    src: "/imgs/projects/nananimaux/generation.png",
+    alt: "Les Nananimaux",
+    technos: "Three.js, Vite, JavaScript",
+    styleClass: "nananimaux",
+  },
     {
     href: "/projects/playground/quantum-art",
     src: "/imgs/projects/quantum-art/minia-quantum.webp",
