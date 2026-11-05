@@ -168,51 +168,6 @@
   padding: 110px var(--pad-x) 110px;
   overflow: hidden;
 }
-/* Scrolling band at the bottom of the first screen */
-.marquee {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: var(--ink);
-  color: var(--paper);
-  overflow: hidden;
-  pointer-events: none;
-  user-select: none;
-}
-.marqueeTrack {
-  display: flex;
-  width: max-content;
-  animation: marquee 70s linear infinite;
-}
-.marqueeGroup {
-  display: flex;
-  flex-shrink: 0;
-}
-.marqueeItem {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  padding: 10px 9px;
-  font-weight: 700;
-  font-size: 14px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-.marqueeSep {
-  color: var(--pink);
-}
-@keyframes marquee {
-  to {
-    transform: translateX(-50%);
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .marqueeTrack {
-    animation: none;
-  }
-}
 .hero > .container {
   width: 100%;
 }

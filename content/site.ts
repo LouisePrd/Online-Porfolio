@@ -18,9 +18,6 @@ export const SOCIALS: { kind: SocialKind; label: string; href: string }[] = [
   { kind: "cv", label: "CV", href: CONTACT.cv },
 ];
 
-/** Scrolling band on the first screen. */
-export const MARQUEE = ["React", "Next.js", "Vue.js", "Three.js", "WebGL", "TypeScript", "Node.js", "Express", "PostgreSQL", "MongoDB", "Firebase", "PlayCanvas", "GitHub Actions", "Figma"];
-
 /** UI strings. */
 export const T = {
   fr: {
@@ -33,7 +30,7 @@ export const T = {
     },
     role: "Développeuse créative",
     intro: "Salut ! Moi c’est Louise, j’ai toujours été tiraillée entre le code et l’art, alors j’ai décidé d’arrêter de choisir. Après un DUT informatique et un bachelor en développement web aux Gobelins, je suis devenue ingénieure à l’IMAC, une formation où ces deux mondes se rencontrent.",
-    now: ["M2 Design d’interface, multimédia & internet - Sorbonne Paris Nord", "Alternance - TV5MONDE"],
+    now: ["Actuellement en M2 Design d’interface, multimédia & internet - Sorbonne Paris Nord", "Alternance - TV5MONDE"],
     ctaWork: "Voir les projets",
     ctaContact: "Me contacter",
     latest: "Derniers projets",
@@ -108,7 +105,7 @@ export const T = {
     },
     role: "Creative developer",
     intro: "Hi! I’m Louise, I’ve always been torn between code and art, so I decided to stop choosing. After a DUT in computer science and a bachelor’s in web development at Gobelins, I became an engineer at IMAC, a program where both worlds meet.",
-    now: ["M2 Interface Design, Multimedia & Internet - Sorbonne Paris Nord", "Work-study - TV5MONDE"],
+    now: ["Currently in M2 Interface Design, Multimedia & Internet - Sorbonne Paris Nord", "Work-study - TV5MONDE"],
     ctaWork: "See the work",
     ctaContact: "Get in touch",
     latest: "Latest work",

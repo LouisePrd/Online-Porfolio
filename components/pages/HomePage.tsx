@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
-import { CONTACT, type Lang, MARQUEE, SOCIALS, T, routes } from "@/content/site";
+import { CONTACT, type Lang, SOCIALS, T, routes } from "@/content/site";
 import { FEATURED, PROJECTS, type Project } from "@/content/projects";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
 import InspirationStrip from "@/components/InspirationStrip";
@@ -60,20 +60,6 @@ export default function HomePage({ lang }: { lang: Lang }) {
               <a href="#work" className={s.btnPrimary}>{t.ctaWork} ↓</a>
               <Link href={r.contact} className={s.btnHighlight}>{t.ctaContact}</Link>
             </div>
-          </div>
-        </div>
-        <div className={s.marquee} aria-hidden="true">
-          <div className={s.marqueeTrack}>
-            {[0, 1].map((g) => (
-              <div key={g} className={s.marqueeGroup}>
-                {MARQUEE.map((word, i) => (
-                  <span key={i} className={s.marqueeItem}>
-                    {word}
-                    <span className={s.marqueeSep}>+</span>
-                  </span>
-                ))}
-              </div>
-            ))}
           </div>
         </div>
       </header>
