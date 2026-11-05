@@ -1095,8 +1095,17 @@
     justify-content: flex-start;
     padding-top: 160px;
   }
+  /* the name block takes the full width so the memoji sits in the right corner, clear of the label */
+  .heroName {
+    flex-basis: 100%;
+  }
   .avatarWrap {
     transform: none !important;
+    right: 0;
+    top: -14px;
+  }
+  .avatar {
+    width: 72px;
   }
 }
 
@@ -1460,7 +1469,9 @@
   font-weight: 700;
   font-size: 17px;
   overflow-wrap: anywhere;
-  background: linear-gradient(var(--yellow), var(--yellow)) 0 85% / 100% 7px no-repeat;
+}
+.contactMail:hover {
+  color: var(--pink-deep) !important;
 }
 .contactSocials {
   list-style: none;
@@ -1592,5 +1603,18 @@
 @media (max-width: 700px) {
   .footerCtas {
     align-items: flex-start;
+  }
+}
+
+/* Very small phones: keep the label and the memoji side by side */
+@media (max-width: 380px) {
+  .roleLabel {
+    font-size: 12px;
+  }
+  .avatar {
+    width: 54px;
+  }
+  .avatarWrap {
+    right: -4px;
   }
 }
