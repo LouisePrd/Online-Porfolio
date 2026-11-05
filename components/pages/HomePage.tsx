@@ -115,11 +115,11 @@ export default function HomePage({ lang }: { lang: Lang }) {
       </section>
 
       <section id="inspirations" className={`${s.insp} ${s.snap}`}>
-        <div className={s.inspHalftone} aria-hidden="true" />
+        <div data-speed="0.08" className={s.inspHalftone} aria-hidden="true" />
         <InspirationStrip lang={lang} />
       </section>
 
-      <footer id="contact" className={`${s.footer} ${s.torn} ${s.snap}`}>
+      <footer id="contact" className={`${s.footer} ${s.snap}`}>
         <div className={`${s.container} ${s.footerInner}`}>
           <div className={s.footerTop}>
             <div data-speed="-0.08" className={s.footerTitleBlock}>
@@ -128,7 +128,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
               </h2>
               <p className={s.contactLine}>{t.contactLine}</p>
             </div>
-            <div className={s.footerCtas}>
+            <div data-speed="0.05" className={s.footerCtas}>
               <a href={`mailto:${CONTACT.email}`} className={s.emailBtn}>{CONTACT.email} →</a>
               <Link href={r.contact} className={s.footerFormLink}>{t.form.writeMessage} →</Link>
             </div>

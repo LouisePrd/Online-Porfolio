@@ -53,9 +53,6 @@
 
 /* Textures */
 /* Grain lives in section backgrounds, so it sits under text and images. */
-.torn {
-  clip-path: polygon(0 24px, 6% 4px, 13% 20px, 21% 2px, 29% 22px, 37% 6px, 45% 24px, 53% 0, 61% 18px, 69% 4px, 77% 22px, 85% 2px, 93% 20px, 100% 6px, 100% 100%, 0 100%);
-}
 
 /* Nav */
 .nav {
@@ -706,7 +703,7 @@
 }
 .inspHalftone {
   position: absolute;
-  inset: 0;
+  inset: -90px 0;
   pointer-events: none;
   background-image: radial-gradient(var(--ink) 1.1px, transparent 1.7px);
   background-size: 7px 7px;
@@ -810,10 +807,9 @@
   position: relative;
   background: var(--grain-light), var(--ink);
   color: var(--paper);
-  margin-top: -24px;
 }
 .footerInner {
-  padding: calc(var(--section-y) + 24px) var(--pad-x) 28px;
+  padding: var(--section-y) var(--pad-x) 28px;
   display: flex;
   flex-direction: column;
   gap: 56px;
