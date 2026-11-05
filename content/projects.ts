@@ -539,7 +539,7 @@ export const PROJECTS: Project[] = [...DATA].sort((a, b) => {
 });
 
 /** Home "Latest work": the first is the large card. */
-export const FEATURED: Project[] = ["architech", "les-nananimaux", "piageon", "regard"].map(
+export const FEATURED: Project[] = ["architech", "piageon", "regard", "mari-e"].map(
   (slug) => PROJECTS.find((p) => p.slug === slug)!,
 );
 
