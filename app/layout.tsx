@@ -1,25 +1,16 @@
+import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "./components/Navbar/Navbar";
 
-export const metadata = {
-  title: "Louise PERIDY | Creative Portfolio",
-  description: "Student at IMAC - ESIEE Paris",
-  icons: {
-    icon: "/assets/imgs/props/memoji.png",
-  },
+export const metadata: Metadata = {
+  title: "Louise Peridy | Développeuse créative",
+  description: "Portfolio de Louise Peridy, développeuse créative entre code et art.",
+  icons: { icon: "/imgs/props/memoji.png" },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <body>
-        <Navbar />
-        {children}
-      </body>
+    <html lang="fr" suppressHydrationWarning>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }

@@ -1,75 +1,12 @@
-"use client";
+import type { Metadata } from "next";
+import ProjectsPage from "@/components/pages/ProjectsPage";
 
-import { useState, useRef } from "react";
-import Image from "next/image";
-import Link from "next/link";
-import styles from "./Projects.module.css";
+export const metadata: Metadata = {
+  title: "Projets | Louise Peridy",
+  description: "Tous les projets de Louise Peridy : web, 3D & WebGL, jeux et créations.",
+  alternates: { languages: { fr: "/projects", en: "/en/projects" } },
+};
 
-export default function Projects() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef<HTMLAudioElement>(null);
-
-  const togglePlay = () => {
-    const audio = audioRef.current;
-    if (!audio) return;
-
-    if (isPlaying) {
-      audio.pause();
-    } else {
-      audio.play();
-      audio.loop = true;
-      audio.volume = 0.5;
-    }
-    setIsPlaying(!isPlaying);
-  };
-
-  return (
-    <div className={styles.container}>
-      <audio ref={audioRef} className={styles.audioRef}>
-        <source src="/audio/FeelGoodInc.mp3" type="audio/mpeg" />
-      </audio>
-
-      <h1 className={styles["sub-title"]}>PROJECTS</h1>
-
-      <div className={styles.cdContainer}>
-        <Image
-          className={`${styles["cd-player"]} ${isPlaying ? styles.play : styles.pause}`}
-          src="/imgs/props/cd-player.png"
-          alt="cd-player"
-          width={300}
-          height={300}
-          onClick={togglePlay}
-          loading="eager"
-          style={{ 
-            transform: isPlaying ? "rotate(140deg)" : "rotate(180deg)",
-            cursor: "pointer",
-            transition: "transform 0.5s ease"
-          }}
-        />
-        <Image
-          className={`${styles.cd} ${isPlaying ? styles.play : styles.pause}`}
-          src="/imgs/props/cd-gorillaz.png"
-          alt="cd"
-          loading="eager"
-          width={200}
-          height={200}
-        />
-      </div>
-
-      <div className={styles.categories}>
-        <Link className={styles.category} href="/projects/it">IT projects</Link>
-        <Link className={styles.category} href="/projects/3d">3D & Design</Link>
-        <Link className={styles.category} href="/projects/playground">Playground</Link>
-        <Link className={styles.category} href="/experiences/professional">Professional Experiences</Link>
-      </div>
-
-      <Image
-        className={styles.hand}
-        src="/imgs/props/hand.png"
-        alt="hand"
-        width={100}
-        height={100}
-      />
-    </div>
-  );
+export default function Page() {
+  return <ProjectsPage lang="fr" />;
 }
