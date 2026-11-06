@@ -135,7 +135,7 @@ const DATA: Project[] = [
     title: "Les Nananimaux",
     cat: "creative",
     date: "2026",
-    img: "/imgs/projects/nananimaux/generation.png",
+    img: "/imgs/projects/nananimaux/generation.webp",
     tags: ["Three.js", "Vite", "JavaScript"],
     links: { source: "https://github.com/LouisePrd/les-nananimaux", report: "https://canva.link/tyggqsz9scrbp8v" },
     intro: {
@@ -155,7 +155,7 @@ const DATA: Project[] = [
       en: "Pair project for the generative art course at Sorbonne Paris",
     },
     media: {
-      images: ["/imgs/projects/nananimaux/generation.png", "/imgs/projects/nananimaux/essaim.png"],
+      images: ["/imgs/projects/nananimaux/generation.webp", "/imgs/projects/nananimaux/essaim.webp"],
       canvaUrl: "https://www.canva.com/design/DAHZMEUW1Us/SZv7eoQNTVsayo31x-D_3A/view?embed",
     },
   },
