@@ -31,7 +31,7 @@ export default function SiteNav({
       {/* Home shortcut on inner pages (the home page already shows the big memoji) */}
       {!onHome && (
         <Link href={r.home} className={s.navHome} aria-label={t.nav.home} title={t.nav.home}>
-          <Image src="/imgs/props/memoji.png" alt="" width={52} height={52} priority />
+          <Image src="/imgs/props/memoji-sm.webp" alt="" width={52} height={52} unoptimized priority />
         </Link>
       )}
       <div className={s.navLinks}>

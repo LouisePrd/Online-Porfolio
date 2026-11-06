@@ -19,6 +19,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
   const r = routes(lang);
   const rootRef = useRef<HTMLDivElement>(null);
   const [cur, setCur] = useState<string | null>(null);
+  const [avatarIn, setAvatarIn] = useState(false);
   useParallax(rootRef);
 
   // Soft "screen by screen" feel: snap only when stopping close to a section top.
@@ -42,7 +43,16 @@ export default function HomePage({ lang }: { lang: Lang }) {
           <div className={s.heroName}>
             <div data-speed="-0.06" style={{ position: "relative" }}>
               <div className={s.avatarWrap}>
-                <Image src="/imgs/props/memoji.png" alt="Memoji Louise" width={140} height={140} className={s.avatar} priority />
+                <Image
+                  src="/imgs/props/memoji.webp"
+                  alt="Memoji Louise"
+                  width={140}
+                  height={140}
+                  className={`${s.avatar} ${avatarIn ? s.avatarIn : ""}`}
+                  onLoad={() => setAvatarIn(true)}
+                  unoptimized
+                  priority
+                />
               </div>
               <span className={s.roleLabel}>{t.role}</span>
               <h1 className={s.h1}>
