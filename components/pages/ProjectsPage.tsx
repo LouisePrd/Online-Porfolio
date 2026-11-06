@@ -23,7 +23,7 @@ export default function ProjectsPage({ lang }: { lang: Lang }) {
   ];
 
   return (
-    <Shell lang={lang}>
+    <Shell>
       <SiteNav lang={lang} page="projects" />
 
       <header className={`${s.container} ${s.projHeader}`}>

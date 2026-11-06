@@ -33,7 +33,7 @@ export default function ProjectPage({ p, lang }: { p: Project; lang: Lang }) {
     m.videos?.length || m.videoUrl || m.iframeUrl || m.canvaUrl || m.panorama || m.images?.length || m.verticalImages?.length || m.gifs?.length;
 
   return (
-    <Shell lang={lang}>
+    <Shell>
       <SiteNav lang={lang} page="projects" altHref={projectHref(p, lang === "fr" ? "en" : "fr")} />
 
       <header className={`${s.container} ${s.pdHeader}`}>

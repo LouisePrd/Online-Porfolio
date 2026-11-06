@@ -33,7 +33,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
   const [lead, ...side] = FEATURED;
 
   return (
-    <Shell lang={lang} rootRef={rootRef}>
+    <Shell rootRef={rootRef}>
       <SiteNav lang={lang} page="home" />
 
       <header id="top" className={`${s.hero} ${s.snap}`}>

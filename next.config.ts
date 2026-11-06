@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  /** Needed for app/global-not-found.tsx: the app has one root layout per language. */
+  experimental: { globalNotFound: true },
   /** Old URLs from the previous version of the site. */
   async redirects() {
     return [

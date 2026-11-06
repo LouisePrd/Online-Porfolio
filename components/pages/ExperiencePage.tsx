@@ -10,7 +10,7 @@ export default function ExperiencePage({ lang }: { lang: Lang }) {
   const t = T[lang];
   const r = routes(lang);
   return (
-    <Shell lang={lang}>
+    <Shell>
       <SiteNav lang={lang} page="experience" />
 
       <header className={`${s.container} ${s.projHeader}`}>

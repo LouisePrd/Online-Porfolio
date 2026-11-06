@@ -11,7 +11,7 @@ export default function ContactPage({ lang }: { lang: Lang }) {
   const f = t.form;
   const r = routes(lang);
   return (
-    <Shell lang={lang}>
+    <Shell>
       <SiteNav lang={lang} page="contact" />
 
       <header className={`${s.container} ${s.projHeader}`}>
