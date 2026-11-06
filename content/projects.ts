@@ -14,8 +14,6 @@ export interface Project {
   date: string;
   /** Card thumbnail (~16:9) */
   img: string;
-  /** Optional background behind a transparent thumbnail */
-  imgBg?: string;
   /** Optional 16:9 visual for the home lead card */
   cover?: { src: string; bg: string };
   tags: string[];
@@ -45,8 +43,7 @@ const DATA: Project[] = [
     title: "Architech",
     cat: "web",
     date: "2026",
-    img: "/imgs/projects/architech/overview.webp",
-    imgBg: "#8f9a86",
+    img: "/imgs/projects/architech/mockup-hand.png",
     cover: { src: "/imgs/projects/architech/mockup-hand.png", bg: "#e6e0d4" },
     tags: ["Next.js", "Firebase", "Cloudinary", "PDFMake"],
     links: { live: "http://architech-webapp.netlify.app/", source: "https://github.com/imac-web/architech-webapp", report: "https://www.canva.com/design/DAG_QtTxkLg/d1r3yhwzDoAA43YF55tTIw/edit?utm_content=DAG_QtTxkLg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" },
