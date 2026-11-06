@@ -87,8 +87,8 @@ export default function ProjectDrawer({
             </button>
           </div>
         </div>
-        <div className={s.drawerImg}>
-          <Image src={cur.img} alt={cur.title} fill sizes="(max-width: 580px) 100vw, 580px" />
+        <div className={s.drawerImg} style={{ background: cur.imgBg }}>
+          <Image src={cur.img} alt={cur.title} fill sizes="(max-width: 580px) 100vw, 580px" style={cur.imgBg ? { padding: "4% 0", boxSizing: "border-box" } : undefined} />
         </div>
         <div className={s.drawerBody}>
           <h3 id="drawer-title" className={s.drawerTitle}>{cur.title}</h3>
