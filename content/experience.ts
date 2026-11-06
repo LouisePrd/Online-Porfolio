@@ -32,9 +32,9 @@ export const JOBS: Job[] = [
       dates: "Sept. 2026 - août 2027",
       summary: "Chaîne de télévision internationale francophone.",
       points: [
-        "SSO (OAuth2, SAML/OIDC) : déploiement complet, du cadrage à la mise en production.",
+        "SSO : déploiement complet, du cadrage à la mise en production.",
         "Migration de données : pilotage d’une migration critique sans interruption de service.",
-        "Projets & Innovation : coordination transverse (devs, prestataires) en méthodologie Agile.",
+        "Projets & Innovation : coordination transverse (devs, prestataires).",
       ],
     },
     en: {
@@ -43,9 +43,9 @@ export const JOBS: Job[] = [
       dates: "Sept. 2026 - Aug. 2027",
       summary: "International French-language TV network.",
       points: [
-        "SSO (OAuth2, SAML/OIDC): Full rollout, from scoping to production.",
+        "SSO: Full rollout, from scoping to production.",
         "Data migration: Led a critical migration with zero service interruption.",
-        "Projects & Innovation: Cross-team coordination (developers, vendors) using Agile methods.",
+        "Projects & Innovation: Cross-team coordination (developers, vendors).",
       ],
     },
   },
