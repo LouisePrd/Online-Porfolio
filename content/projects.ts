@@ -39,6 +39,35 @@ export interface Project {
 
 const DATA: Project[] = [
   {
+    slug: "architech",
+    title: "Architech",
+    cat: "web",
+    date: "2026",
+    img: "/imgs/projects/architech/overview.webp",
+    cover: { src: "/imgs/projects/architech/mockup-hand.png", bg: "#e6e0d4" },
+    tags: ["Next.js", "Firebase", "Cloudinary", "PDFMake"],
+    links: { live: "http://architech-webapp.netlify.app/", source: "https://github.com/imac-web/architech-webapp", report: "https://www.canva.com/design/DAG_QtTxkLg/d1r3yhwzDoAA43YF55tTIw/edit?utm_content=DAG_QtTxkLg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" },
+    intro: {
+      fr: "Une solution SaaS dédiée aux architectes pour simplifier la rédaction des Diagnostics Techniques Globaux (DTG).",
+      en: "A SaaS solution dedicated to architects for streamlining General Technical Diagnostic (DTG) reports.",
+    },
+    desc: {
+      fr: "Les architectes passent des heures à rédiger des DTG sans outil dédié. Architech répond à ce besoin avec un écosystème web complet pour gérer les équipes, la collecte de données sur site et des formulaires complexes. Construite avec Next.js et Firebase, l’application met l’accent sur l’UX de la saisie de données lourde. Elle repose sur une architecture NoSQL hybride, Cloudinary pour la gestion des photos et une génération de PDF instantanée côté client, ce qui réduit considérablement le temps de production des rapports.",
+      en: "Architects spend hours creating DTGs without dedicated tools. Architech solves this by providing a complete web ecosystem to manage teams, onsite data collection, and complex forms. Built with Next.js and Firebase, the application focuses on optimizing the UX of heavy data entry. It features a hybrid NoSQL architecture, Cloudinary for photo management , and instant client-side PDF generation, drastically reducing report production time.",
+    },
+    type: {
+      fr: "Application web / SaaS",
+      en: "Web Application / SaaS",
+    },
+    context: {
+      fr: "Projet de groupe pré-professionnel à l’IMAC",
+      en: "Pre-professional Group Project at IMAC",
+    },
+    media: {
+      verticalImages: ["/imgs/projects/architech/FirstScreen.webp", "/imgs/projects/architech/HomeScreen.webp", "/imgs/projects/architech/ProjectScreen.webp", "/imgs/projects/architech/ElementScreen.webp"],
+    },
+  },
+  {
     slug: "3d-animation",
     title: "Modélisation & animation 3D",
     cat: "creative",
@@ -97,7 +126,7 @@ const DATA: Project[] = [
       en: "Experimental project exploring algorithmic social interactions",
     },
     media: {
-      images: ["/imgs/projects/piageon/loading.webp", "/imgs/projects/piageon/isle.webp", "/imgs/projects/piageon/top-isle.webp"],
+      images: ["/imgs/projects/piageon/preview.webp", "/imgs/projects/piageon/isle.webp", "/imgs/projects/piageon/top-isle.webp"],
       gifs: ["/imgs/projects/piageon/idle.gif", "/imgs/projects/piageon/die.gif"],
     },
   },
@@ -160,60 +189,32 @@ const DATA: Project[] = [
     },
   },
   {
-    slug: "prewatch",
-    title: "preWatch",
+    slug: "regard",
+    title: "Regard",
     cat: "3d",
-    date: "2025 - 2026",
-    img: "/imgs/projects/preWatch/preWatch-demo.webp",
-    tags: ["WebGL", "Next.js", "PlayCanvas", "GitHub Actions"],
-    links: { company: "https://www.linkedin.com/company/prewatch-lab" },
-    intro: {
-      fr: "Visualisation 3D interactive basée sur le Gaussian Splatting.",
-      en: "Interactive 3D visualization based on Gaussian Splatting.",
-    },
-    desc: {
-      fr: "Développé pendant un stage puis une collaboration en freelance, ce service web de visualisation 3D interactive s’appuie sur des données en Gaussian Splatting. Le développement s’est concentré sur une interface permettant d’interagir dynamiquement avec des scènes 3D directement dans le navigateur : outils de mesure, ajout de modèles et personnalisation de la scène.",
-      en: "Developed during an internship followed by a freelance collaboration, this interactive 3D visualization web service is built using Gaussian Splatting data. The development focused on creating a user interface that allows for dynamic interaction with 3D scenes directly in the browser, featuring tools for measurements, model additions, and scene customization.",
-    },
-    type: {
-      fr: "Service web",
-      en: "Web Service",
-    },
-    context: {
-      fr: "Stage puis freelance chez preWatch Lab",
-      en: "Internship & Freelance at Prewatch Lab",
-    },
-    media: {
-      images: ["/imgs/projects/preWatch/preWatch-demo.webp"],
-    },
-  },
-  {
-    slug: "architech",
-    title: "Architech",
-    cat: "web",
     date: "2025",
-    img: "/imgs/projects/architech/overview.webp",
-    cover: { src: "/imgs/projects/architech/mockup-hand.png", bg: "#e6e0d4" },
-    tags: ["Next.js", "Firebase", "Cloudinary", "PDFMake"],
-    links: { live: "http://architech-webapp.netlify.app/", source: "https://github.com/imac-web/architech-webapp", report: "https://www.canva.com/design/DAG_QtTxkLg/d1r3yhwzDoAA43YF55tTIw/edit?utm_content=DAG_QtTxkLg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" },
+    img: "/imgs/projects/regard/regard-overview.webp",
+    tags: ["Unity", "C#", "Next.js API", "Blender"],
+    links: { source: "https://github.com/REG-RD", report: "https://drive.google.com/file/d/1gD_S1r4MI6pO2nQb7feqqenLv3u_mohs/view?usp=sharing" },
     intro: {
-      fr: "Une solution SaaS dédiée aux architectes pour simplifier la rédaction des Diagnostics Techniques Globaux (DTG).",
-      en: "A SaaS solution dedicated to architects for streamlining General Technical Diagnostic (DTG) reports.",
+      fr: "Une application mobile pour découvrir comment vos proches vous perçoivent.",
+      en: "A mobile app to discover how your loved ones perceive you.",
     },
     desc: {
-      fr: "Les architectes passent des heures à rédiger des DTG sans outil dédié. Architech répond à ce besoin avec un écosystème web complet pour gérer les équipes, la collecte de données sur site et des formulaires complexes. Construite avec Next.js et Firebase, l’application met l’accent sur l’UX de la saisie de données lourde. Elle repose sur une architecture NoSQL hybride, Cloudinary pour la gestion des photos et une génération de PDF instantanée côté client, ce qui réduit considérablement le temps de production des rapports.",
-      en: "Architects spend hours creating DTGs without dedicated tools. Architech solves this by providing a complete web ecosystem to manage teams, onsite data collection, and complex forms. Built with Next.js and Firebase, the application focuses on optimizing the UX of heavy data entry. It features a hybrid NoSQL architecture, Cloudinary for photo management , and instant client-side PDF generation, drastically reducing report production time.",
+      fr: "Une application mobile qui exprime visuellement, par l’art génératif, le contraste entre la façon dont les autres nous voient et celle dont nous nous voyons. Chaque utilisateur dispose d’un espace visuel dédié : une page présentant une sphère 3D entourée d’un environnement unique. L’apparence de cette sphère (les couleurs qui l’entourent, le nombre de particules, sa luminosité et son paysage sonore) est déterminée par des algorithmes qui prennent en entrée… les perceptions des autres.",
+      en: "A mobile app designed to visually express, through generative art, the contrast between how others see us and how we see ourselves. Each user has a dedicated visual space: a page featuring a 3D sphere surrounded by a unique environment. In fact, the appearance of this sphere—the colors surrounding it, the number of particles, its brightness, and its soundscape—will all be determined by algorithms that use as input… the perceptions of others.",
     },
     type: {
-      fr: "Application web / SaaS",
-      en: "Web Application / SaaS",
+      fr: "Application mobile",
+      en: "Mobile Application",
     },
     context: {
-      fr: "Projet de groupe pré-professionnel à l’IMAC",
-      en: "Pre-professional Group Project at IMAC",
+      fr: "Projet tutoré en groupe, deuxième année du cycle ingénieur (bac +4)",
+      en: "Group-based mentoring project for second-year engineering students (bac +4)",
     },
     media: {
-      verticalImages: ["/imgs/projects/architech/FirstScreen.webp", "/imgs/projects/architech/HomeScreen.webp", "/imgs/projects/architech/ProjectScreen.webp", "/imgs/projects/architech/ElementScreen.webp"],
+      images: ["/imgs/projects/regard/regard-overview.webp"],
+      videoUrl: "https://www.youtube.com/embed/2gZwbwUYGC0?si=8u8E8UHDJDnXWmli",
     },
   },
   {
@@ -242,35 +243,6 @@ const DATA: Project[] = [
     },
     media: {
       images: ["/imgs/projects/girlyChaos/render1.webp", "/imgs/projects/girlyChaos/render2.webp", "/imgs/projects/girlyChaos/render3.webp", "/imgs/projects/girlyChaos/render4.webp"],
-    },
-  },
-  {
-    slug: "regard",
-    title: "Regard",
-    cat: "3d",
-    date: "2025",
-    img: "/imgs/projects/regard/regard-overview.webp",
-    tags: ["Unity", "C#", "Next.js API", "Blender"],
-    links: { source: "https://github.com/REG-RD", report: "https://drive.google.com/file/d/1gD_S1r4MI6pO2nQb7feqqenLv3u_mohs/view?usp=sharing" },
-    intro: {
-      fr: "Une application mobile pour découvrir comment vos proches vous perçoivent.",
-      en: "A mobile app to discover how your loved ones perceive you.",
-    },
-    desc: {
-      fr: "Une application mobile qui exprime visuellement, par l’art génératif, le contraste entre la façon dont les autres nous voient et celle dont nous nous voyons. Chaque utilisateur dispose d’un espace visuel dédié : une page présentant une sphère 3D entourée d’un environnement unique. L’apparence de cette sphère (les couleurs qui l’entourent, le nombre de particules, sa luminosité et son paysage sonore) est déterminée par des algorithmes qui prennent en entrée… les perceptions des autres.",
-      en: "A mobile app designed to visually express, through generative art, the contrast between how others see us and how we see ourselves. Each user has a dedicated visual space: a page featuring a 3D sphere surrounded by a unique environment. In fact, the appearance of this sphere—the colors surrounding it, the number of particles, its brightness, and its soundscape—will all be determined by algorithms that use as input… the perceptions of others.",
-    },
-    type: {
-      fr: "Application mobile",
-      en: "Mobile Application",
-    },
-    context: {
-      fr: "Projet tutoré en groupe, deuxième année du cycle ingénieur (bac +4)",
-      en: "Group-based mentoring project for second-year engineering students (bac +4)",
-    },
-    media: {
-      images: ["/imgs/projects/regard/regard-overview.webp"],
-      videoUrl: "https://www.youtube.com/embed/2gZwbwUYGC0?si=8u8E8UHDJDnXWmli",
     },
   },
   {
@@ -386,6 +358,62 @@ const DATA: Project[] = [
     },
   },
   {
+    slug: "elixir",
+    title: "Elixir",
+    cat: "web",
+    date: "2023",
+    img: "/imgs/projects/elixir/Elixir.png",
+    tags: ["HTML", "CSS", "JS", "TheCocktailDB API"],
+    links: { live: "https://louiseprd.github.io/Elixir-Project/src/index.html", source: "https://github.com/LouisePrd/Elixir-Project" },
+    intro: {
+      fr: "Un site dédié à la découverte et à la création de cocktails, basé sur une API publique.",
+      en: "A website dedicated to discovering and crafting cocktails using a public API.",
+    },
+    desc: {
+      fr: "Plongez dans l’univers des cocktails avec Elixir. Trouvez des recettes pour toutes les envies, ou réveillez le mixologue qui sommeille en vous en devinant les ingrédients dans le mode jeu interactif.",
+      en: "Dive into the world of cocktails with Elixir. Find recipes to satisfy every craving or awaken your inner mixologist by trying to guess ingredients in the interactive game mode.",
+    },
+    type: {
+      fr: "Site web",
+      en: "Website",
+    },
+    context: {
+      fr: "Projet étudiant à l’IMAC",
+      en: "Student project at IMAC",
+    },
+    media: {
+      images: ["/imgs/projects/elixir/ElixirHome.png", "/imgs/projects/elixir/ElixirDiscover.png", "/imgs/projects/elixir/ElixirPlay1.png", "/imgs/projects/elixir/ElixirPlay2.png"],
+    },
+  },
+  {
+    slug: "making-of-sauvage",
+    title: "Le Making-Of Sauvage",
+    cat: "creative",
+    date: "2023",
+    img: "/imgs/projects/makingOfSauvage/making-of-sauvage.webp",
+    tags: ["After Effects", "Premiere Pro", "Photoshop"],
+    links: {},
+    intro: {
+      fr: "Court-métrage sur les coulisses de l’audiovisuel.",
+      en: "Short film about audiovisual backstages.",
+    },
+    desc: {
+      fr: "Dans le cadre de notre cours d’audiovisuel, au premier semestre de première année à l’IMAC, nous avons réalisé un court-métrage en groupe. Rien n’était scénarisé : il fallait s’adapter à chaque situation. Nous nous sommes immergés dans des tournages et des répétitions pour récolter un maximum de matière.",
+      en: "As part of our audiovisual course during the first semester of our first year at IMAC, we produced a group short film. Nothing was scripted; we had to adapt to every situation. We embedded ourselves in filming sessions and rehearsals to gather as much content as possible.",
+    },
+    type: {
+      fr: "Film",
+      en: "Film",
+    },
+    context: {
+      fr: "Premier semestre à l’IMAC, dans le cadre du cours d’audiovisuel",
+      en: "First semester of IMAC, as part of our audiovisual course",
+    },
+    media: {
+      iframeUrl: "https://www.youtube.com/embed/MTOJBfGEMDM",
+    },
+  },
+  {
     slug: "mari-e",
     title: "MARI-E",
     cat: "3d",
@@ -441,62 +469,6 @@ const DATA: Project[] = [
     },
     media: {
       images: ["/imgs/projects/inusTale/inus-tale.png", "/imgs/projects/inusTale/characters.png", "/imgs/projects/inusTale/map.png", "/imgs/projects/inusTale/cave.png"],
-    },
-  },
-  {
-    slug: "elixir",
-    title: "Elixir",
-    cat: "web",
-    date: "2023",
-    img: "/imgs/projects/elixir/Elixir.png",
-    tags: ["HTML", "CSS", "JS", "TheCocktailDB API"],
-    links: { live: "https://louiseprd.github.io/Elixir-Project/src/index.html", source: "https://github.com/LouisePrd/Elixir-Project" },
-    intro: {
-      fr: "Un site dédié à la découverte et à la création de cocktails, basé sur une API publique.",
-      en: "A website dedicated to discovering and crafting cocktails using a public API.",
-    },
-    desc: {
-      fr: "Plongez dans l’univers des cocktails avec Elixir. Trouvez des recettes pour toutes les envies, ou réveillez le mixologue qui sommeille en vous en devinant les ingrédients dans le mode jeu interactif.",
-      en: "Dive into the world of cocktails with Elixir. Find recipes to satisfy every craving or awaken your inner mixologist by trying to guess ingredients in the interactive game mode.",
-    },
-    type: {
-      fr: "Site web",
-      en: "Website",
-    },
-    context: {
-      fr: "Projet étudiant à l’IMAC",
-      en: "Student project at IMAC",
-    },
-    media: {
-      images: ["/imgs/projects/elixir/ElixirHome.png", "/imgs/projects/elixir/ElixirDiscover.png", "/imgs/projects/elixir/ElixirPlay1.png", "/imgs/projects/elixir/ElixirPlay2.png"],
-    },
-  },
-  {
-    slug: "making-of-sauvage",
-    title: "Le Making-Of Sauvage",
-    cat: "creative",
-    date: "2023",
-    img: "/imgs/projects/makingOfSauvage/making-of-sauvage.webp",
-    tags: ["After Effects", "Premiere Pro", "Photoshop"],
-    links: {},
-    intro: {
-      fr: "Court-métrage sur les coulisses de l’audiovisuel.",
-      en: "Short film about audiovisual backstages.",
-    },
-    desc: {
-      fr: "Dans le cadre de notre cours d’audiovisuel, au premier semestre de première année à l’IMAC, nous avons réalisé un court-métrage en groupe. Rien n’était scénarisé : il fallait s’adapter à chaque situation. Nous nous sommes immergés dans des tournages et des répétitions pour récolter un maximum de matière.",
-      en: "As part of our audiovisual course during the first semester of our first year at IMAC, we produced a group short film. Nothing was scripted; we had to adapt to every situation. We embedded ourselves in filming sessions and rehearsals to gather as much content as possible.",
-    },
-    type: {
-      fr: "Film",
-      en: "Film",
-    },
-    context: {
-      fr: "Premier semestre à l’IMAC, dans le cadre du cours d’audiovisuel",
-      en: "First semester of IMAC, as part of our audiovisual course",
-    },
-    media: {
-      iframeUrl: "https://www.youtube.com/embed/MTOJBfGEMDM",
     },
   },
   {
