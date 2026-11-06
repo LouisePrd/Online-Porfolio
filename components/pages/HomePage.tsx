@@ -86,8 +86,8 @@ export default function HomePage({ lang }: { lang: Lang }) {
             <div className={s.sideCol}>
               {side.map((p, i) => (
                 <button key={p.slug} type="button" className={`${s.cardBtn} ${s.sideCard}`} onClick={() => setCur(p.slug)}>
-                  <span className={`${s.media} ${s.r169}`} style={{ display: "block", background: p.imgBg }}>
-                    <Image src={p.img} alt={p.title} fill sizes="(max-width: 800px) 45vw, 18vw" className={s.mediaImg} style={p.imgBg ? { padding: "4% 0", boxSizing: "border-box" } : undefined} />
+                  <span className={`${s.media} ${s.r169}`} style={{ display: "block" }}>
+                    <Image src={p.img} alt={p.title} fill sizes="(max-width: 800px) 45vw, 18vw" className={s.mediaImg} />
                   </span>
                   <span className={s.cardText}>
                     <span className={s.cat}>
