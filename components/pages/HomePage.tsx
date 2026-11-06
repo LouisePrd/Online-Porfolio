@@ -125,7 +125,7 @@ export default function HomePage({ lang }: { lang: Lang }) {
               <p className={s.contactLine}>{t.contactLine}</p>
             </div>
             <div data-speed="0.05" className={s.footerCtas}>
-              <a href={`mailto:${CONTACT.email}`} className={s.emailBtn}>{CONTACT.email} →</a>
+              <a href={`mailto:${CONTACT.email}`} className={s.emailBtn}><span>{CONTACT.email}</span><span aria-hidden="true">→</span></a>
               <Link href={r.contact} className={s.footerFormLink}>{t.form.writeMessage} →</Link>
             </div>
           </div>

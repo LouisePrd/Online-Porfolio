@@ -81,7 +81,7 @@ export const JOBS: Job[] = [
     company: "prewatch-lab",
     logo: "/imgs/logos/prewatch.webp",
     logoDark: true,
-    years: "2025",
+    years: "2025 - 26",
     tags: ["WebGL", "3DGS", "PlayCanvas", "VR", "Next.js"],
     fr: {
       role: "Développeuse WebGL (freelance & stage)",

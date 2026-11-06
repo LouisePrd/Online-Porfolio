@@ -8,7 +8,7 @@ export default function ShortFooter({ href, label }: { href: string; label: stri
     <footer className={`${s.footer}`} style={{ marginTop: 0 }}>
       <div className={`${s.container} ${s.shortFooterInner}`}>
         <Link href={href} className={s.shortFooterHome}>← {label}</Link>
-        <a href={`mailto:${CONTACT.email}`} className={`${s.emailBtn} ${s.emailBtnSmall}`}>{CONTACT.email} →</a>
+        <a href={`mailto:${CONTACT.email}`} className={`${s.emailBtn} ${s.emailBtnSmall}`}><span>{CONTACT.email}</span><span aria-hidden="true">→</span></a>
       </div>
     </footer>
   );

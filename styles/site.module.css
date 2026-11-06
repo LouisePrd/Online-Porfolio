@@ -77,13 +77,19 @@
   height: 52px;
   margin-top: -4px;
   transform: rotate(-8deg);
-  transition: transform 0.2s;
+  transition: transform 0.25s, opacity 0.25s;
   filter: drop-shadow(2px 0 0 #fff) drop-shadow(-2px 0 0 #fff) drop-shadow(0 2px 0 #fff) drop-shadow(0 -2px 0 #fff)
     drop-shadow(3px 4px 0 var(--pink));
 }
 .navHome:hover,
 .navHome:focus-visible {
   transform: rotate(0deg) scale(1.1);
+}
+/* Scrolling down: the sticker slides up out of the way (back on scroll up). */
+.navHomeTucked {
+  transform: translateY(-140%) rotate(-8deg);
+  opacity: 0;
+  pointer-events: none;
 }
 .navHome img {
   width: 100%;
@@ -106,6 +112,54 @@
 .navLink:hover,
 .navActive {
   color: var(--pink) !important;
+}
+/* Desktop: the links sit inline in the bar, no toggle. */
+.navToggle {
+  display: none;
+}
+.navMenu {
+  display: contents;
+}
+/* Mobile: one-line bar (Menu + EN/FR), links in a dropdown. */
+@media (max-width: 700px) {
+  .navLinks {
+    position: relative;
+    flex-wrap: nowrap;
+    gap: 14px;
+    padding: 7px 8px 7px 14px;
+  }
+  .navToggle {
+    display: block;
+    background: none;
+    border: 0;
+    padding: 2px 0;
+    color: var(--paper);
+    font: inherit;
+    text-transform: inherit;
+    cursor: pointer;
+  }
+  .navOpen .navToggle {
+    color: var(--pink);
+  }
+  .navMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: min(220px, calc(100vw - 24px));
+    flex-direction: column;
+    gap: 0;
+    padding: 4px 14px 10px;
+    background: var(--ink);
+    box-shadow: 6px 6px 0 var(--pink);
+  }
+  .navOpen .navMenu {
+    display: flex;
+  }
+  .navMenu a {
+    font-size: 15px;
+    padding: 9px 0;
+  }
 }
 .langToggle {
   display: flex;
@@ -825,7 +879,31 @@
   font-size: clamp(20px, 2.4vw, 34px);
   padding: 16px 24px;
   letter-spacing: -0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  max-width: 100%;
+}
+.emailBtn > span:first-child {
+  min-width: 0;
   overflow-wrap: anywhere;
+}
+/* the arrow never drops onto its own line */
+.emailBtn > span:last-child {
+  flex-shrink: 0;
+}
+@media (max-width: 480px) {
+  .emailBtn,
+  .emailBtn.emailBtnSmall {
+    font-size: 17px;
+    padding: 14px 16px;
+  }
+}
+@media (max-width: 380px) {
+  .emailBtn,
+  .emailBtn.emailBtnSmall {
+    font-size: 15px;
+  }
 }
 .emailBtn:hover {
   background: var(--yellow);
