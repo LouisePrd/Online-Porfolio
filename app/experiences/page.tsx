@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/seo";
 import ExperiencePage from "@/components/pages/ExperiencePage";
 
-export const metadata: Metadata = {
-  title: "Expériences | Louise Peridy",
-  description: "Parcours professionnel et formations de Louise Peridy.",
-  alternates: { languages: { fr: "/experiences", en: "/en/experiences" } },
-};
+export const metadata: Metadata = pageMeta(
+  "fr",
+  "/experiences",
+  "Expériences | Louise Peridy",
+  "Parcours professionnel et formations de Louise Peridy.",
+);
 
 export default function Page() {
   return <ExperiencePage lang="fr" />;

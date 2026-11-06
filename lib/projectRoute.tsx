@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import ProjectPage from "@/components/pages/ProjectPage";
 import { PROJECTS, findProject } from "@/content/projects";
 import type { Lang } from "@/content/site";
+import { pageMeta } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -14,11 +15,7 @@ export function projectRoute(lang: Lang) {
     generateMetadata: async ({ params }: Props): Promise<Metadata> => {
       const p = findProject((await params).slug);
       if (!p) return {};
-      return {
-        title: `${p.title} | Louise Peridy`,
-        description: p.intro[lang],
-        alternates: { languages: { fr: `/projects/${p.slug}`, en: `/en/projects/${p.slug}` } },
-      };
+      return pageMeta(lang, `/projects/${p.slug}`, `${p.title} | Louise Peridy`, p.intro[lang]);
     },
 
     Page: async ({ params }: Props) => {
