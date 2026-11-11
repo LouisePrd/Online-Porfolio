@@ -408,7 +408,6 @@ const DATA: Project[] = [
         { src: "/imgs/projects/moulagos/kit-quitte.webp", w: 2000, h: 1250 },
         { src: "/imgs/projects/moulagos/kit-sans-valentin.webp", w: 2000, h: 1250 },
         { src: "/imgs/projects/moulagos/kits-soiree.webp", w: 1922, h: 1201 },
-        { src: "/imgs/projects/moulagos/site-accueil.webp", w: 1721, h: 1076 },
         { src: "/imgs/projects/moulagos/site-versions.webp", w: 2000, h: 1250 },
       ],
     },
