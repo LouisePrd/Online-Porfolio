@@ -1210,6 +1210,9 @@
   gap: clamp(32px, 5vw, 80px);
   align-items: start;
 }
+.pdBody:has(+ .pdMedia) {
+  padding-bottom: clamp(40px, 4.5vw, 64px);
+}
 .pdMeta {
   margin: 0;
   padding: 24px;
@@ -1283,6 +1286,34 @@
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 420px), 1fr));
   gap: 24px;
   align-items: start;
+}
+.pdCredits {
+  margin: 0;
+  font-size: 15px;
+  opacity: 0.75;
+}
+.pdCredits a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.pdCredits a:hover {
+  opacity: 0.7;
+}
+.pdRow {
+  display: flex;
+  gap: 24px;
+}
+.pdRow > .pdImg {
+  min-width: 0;
+  flex: var(--ratio) 1 0;
+}
+@media (max-width: 800px) {
+  .pdRow {
+    flex-direction: column;
+  }
+  .pdRow > .pdImg {
+    flex: none;
+  }
 }
 .pdGridTall {
   display: grid;

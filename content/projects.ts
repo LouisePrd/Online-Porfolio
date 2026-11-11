@@ -24,8 +24,9 @@ export interface Project {
   desc: Localized;
   type: Localized;
   context: Localized;
+  credits?: { name: string; url: string }[];
   media: {
-    images?: string[];
+    images?: (string | { src: string; w: number; h: number })[];
     verticalImages?: string[];
     gifs?: string[];
     panorama?: string;
@@ -63,8 +64,16 @@ const DATA: Project[] = [
       fr: "Projet de groupe pré-professionnel à l’IMAC",
       en: "Pre-professional Group Project at IMAC",
     },
+    credits: [
+      { name: "Flavien IZACKOVIC", url: "https://www.behance.net/izackovflavien" },
+      { name: "Sousada Boualapha", url: "https://sousada-b.netlify.app/en" },
+    ],
     media: {
-      verticalImages: ["/imgs/projects/architech/FirstScreen.webp", "/imgs/projects/architech/HomeScreen.webp", "/imgs/projects/architech/ProjectScreen.webp", "/imgs/projects/architech/ElementScreen.webp"],
+      images: [
+        { src: "/imgs/projects/architech/page-de-presentation.webp", w: 4252, h: 3189 },
+        { src: "/imgs/projects/architech/vue-sur-le-projet.webp", w: 6000, h: 3000 },
+        { src: "/imgs/projects/architech/floating-phones.webp", w: 3000, h: 3000 },
+      ],
     },
   },
   {

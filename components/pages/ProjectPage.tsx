@@ -101,13 +101,21 @@ export default function ProjectPage({ p, lang }: { p: Project; lang: Lang }) {
             </div>
           )}
 
+          {m.images?.some((img) => typeof img !== "string") && (
+            <div className={s.pdRow}>
+              {m.images.filter((img) => typeof img !== "string").map(({ src, w, h }) => (
+                <Image key={src} src={src} alt={p.title} width={w} height={h} className={s.pdImg} style={{ "--ratio": w / h } as React.CSSProperties} sizes="(max-width: 800px) 100vw, 50vw" />
+              ))}
+            </div>
+          )}
+
           {m.panorama && (
             <Image src={m.panorama} alt={p.title} width={1600} height={600} className={s.pdImg} sizes="100vw" />
           )}
 
-          {m.images && m.images.length > 0 && (
+          {m.images?.some((img) => typeof img === "string") && (
             <div className={s.pdGrid}>
-              {m.images.map((src) => (
+              {m.images.filter((img) => typeof img === "string").map((src) => (
                 <Image key={src} src={src} alt={p.title} width={1200} height={750} className={s.pdImg} sizes="(max-width: 800px) 100vw, 50vw" />
               ))}
             </div>
@@ -127,6 +135,18 @@ export default function ProjectPage({ p, lang }: { p: Project; lang: Lang }) {
                 <Image key={src} src={src} alt={p.title} width={800} height={450} className={s.pdImg} unoptimized />
               ))}
             </div>
+          )}
+
+          {p.credits && p.credits.length > 0 && (
+            <p className={s.pdCredits}>
+              {d.visualsBy}{" "}
+              {p.credits.map((c, k) => (
+                <span key={c.url}>
+                  {k > 0 && (k === p.credits!.length - 1 ? ` ${d.and} ` : ", ")}
+                  <a href={c.url} target="_blank" rel="noopener noreferrer">{c.name}</a>
+                </span>
+              ))}
+            </p>
           )}
         </section>
       )}
