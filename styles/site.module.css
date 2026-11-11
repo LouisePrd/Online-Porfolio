@@ -1315,6 +1315,119 @@
     flex: none;
   }
 }
+.pdLogos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.pdLogos > .pdImg {
+  width: clamp(120px, 22vw, 220px);
+}
+/* Logos panel + carousel side by side, same height */
+.pdShowcase {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 24px;
+}
+.pdShowcase .pdLogos {
+  /* Height comes from the carousel, not from the logos */
+  contain: size;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: clamp(20px, 3vw, 40px);
+  padding: clamp(20px, 2.5vw, 36px);
+  background: var(--paper-2);
+}
+.pdShowcase .pdLogos > .pdImg {
+  flex: 1 1 0;
+  min-height: 0;
+  width: 100%;
+  object-fit: contain;
+  background: none;
+}
+@media (max-width: 800px) {
+  .pdShowcase {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .pdShowcase .pdLogos {
+    contain: none;
+    flex-direction: row;
+    align-items: center;
+  }
+  .pdShowcase .pdLogos > .pdImg {
+    flex: 1 1 0;
+    min-width: 0;
+    max-height: 160px;
+  }
+}
+/* Column of images inside a .pdRow */
+.pdStack {
+  flex: none;
+  width: var(--w);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.zoomBtn {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+@media (max-width: 800px) {
+  .pdStack {
+    width: 100%;
+  }
+}
+.carousel {
+  position: relative;
+}
+.carouselTrack {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  background: var(--paper-2);
+}
+.carouselTrack::-webkit-scrollbar {
+  display: none;
+}
+.carouselTrack:focus-visible {
+  outline: 2px solid var(--pink-deep);
+  outline-offset: 3px;
+}
+.carouselSlide {
+  position: relative;
+  flex: 0 0 100%;
+  aspect-ratio: 16 / 10;
+  scroll-snap-align: start;
+}
+.carouselSlide img {
+  object-fit: contain;
+}
+/* Arrows + counter float over the bottom of the image */
+.carouselBar {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background: var(--paper);
+  box-shadow: 0 2px 10px rgba(17, 17, 17, 0.12);
+}
+.carouselBar .iconBtn {
+  background: none;
+}
+.carouselCount {
+  min-width: 44px;
+  text-align: center;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+  color: var(--muted-light);
+}
 .pdGridTall {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(45%, 220px), 1fr));

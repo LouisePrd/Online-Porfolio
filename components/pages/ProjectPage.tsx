@@ -1,11 +1,30 @@
 import Image from "next/image";
 import Link from "next/link";
 import { type Lang, T, routes } from "@/content/site";
-import { PROJECTS, type Project, projectHref } from "@/content/projects";
+import { PROJECTS, type Project, type Sized, projectHref } from "@/content/projects";
+import Carousel from "@/components/Carousel";
 import ShortFooter from "@/components/ShortFooter";
+import ZoomImage from "@/components/ZoomImage";
 import Shell from "@/components/Shell";
 import SiteNav from "@/components/SiteNav";
 import s from "@/styles/site.module.css";
+
+/** Gap between images, must match .pdRow / .pdStack in site.module.css */
+const GAP = 24;
+
+function rowColumns(row: (Sized | Sized[])[]) {
+  const cols = row.map((item) => {
+    const stack = Array.isArray(item) ? item : [item];
+    const S = stack.reduce((sum, x) => sum + x.h / x.w, 0);
+    return { stack, a: 1 / S, b: ((stack.length - 1) * GAP) / S };
+  });
+  const A = cols.reduce((sum, c) => sum + c.a, 0);
+  const K = cols.reduce((sum, c) => sum + c.b, 0) - (cols.length - 1) * GAP;
+  return cols.map(({ stack, a, b }) => ({
+    stack,
+    width: `calc((100% + ${K.toFixed(2)}px) * ${(a / A).toFixed(5)} - ${b.toFixed(2)}px)`,
+  }));
+}
 
 export default function ProjectPage({ p, lang }: { p: Project; lang: Lang }) {
   const t = T[lang];
@@ -30,7 +49,7 @@ export default function ProjectPage({ p, lang }: { p: Project; lang: Lang }) {
   ];
 
   const hasMedia =
-    m.videos?.length || m.videoUrl || m.iframeUrl || m.canvaUrl || m.panorama || m.images?.length || m.verticalImages?.length || m.gifs?.length;
+    m.videos?.length || m.videoUrl || m.iframeUrl || m.canvaUrl || m.panorama || m.images?.length || m.rows?.length || m.logos?.length || m.carousel?.length || m.verticalImages?.length || m.gifs?.length;
 
   return (
     <Shell>
@@ -100,6 +119,33 @@ export default function ProjectPage({ p, lang }: { p: Project; lang: Lang }) {
               ))}
             </div>
           )}
+
+          {Boolean(m.logos?.length || m.carousel?.length) && (
+            <div className={m.logos?.length && m.carousel?.length ? s.pdShowcase : undefined}>
+              {m.logos && m.logos.length > 0 && (
+                <div className={s.pdLogos}>
+                  {m.logos.map(({ src, w, h }) => (
+                    <Image key={src} src={src} alt={`${p.title} logo`} width={w} height={h} className={s.pdImg} sizes="260px" />
+                  ))}
+                </div>
+              )}
+              {m.carousel && m.carousel.length > 0 && <Carousel slides={m.carousel} alt={p.title} lang={lang} />}
+            </div>
+          )}
+
+          {m.rows?.map((row) => (
+            <div key={JSON.stringify(row[0])} className={s.pdRow}>
+              {rowColumns(row).map(({ stack, width }) => {
+                return (
+                  <div key={stack[0].src} className={s.pdStack} style={{ "--w": width } as React.CSSProperties}>
+                    {stack.map(({ src, w, h }) => (
+                      <ZoomImage key={src} src={src} w={w} h={h} alt={p.title} lang={lang} sizes={row.length > 1 ? "(max-width: 800px) 100vw, 50vw" : "100vw"} />
+                    ))}
+                  </div>
+                );
+              })}
+            </div>
+          ))}
 
           {m.images?.some((img) => typeof img !== "string") && (
             <div className={s.pdRow}>

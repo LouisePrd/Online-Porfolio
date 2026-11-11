@@ -4,6 +4,7 @@ export type Category = "web" | "3d" | "games" | "creative";
 export const CATEGORIES: Category[] = ["web", "3d", "games", "creative"];
 
 type Localized = Record<Lang, string>;
+export type Sized = { src: string; w: number; h: number };
 
 export interface Project {
   /** URL segment: /projects/{slug} */
@@ -27,6 +28,11 @@ export interface Project {
   credits?: { name: string; url: string }[];
   media: {
     images?: (string | { src: string; w: number; h: number })[];
+    rows?: (Sized | Sized[])[][];
+    /** Small logos, stacked next to the carousel */
+    logos?: Sized[];
+    /** Shown one at a time with arrows */
+    carousel?: Sized[];
     verticalImages?: string[];
     gifs?: string[];
     panorama?: string;
@@ -364,6 +370,47 @@ const DATA: Project[] = [
     },
     media: {
       images: ["/imgs/projects/pigeonGate/homePigeon.png", "/imgs/projects/pigeonGate/registerPigeon.png", "/imgs/projects/pigeonGate/cardPigeon.png", "/imgs/projects/pigeonGate/aProposPigeon.png"],
+    },
+  },
+  {
+    slug: "moulagos",
+    title: "Moulagos",
+    cat: "creative",
+    date: "2024",
+    img: "/imgs/projects/moulagos/kits-soiree.webp",
+    tags: ["Figma", "Branding", "Packaging", "UX/UI"],
+    links: {},
+    intro: {
+      fr: "Une marque de chocolat décalée pensée pour la Gen Z : identité, kits à thèmes et site e-commerce.",
+      en: "A cheeky chocolate brand designed for Gen Z: identity, themed kits and an e-commerce website.",
+    },
+    desc: {
+      fr: "Moulagos est une marque fictive de chocolat imaginée pour faire passer une chocolaterie à l’image vieillissante vers une marque moderne qui parle aux jeunes. Le chocolat devient le prétexte de moments à partager, à travers des kits à thèmes qui ne se prennent pas au sérieux : Kit Quitté, Kit Sans Valentin, Kit Brillax au Max… Nous avons mené la démarche de bout en bout : mind map de la stratégie, persona et parcours utilisateur, création du logo et de la mascotte, design des packagings puis maquettes du site e-commerce, itérées sur plusieurs versions.",
+      en: "Moulagos is a fictional chocolate brand created to turn an old-fashioned chocolate maker into a modern brand that speaks to young people. Chocolate becomes an excuse for shared moments, through themed kits that don’t take themselves too seriously: the Dumped Kit, the No-Valentine Kit, the Glow Party Kit… We covered the whole process: strategy mind map, persona and user journey, logo and mascot, packaging design, and e-commerce website mockups iterated over several versions.",
+    },
+    type: { fr: "Identité de marque / packaging / UX", en: "Brand identity / packaging / UX" },
+    context: { fr: "Projet de groupe en première année à l’IMAC", en: "First-year group project at IMAC" },
+    media: {
+      logos: [
+        { src: "/imgs/projects/moulagos/logo.webp", w: 1000, h: 579 },
+        { src: "/imgs/projects/moulagos/logo-m.webp", w: 669, h: 939 },
+      ],
+      rows: [
+        [
+          { src: "/imgs/projects/moulagos/mindmap.webp", w: 2800, h: 2276 },
+          [
+            { src: "/imgs/projects/moulagos/persona.webp", w: 2400, h: 1080 },
+            { src: "/imgs/projects/moulagos/user-journey.webp", w: 3000, h: 1392 },
+          ],
+        ],
+      ],
+      carousel: [
+        { src: "/imgs/projects/moulagos/kit-quitte.webp", w: 2000, h: 1250 },
+        { src: "/imgs/projects/moulagos/kit-sans-valentin.webp", w: 2000, h: 1250 },
+        { src: "/imgs/projects/moulagos/kits-soiree.webp", w: 1922, h: 1201 },
+        { src: "/imgs/projects/moulagos/site-accueil.webp", w: 1721, h: 1076 },
+        { src: "/imgs/projects/moulagos/site-versions.webp", w: 2000, h: 1250 },
+      ],
     },
   },
   {
