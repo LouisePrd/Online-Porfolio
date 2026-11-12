@@ -60,7 +60,7 @@ const DATA: Project[] = [
     },
     desc: {
       fr: "Les architectes passent des heures à rédiger des DTG sans outil dédié. Architech répond à ce besoin avec un écosystème web complet pour gérer les équipes, la collecte de données sur site et des formulaires complexes. Construite avec Next.js et Firebase, l’application met l’accent sur l’UX de la saisie de données lourde. Elle repose sur une architecture NoSQL hybride, Cloudinary pour la gestion des photos et une génération de PDF instantanée côté client, ce qui réduit considérablement le temps de production des rapports.",
-      en: "Architects spend hours creating DTGs without dedicated tools. Architech solves this by providing a complete web ecosystem to manage teams, onsite data collection, and complex forms. Built with Next.js and Firebase, the application focuses on optimizing the UX of heavy data entry. It features a hybrid NoSQL architecture, Cloudinary for photo management , and instant client-side PDF generation, drastically reducing report production time.",
+      en: "Architects spend hours creating DTGs without dedicated tools. Architech solves this by providing a complete web ecosystem to manage teams, onsite data collection, and complex forms. Built with Next.js and Firebase, the application focuses on optimizing the UX of heavy data entry. It features a hybrid NoSQL architecture, Cloudinary for photo management, and instant client-side PDF generation, drastically reducing report production time.",
     },
     type: {
       fr: "Application web / SaaS",
@@ -196,7 +196,7 @@ const DATA: Project[] = [
     },
     context: {
       fr: "Initiation à l’informatique quantique appliquée à l’art génératif",
-      en: "Introduction to the use of quantum computing in the creation of generative art.",
+      en: "Introduction to the use of quantum computing in the creation of generative art",
     },
     media: {
       gifs: ["/imgs/projects/quantum-art/vasarely_entanglement.gif", "/imgs/projects/quantum-art/vasarely_quantum_pulse.gif"],

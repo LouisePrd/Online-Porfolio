@@ -32,8 +32,8 @@ export const JOBS: Job[] = [
       dates: "Sept. 2026 - août 2027",
       summary: "Chaîne de télévision internationale francophone.",
       points: [
-        "SSO : déploiement complet, du cadrage à la mise en production.",
-        "Migration de données : pilotage d’une migration critique sans interruption de service.",
+        "SSO : pilotage du déploiement, du cadrage à la mise en production.",
+        "Migration de données : pilotage d’une migration critique, avec l’objectif de zéro interruption de service.",
         "Projets & Innovation : coordination transverse (devs, prestataires).",
       ],
     },
@@ -43,8 +43,8 @@ export const JOBS: Job[] = [
       dates: "Sept. 2026 - Aug. 2027",
       summary: "International French-language TV network.",
       points: [
-        "SSO: Full rollout, from scoping to production.",
-        "Data migration: Led a critical migration with zero service interruption.",
+        "SSO: Leading the rollout, from scoping to production.",
+        "Data migration: Leading a critical migration, aiming for zero service interruption.",
         "Projects & Innovation: Cross-team coordination (developers, vendors).",
       ],
     },
@@ -281,6 +281,6 @@ export const SKILLS: SkillGroup[] = [
   {
     fr: { title: "Gestion de projet & outils", text: "Coordination d’équipes techniques, de la conception à la mise en production." },
     en: { title: "Project management & tools", text: "Coordinating technical teams, from scoping to production." },
-    items: ["Agile", "JIRA", "Git / CI", "SSO"],
+    items: ["Agile", "JIRA", "Git / CI"],
   },
 ];
