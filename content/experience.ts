@@ -253,8 +253,8 @@ export const ASSOCIATIONS: Association[] = [
 ];
 
 export const ASSO_PHOTOS: { src: string; label: Record<Lang, string> }[] = [
-  { src: "/imgs/projects/asso/imacannes.jpg", label: { fr: "Cérémonie IMACannes", en: "IMACannes ceremony" } },
-  { src: "/imgs/projects/asso/jdc.jpg", label: { fr: "Journées de cohésion", en: "Cohesion Days" } },
+  { src: "/imgs/projects/asso/imacannes.webp", label: { fr: "Cérémonie IMACannes", en: "IMACannes ceremony" } },
+  { src: "/imgs/projects/asso/jdc.webp", label: { fr: "Journées de cohésion", en: "Cohesion Days" } },
   { src: "/imgs/projects/asso/post-gala.png", label: { fr: "Gala de fin d’année", en: "End-of-year gala" } },
 ];
 
