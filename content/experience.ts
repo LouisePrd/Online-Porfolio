@@ -257,3 +257,30 @@ export const ASSO_PHOTOS: { src: string; label: Record<Lang, string> }[] = [
   { src: "/imgs/projects/asso/jdc.jpg", label: { fr: "Journées de cohésion", en: "Cohesion Days" } },
   { src: "/imgs/projects/asso/post-gala.png", label: { fr: "Gala de fin d’année", en: "End-of-year gala" } },
 ];
+
+export interface SkillGroup extends Record<Lang, { title: string; text: string }> {
+  items: (string | Record<Lang, string>)[];
+}
+
+export const SKILLS: SkillGroup[] = [
+  {
+    fr: { title: "Développement web", text: "Applications web, API et bases de données, du front au back." },
+    en: { title: "Web development", text: "Web apps, APIs and databases, front to back." },
+    items: ["React", "Next.js", "TypeScript", "Node.js", "SQL / NoSQL"],
+  },
+  {
+    fr: { title: "3D, jeux & temps réel", text: "Expériences interactives dans le navigateur et moteurs de jeu." },
+    en: { title: "3D, games & real-time", text: "Interactive experiences in the browser and game engines." },
+    items: ["Three.js", "PlayCanvas", "WebXR / VR", "Unity"],
+  },
+  {
+    fr: { title: "Design & création", text: "Interfaces, identités visuelles, 3D et vidéo." },
+    en: { title: "Design & creative", text: "Interfaces, visual identities, 3D and video." },
+    items: ["Figma", "UI/UX", "Blender", { fr: "Suite Adobe", en: "Adobe Suite" }],
+  },
+  {
+    fr: { title: "Gestion de projet & outils", text: "Coordination d’équipes techniques, de la conception à la mise en production." },
+    en: { title: "Project management & tools", text: "Coordinating technical teams, from scoping to production." },
+    items: ["Agile", "JIRA", "Git / CI", "SSO"],
+  },
+];

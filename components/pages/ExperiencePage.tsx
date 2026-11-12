@@ -2,6 +2,7 @@ import Link from "next/link";
 import { type Lang, T, routes } from "@/content/site";
 import Associations from "@/components/Associations";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
+import Skills from "@/components/Skills";
 import ShortFooter from "@/components/ShortFooter";
 import Shell from "@/components/Shell";
 import SiteNav from "@/components/SiteNav";
@@ -24,6 +25,8 @@ export default function ExperiencePage({ lang }: { lang: Lang }) {
       <main className={s.expPage}>
         <ExperienceTimeline lang={lang} />
       </main>
+
+      <Skills lang={lang} />
 
       <Associations lang={lang} />
 
