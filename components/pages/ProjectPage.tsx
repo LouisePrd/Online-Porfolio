@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { type Lang, T, routes } from "@/content/site";
-import { PROJECTS, type Project, type Sized, projectHref } from "@/content/projects";
+import { PROJECTS, type Project, type Sized, projectHref, projectTitle, projectTags } from "@/content/projects";
 import Carousel from "@/components/Carousel";
 import ShortFooter from "@/components/ShortFooter";
 import ZoomImage from "@/components/ZoomImage";
@@ -45,7 +45,7 @@ export default function ProjectPage({ p, lang }: { p: Project; lang: Lang }) {
     { label: d.type, value: p.type[lang] },
     { label: d.date, value: p.date },
     { label: d.context, value: p.context[lang] },
-    { label: d.tech, value: p.tags.join(" / ") },
+    { label: d.tech, value: projectTags(p, lang).join(" / ") },
   ];
 
   const hasMedia =
@@ -60,15 +60,15 @@ export default function ProjectPage({ p, lang }: { p: Project; lang: Lang }) {
           <Link href={r.projects} className={s.pdBack}>← {d.back}</Link>
           <nav className={s.pdPager} aria-label={t.titles.projects}>
             <Link href={projectHref(prev, lang)} className={s.pdPagerLink} title={d.prev}>
-              ← {prev.title}
+              ← {projectTitle(prev, lang)}
             </Link>
             <Link href={projectHref(next, lang)} className={s.pdPagerLink} title={d.next}>
-              {next.title} →
+              {projectTitle(next, lang)} →
             </Link>
           </nav>
         </div>
         <span className={`${s.cat} ${s.catDeep}`}>{t.cats[p.cat]} · {p.date}</span>
-        <h1 className={s.pdTitle}>{p.title}</h1>
+        <h1 className={s.pdTitle}>{projectTitle(p, lang)}</h1>
         <p className={s.pdIntro}>{p.intro[lang]}</p>
         {links.length > 0 && (
           <div className={s.ctaRow}>
@@ -104,7 +104,7 @@ export default function ProjectPage({ p, lang }: { p: Project; lang: Lang }) {
             <div key={src} className={`${s.pdEmbed} ${src === m.canvaUrl ? s.pdEmbedSmall : ""}`}>
               <iframe
                 src={src}
-                title={p.title}
+                title={projectTitle(p, lang)}
                 loading="lazy"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
                 allowFullScreen
@@ -125,11 +125,11 @@ export default function ProjectPage({ p, lang }: { p: Project; lang: Lang }) {
               {m.logos && m.logos.length > 0 && (
                 <div className={s.pdLogos}>
                   {m.logos.map(({ src, w, h }) => (
-                    <Image key={src} src={src} alt={`${p.title} logo`} width={w} height={h} className={s.pdImg} sizes="260px" />
+                    <Image key={src} src={src} alt={`${projectTitle(p, lang)} logo`} width={w} height={h} className={s.pdImg} sizes="260px" />
                   ))}
                 </div>
               )}
-              {m.carousel && m.carousel.length > 0 && <Carousel slides={m.carousel} alt={p.title} lang={lang} />}
+              {m.carousel && m.carousel.length > 0 && <Carousel slides={m.carousel} alt={projectTitle(p, lang)} lang={lang} />}
             </div>
           )}
 
@@ -139,7 +139,7 @@ export default function ProjectPage({ p, lang }: { p: Project; lang: Lang }) {
                 return (
                   <div key={stack[0].src} className={s.pdStack} style={{ "--w": width } as React.CSSProperties}>
                     {stack.map(({ src, w, h }) => (
-                      <ZoomImage key={src} src={src} w={w} h={h} alt={p.title} lang={lang} sizes={row.length > 1 ? "(max-width: 800px) 100vw, 50vw" : "100vw"} />
+                      <ZoomImage key={src} src={src} w={w} h={h} alt={projectTitle(p, lang)} lang={lang} sizes={row.length > 1 ? "(max-width: 800px) 100vw, 50vw" : "100vw"} />
                     ))}
                   </div>
                 );
@@ -150,19 +150,19 @@ export default function ProjectPage({ p, lang }: { p: Project; lang: Lang }) {
           {m.images?.some((img) => typeof img !== "string") && (
             <div className={s.pdRow}>
               {m.images.filter((img) => typeof img !== "string").map(({ src, w, h }) => (
-                <Image key={src} src={src} alt={p.title} width={w} height={h} className={s.pdImg} style={{ "--ratio": w / h } as React.CSSProperties} sizes="(max-width: 800px) 100vw, 50vw" />
+                <Image key={src} src={src} alt={projectTitle(p, lang)} width={w} height={h} className={s.pdImg} style={{ "--ratio": w / h } as React.CSSProperties} sizes="(max-width: 800px) 100vw, 50vw" />
               ))}
             </div>
           )}
 
           {m.panorama && (
-            <Image src={m.panorama} alt={p.title} width={1600} height={600} className={s.pdImg} sizes="100vw" />
+            <Image src={m.panorama} alt={projectTitle(p, lang)} width={1600} height={600} className={s.pdImg} sizes="100vw" />
           )}
 
           {m.images?.some((img) => typeof img === "string") && (
             <div className={s.pdGrid}>
               {m.images.filter((img) => typeof img === "string").map((src) => (
-                <Image key={src} src={src} alt={p.title} width={1200} height={750} className={s.pdImg} sizes="(max-width: 800px) 100vw, 50vw" />
+                <Image key={src} src={src} alt={projectTitle(p, lang)} width={1200} height={750} className={s.pdImg} sizes="(max-width: 800px) 100vw, 50vw" />
               ))}
             </div>
           )}
@@ -170,7 +170,7 @@ export default function ProjectPage({ p, lang }: { p: Project; lang: Lang }) {
           {m.verticalImages && m.verticalImages.length > 0 && (
             <div className={s.pdGridTall}>
               {m.verticalImages.map((src) => (
-                <Image key={src} src={src} alt={p.title} width={500} height={1000} className={s.pdImg} sizes="(max-width: 800px) 50vw, 25vw" />
+                <Image key={src} src={src} alt={projectTitle(p, lang)} width={500} height={1000} className={s.pdImg} sizes="(max-width: 800px) 50vw, 25vw" />
               ))}
             </div>
           )}
@@ -178,7 +178,7 @@ export default function ProjectPage({ p, lang }: { p: Project; lang: Lang }) {
           {m.gifs && m.gifs.length > 0 && (
             <div className={s.pdGrid}>
               {m.gifs.map((src) => (
-                <Image key={src} src={src} alt={p.title} width={800} height={450} className={s.pdImg} unoptimized />
+                <Image key={src} src={src} alt={projectTitle(p, lang)} width={800} height={450} className={s.pdImg} unoptimized />
               ))}
             </div>
           )}

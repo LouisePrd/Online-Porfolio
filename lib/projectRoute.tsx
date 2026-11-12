@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ProjectPage from "@/components/pages/ProjectPage";
-import { PROJECTS, findProject } from "@/content/projects";
+import { PROJECTS, findProject, projectTitle } from "@/content/projects";
 import type { Lang } from "@/content/site";
 import { pageMeta } from "@/lib/seo";
 
@@ -15,7 +15,7 @@ export function projectRoute(lang: Lang) {
     generateMetadata: async ({ params }: Props): Promise<Metadata> => {
       const p = findProject((await params).slug);
       if (!p) return {};
-      return pageMeta(lang, `/projects/${p.slug}`, `${p.title} | Louise Peridy`, p.intro[lang]);
+      return pageMeta(lang, `/projects/${p.slug}`, `${projectTitle(p, lang)} | Louise Peridy`, p.intro[lang]);
     },
 
     Page: async ({ params }: Props) => {

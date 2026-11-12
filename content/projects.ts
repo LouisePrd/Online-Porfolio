@@ -9,7 +9,7 @@ export type Sized = { src: string; w: number; h: number };
 export interface Project {
   /** URL segment: /projects/{slug} */
   slug: string;
-  title: string;
+  title: string | Localized;
   cat: Category;
   /** "2025" or "2025 - 2026" (used for sorting) */
   date: string;
@@ -17,7 +17,7 @@ export interface Project {
   img: string;
   /** Optional 16:9 visual for the home lead card */
   cover?: { src: string; bg: string };
-  tags: string[];
+  tags: (string | Localized)[];
   links: { live?: string; source?: string; report?: string; company?: string };
   /** One-liner for cards */
   intro: Localized;
@@ -84,11 +84,11 @@ const DATA: Project[] = [
   },
   {
     slug: "3d-animation",
-    title: "Modélisation & animation 3D",
+    title: { fr: "Modélisation & animation 3D", en: "3D modelling & animation" },
     cat: "creative",
     date: "2023 - 2026",
     img: "/imgs/projects/3d/trophees.webp",
-    tags: ["Blender", "Modélisation", "Animation"],
+    tags: ["Blender", { fr: "Modélisation", en: "Modelling" }, "Animation"],
     links: {},
     intro: {
       fr: "Une sélection de mes modélisations et animations 3D.",
@@ -571,5 +571,9 @@ export const FEATURED: Project[] = ["architech", "piageon", "regard", "mari-e"].
 );
 
 export const findProject = (slug: string) => PROJECTS.find((p) => p.slug === slug);
+
+const pick = (v: string | Localized, lang: Lang) => (typeof v === "string" ? v : v[lang]);
+export const projectTitle = (p: Project, lang: Lang) => pick(p.title, lang);
+export const projectTags = (p: Project, lang: Lang) => p.tags.map((t) => pick(t, lang));
 
 export const projectHref = (p: Project, lang: Lang) => `${lang === "en" ? "/en" : ""}/projects/${p.slug}`;

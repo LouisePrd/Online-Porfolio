@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { CONTACT, type Lang, SOCIALS, T, routes } from "@/content/site";
-import { FEATURED, PROJECTS, type Project } from "@/content/projects";
+import { FEATURED, PROJECTS, type Project, projectTitle } from "@/content/projects";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
 import InspirationStrip from "@/components/InspirationStrip";
 import ProjectDrawer from "@/components/ProjectDrawer";
@@ -87,13 +87,13 @@ export default function HomePage({ lang }: { lang: Lang }) {
               {side.map((p, i) => (
                 <button key={p.slug} type="button" className={`${s.cardBtn} ${s.sideCard}`} onClick={() => setCur(p.slug)}>
                   <span className={`${s.media} ${s.r169}`} style={{ display: "block" }}>
-                    <Image src={p.img} alt={p.title} fill sizes="(max-width: 800px) 45vw, 18vw" className={s.mediaImg} />
+                    <Image src={p.img} alt={projectTitle(p, lang)} fill sizes="(max-width: 800px) 45vw, 18vw" className={s.mediaImg} />
                   </span>
                   <span className={s.cardText}>
                     <span className={s.cat}>
                       <span className={s.num}>{String(i + 2).padStart(2, "0")}</span> {t.cats[p.cat]}
                     </span>
-                    <span className={s.sideTitle}>{p.title}</span>
+                    <span className={s.sideTitle}>{projectTitle(p, lang)}</span>
                     <span className={s.sideDesc}>{p.intro[lang]}</span>
                   </span>
                 </button>
@@ -158,7 +158,7 @@ function LeadCard({ p, n, lang, onOpen }: { p: Project; n: number; lang: Lang; o
       >
         <Image
           src={p.cover?.src ?? p.img}
-          alt={p.title}
+          alt={projectTitle(p, lang)}
           fill
           sizes="(max-width: 800px) 100vw, 60vw"
           className={s.mediaImg}
@@ -169,7 +169,7 @@ function LeadCard({ p, n, lang, onOpen }: { p: Project; n: number; lang: Lang; o
         <span className={s.cat}>
           <span className={s.num}>{String(n).padStart(2, "0")}</span> {t.cats[p.cat]}
         </span>
-        <span className={s.leadTitle}>{p.title}</span>
+        <span className={s.leadTitle}>{projectTitle(p, lang)}</span>
         <span className={s.leadDesc}>{p.intro[lang]}</span>
       </span>
     </button>

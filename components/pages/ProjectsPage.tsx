@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { type Lang, T, routes } from "@/content/site";
-import { CATEGORIES, type Category, PROJECTS } from "@/content/projects";
+import { CATEGORIES, type Category, PROJECTS, projectTitle } from "@/content/projects";
 import ProjectDrawer from "@/components/ProjectDrawer";
 import ShortFooter from "@/components/ShortFooter";
 import Shell from "@/components/Shell";
@@ -52,7 +52,7 @@ export default function ProjectsPage({ lang }: { lang: Lang }) {
               <span className={`${s.media} ${s.mediaLight} ${s.r169}`} style={{ display: "block" }}>
                 <Image
                   src={p.img}
-                  alt={p.title}
+                  alt={projectTitle(p, lang)}
                   fill
                   sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
                   className={s.mediaImg}
@@ -61,7 +61,7 @@ export default function ProjectsPage({ lang }: { lang: Lang }) {
               </span>
               <span className={s.cardText} style={{ gap: 5 }}>
                 <span className={`${s.cat} ${s.catDeep}`}>{t.cats[p.cat]} · {p.date}</span>
-                <span className={s.gridTitle}>{p.title}</span>
+                <span className={s.gridTitle}>{projectTitle(p, lang)}</span>
                 <span className={s.gridDesc}>{p.intro[lang]}</span>
               </span>
             </button>

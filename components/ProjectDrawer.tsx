@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { type Lang, T } from "@/content/site";
-import { type Project, projectHref } from "@/content/projects";
+import { type Project, projectHref, projectTitle, projectTags } from "@/content/projects";
 import s from "@/styles/site.module.css";
 
 export default function ProjectDrawer({
@@ -88,12 +88,12 @@ export default function ProjectDrawer({
           </div>
         </div>
         <div className={s.drawerImg}>
-          <Image src={cur.img} alt={cur.title} fill sizes="(max-width: 580px) 100vw, 580px" />
+          <Image src={cur.img} alt={projectTitle(cur, lang)} fill sizes="(max-width: 580px) 100vw, 580px" />
         </div>
         <div className={s.drawerBody}>
-          <h3 id="drawer-title" className={s.drawerTitle}>{cur.title}</h3>
+          <h3 id="drawer-title" className={s.drawerTitle}>{projectTitle(cur, lang)}</h3>
           <p className={s.drawerDesc}>{cur.desc[lang]}</p>
-          <p className={s.tagLine}>{cur.tags.join(" / ")}</p>
+          <p className={s.tagLine}>{projectTags(cur, lang).join(" / ")}</p>
           <div className={s.drawerCtas}>
             {links.map((l, i) => {
               const cls = i === 0 ? s.btnPrimary : s.btnHighlight;
