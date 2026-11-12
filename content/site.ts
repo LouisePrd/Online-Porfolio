@@ -59,6 +59,7 @@ export const T = {
     backHome: "Accueil",
     current: "En cours",
     fullPath: "Tout mon parcours",
+    cvLink: "Voir mon CV",
     asso: "Engagement associatif",
     form: {
       intro: "Un projet, une collab, une question ? Écris-moi ici.",
@@ -138,6 +139,7 @@ export const T = {
     backHome: "Home",
     current: "Now",
     fullPath: "Full background",
+    cvLink: "See my CV (in French)",
     asso: "Student associations",
     form: {
       intro: "A project, a collab, a question? Write to me here.",

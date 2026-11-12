@@ -17,14 +17,14 @@ export default function SiteNav({
   altHref,
 }: {
   lang: Lang;
-  page: "home" | "projects" | "experience" | "contact";
+  page: "home" | "projects" | "experience" | "contact" | "cv";
   altHref?: string;
 }) {
   const t = T[lang];
   const r = routes(lang);
   const onHome = page === "home";
   const anchor = (id: string) => (onHome ? `#${id}` : `${r.home}#${id}`);
-  const other = altHref ?? routes(lang === "fr" ? "en" : "fr")[page];
+  const other = altHref ?? routes(lang === "fr" ? "en" : "fr")[page === "cv" ? "experience" : page];
 
   const [open, setOpen] = useState(false);
   const [tucked, setTucked] = useState(false);

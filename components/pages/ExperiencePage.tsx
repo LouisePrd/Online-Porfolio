@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { type Lang, T, routes } from "@/content/site";
 import Associations from "@/components/Associations";
 import ExperienceTimeline from "@/components/ExperienceTimeline";
@@ -15,6 +16,9 @@ export default function ExperiencePage({ lang }: { lang: Lang }) {
 
       <header className={`${s.container} ${s.projHeader}`}>
         <h1 className={s.projH1}>{t.titles.experience}</h1>
+        <Link href="/cv" className={s.btnPrimary} hrefLang={lang === "fr" ? undefined : "fr"}>
+          {t.cvLink} →
+        </Link>
       </header>
 
       <main className={s.expPage}>

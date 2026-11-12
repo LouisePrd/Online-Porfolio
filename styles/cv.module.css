@@ -1,0 +1,59 @@
+/* CV page (/cv): the PDF shown as a sheet on the site paper. Tokens come from .root in site.module.css. */
+
+.main {
+  padding: clamp(100px, 9vw, 130px) var(--pad-x) var(--section-y);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  max-width: 860px;
+  margin: 0 auto 20px;
+  animation: fadeUp 0.5s 0.3s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.sheet {
+  display: block;
+  max-width: 860px;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 0 0 1.5px var(--ink), 10px 10px 0 var(--pink);
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s;
+  animation: fadeUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+.sheet:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 0 0 0 1.5px var(--ink), 14px 14px 0 var(--pink);
+}
+.sheet img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; translate: 0 24px; }
+  to { opacity: 1; translate: 0 0; }
+}
+
+@media (max-width: 760px) {
+  .actions {
+    justify-content: flex-start;
+  }
+  .sheet,
+  .sheet:hover {
+    transform: none;
+    box-shadow: 0 0 0 1.5px var(--ink), 6px 6px 0 var(--pink);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .actions,
+  .sheet {
+    animation: none;
+    transition: none;
+  }
+}
