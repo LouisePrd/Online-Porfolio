@@ -150,19 +150,19 @@ export default function ProjectPage({ p, lang }: { p: Project; lang: Lang }) {
           {m.images?.some((img) => typeof img !== "string") && (
             <div className={s.pdRow}>
               {m.images.filter((img) => typeof img !== "string").map(({ src, w, h }) => (
-                <Image key={src} src={src} alt={projectTitle(p, lang)} width={w} height={h} className={s.pdImg} style={{ "--ratio": w / h } as React.CSSProperties} sizes="(max-width: 800px) 100vw, 50vw" />
+                <ZoomImage key={src} src={src} w={w} h={h} alt={projectTitle(p, lang)} lang={lang} sizes="(max-width: 800px) 100vw, 50vw" />
               ))}
             </div>
           )}
 
           {m.panorama && (
-            <Image src={m.panorama} alt={projectTitle(p, lang)} width={1600} height={600} className={s.pdImg} sizes="100vw" />
+            <ZoomImage src={m.panorama} w={1600} h={600} alt={projectTitle(p, lang)} lang={lang} sizes="100vw" />
           )}
 
           {m.images?.some((img) => typeof img === "string") && (
             <div className={s.pdGrid}>
               {m.images.filter((img) => typeof img === "string").map((src) => (
-                <Image key={src} src={src} alt={projectTitle(p, lang)} width={1200} height={750} className={s.pdImg} sizes="(max-width: 800px) 100vw, 50vw" />
+                <ZoomImage key={src} src={src} w={1200} h={750} alt={projectTitle(p, lang)} lang={lang} sizes="(max-width: 800px) 100vw, 50vw" />
               ))}
             </div>
           )}
@@ -170,7 +170,7 @@ export default function ProjectPage({ p, lang }: { p: Project; lang: Lang }) {
           {m.verticalImages && m.verticalImages.length > 0 && (
             <div className={s.pdGridTall}>
               {m.verticalImages.map((src) => (
-                <Image key={src} src={src} alt={projectTitle(p, lang)} width={500} height={1000} className={s.pdImg} sizes="(max-width: 800px) 50vw, 25vw" />
+                <ZoomImage key={src} src={src} w={500} h={1000} alt={projectTitle(p, lang)} lang={lang} sizes="(max-width: 800px) 50vw, 25vw" />
               ))}
             </div>
           )}
@@ -178,7 +178,7 @@ export default function ProjectPage({ p, lang }: { p: Project; lang: Lang }) {
           {m.gifs && m.gifs.length > 0 && (
             <div className={s.pdGrid}>
               {m.gifs.map((src) => (
-                <Image key={src} src={src} alt={projectTitle(p, lang)} width={800} height={450} className={s.pdImg} unoptimized />
+                <ZoomImage key={src} src={src} w={800} h={450} alt={projectTitle(p, lang)} lang={lang} unoptimized />
               ))}
             </div>
           )}

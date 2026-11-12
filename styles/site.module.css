@@ -1303,7 +1303,8 @@
   display: flex;
   gap: 24px;
 }
-.pdRow > .pdImg {
+.pdRow > .pdImg,
+.pdRow > .zoomBtn {
   min-width: 0;
   flex: var(--ratio) 1 0;
 }
@@ -1311,7 +1312,8 @@
   .pdRow {
     flex-direction: column;
   }
-  .pdRow > .pdImg {
+  .pdRow > .pdImg,
+  .pdRow > .zoomBtn {
     flex: none;
   }
 }
@@ -1371,10 +1373,17 @@
 }
 .zoomBtn {
   display: block;
+  width: 100%;
   padding: 0;
   border: 0;
   background: none;
   cursor: zoom-in;
+}
+.zoomBtn .pdImg {
+  transition: opacity 0.15s;
+}
+.zoomBtn:hover .pdImg {
+  opacity: 0.88;
 }
 @media (max-width: 800px) {
   .pdStack {

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { type Lang, T } from "@/content/site";
+import { ImageViewer } from "@/components/ZoomImage";
 import s from "@/styles/site.module.css";
 
 type Slide = { src: string; w: number; h: number };
@@ -11,6 +12,7 @@ export default function Carousel({ slides, alt, lang }: { slides: Slide[]; alt: 
   const t = T[lang];
   const track = useRef<HTMLDivElement>(null);
   const [cur, setCur] = useState(0);
+  const [zoomed, setZoomed] = useState<number | null>(null);
 
   const go = (i: number) => {
     const el = track.current;
@@ -35,9 +37,17 @@ export default function Carousel({ slides, alt, lang }: { slides: Slide[]; alt: 
         aria-label={alt}
       >
         {slides.map(({ src }, i) => (
-          <div key={src} className={s.carouselSlide} aria-hidden={i !== cur}>
+          <button
+            key={src}
+            type="button"
+            className={`${s.carouselSlide} ${s.zoomBtn}`}
+            aria-hidden={i !== cur}
+            tabIndex={i === cur ? 0 : -1}
+            aria-label={`${t.openPhoto} : ${alt} ${i + 1}`}
+            onClick={() => setZoomed(i)}
+          >
             <Image src={src} alt={`${alt} ${i + 1}`} fill sizes="(max-width: 1200px) 100vw, 1200px" />
-          </div>
+          </button>
         ))}
       </div>
       <div className={s.carouselBar}>
@@ -45,6 +55,9 @@ export default function Carousel({ slides, alt, lang }: { slides: Slide[]; alt: 
         <span className={s.carouselCount} aria-live="polite">{cur + 1} / {slides.length}</span>
         <button type="button" className={s.iconBtn} onClick={() => go(cur + 1)} aria-label={t.scrollNext}>→</button>
       </div>
+      {zoomed !== null && (
+        <ImageViewer src={slides[zoomed].src} alt={`${alt} ${zoomed + 1}`} lang={lang} onClose={() => setZoomed(null)} />
+      )}
     </div>
   );
 }
