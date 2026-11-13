@@ -118,26 +118,20 @@ export default function HomePage({ lang }: { lang: Lang }) {
       <footer id="contact" className={`${s.footer} ${s.snap}`}>
         <div className={`${s.container} ${s.footerInner}`}>
           <div className={s.footerTop}>
-            <div data-speed="-0.08" className={s.footerTitleBlock}>
-              <h2 className={`${s.h2} ${s.h2Contact}`}>
-                {t.titles.contact}
-              </h2>
-              <p className={s.contactLine}>{t.contactLine}</p>
+            <div>
+              <p className={s.footerSocialsLabel}>{t.mySocials}</p>
+              <div className={s.socials}>
+                {SOCIALS.map(({ kind, label, href }) => (
+                  <a key={kind} href={href} target="_blank" rel="noopener noreferrer" className={s.socialLink}>
+                    <SocialIcon kind={kind} className={s.footerSocialIcon} />
+                    {label} ↗
+                  </a>
+                ))}
+              </div>
             </div>
-            <div data-speed="0.05" className={s.footerCtas}>
-              <a href={`mailto:${CONTACT.email}`} className={s.emailBtn}><span>{CONTACT.email}</span><span aria-hidden="true">→</span></a>
-              <Link href={r.contact} className={s.footerFormLink}>{t.form.writeMessage} →</Link>
-            </div>
+            <a href={`mailto:${CONTACT.email}`} className={`${s.emailBtn} ${s.footerEmail}`}><span>{CONTACT.email}</span><span aria-hidden="true">→</span></a>
           </div>
           <div className={s.footerBottom}>
-            <div className={s.socials}>
-              {SOCIALS.map(({ kind, label, href }) => (
-                <a key={kind} href={href} target="_blank" rel="noopener noreferrer" className={s.socialLink}>
-                  <SocialIcon kind={kind} />
-                  {label} ↗
-                </a>
-              ))}
-            </div>
             <span className={s.copyright}>© {new Date().getFullYear()} Louise Peridy</span>
           </div>
         </div>

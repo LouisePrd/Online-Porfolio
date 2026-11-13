@@ -846,31 +846,17 @@
   color: var(--paper);
 }
 .footerInner {
-  padding: var(--section-y) var(--pad-x) 28px;
+  padding: clamp(56px, 6vw, 88px) var(--pad-x) 28px;
   display: flex;
   flex-direction: column;
-  gap: 56px;
+  gap: clamp(40px, 4.5vw, 64px);
 }
 .footerTop {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;
-  gap: 36px;
-}
-.footerTitleBlock {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-.h2Contact {
-  font-size: var(--h2-size);
-}
-.contactLine {
-  margin: 0;
-  font-size: 22px;
-  font-weight: 500;
-  color: var(--muted-dark);
+  gap: 28px 36px;
 }
 .emailBtn {
   background: var(--pink);
@@ -909,23 +895,42 @@
   background: var(--yellow);
 }
 .footerBottom {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 13px;
   text-transform: uppercase;
 }
 .socials {
   display: flex;
   flex-wrap: wrap;
-  gap: 28px;
+  gap: 14px 28px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 .socialLink {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+}
+.footerSocialsLabel {
+  margin: 0 0 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--meta);
+}
+.footerEmail {
+  margin-left: auto;
+}
+@media (max-width: 700px) {
+  .footerEmail {
+    margin-left: 0;
+  }
+}
+.footerSocialIcon {
+  width: 24px;
+  height: 24px;
 }
 .socials a:hover {
   color: var(--pink) !important;
@@ -1860,27 +1865,6 @@
   width: 1px;
   height: 1px;
   overflow: hidden;
-}
-
-/* Home footer: e-mail + link to the form */
-.footerCtas {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 14px;
-}
-.footerFormLink {
-  font-weight: 900;
-  font-size: 15px;
-  text-transform: uppercase;
-}
-.footerFormLink:hover {
-  color: var(--pink) !important;
-}
-@media (max-width: 700px) {
-  .footerCtas {
-    align-items: flex-start;
-  }
 }
 
 /* Very small phones: keep the label and the memoji side by side */
