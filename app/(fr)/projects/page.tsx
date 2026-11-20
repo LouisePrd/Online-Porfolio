@@ -6,7 +6,7 @@ export const metadata: Metadata = pageMeta(
   "fr",
   "/projects",
   "Projets | Louise Peridy",
-  "Tous les projets de Louise Peridy : web, 3D & WebGL, jeux et créations.",
+  "Tous les projets de Louise Peridy : web, applis & jeux, art & design.",
 );
 
 export default function Page() {

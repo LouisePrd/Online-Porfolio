@@ -1,7 +1,7 @@
 import type { Lang } from "./site";
 
-export type Category = "web" | "3d" | "games" | "creative";
-export const CATEGORIES: Category[] = ["web", "3d", "games", "creative"];
+export type Category = "web" | "apps" | "art";
+export const CATEGORIES: Category[] = ["web", "apps", "art"];
 
 type Localized = Record<Lang, string>;
 export type Sized = { src: string; w: number; h: number };
@@ -85,7 +85,7 @@ const DATA: Project[] = [
   {
     slug: "3d-animation",
     title: { fr: "Modélisation & animation 3D", en: "3D modelling & animation" },
-    cat: "creative",
+    cat: "art",
     date: "2023 - 2026",
     img: "/imgs/projects/3d/trophees.webp",
     tags: ["Blender", { fr: "Modélisation", en: "Modelling" }, "Animation"],
@@ -119,7 +119,7 @@ const DATA: Project[] = [
   {
     slug: "piageon",
     title: "Piageon : L'Île aux Pigeons",
-    cat: "3d",
+    cat: "web",
     date: "2026",
     img: "/imgs/projects/piageon/preview.webp",
     tags: ["Three.js", "Cellular Automata", "Genetic Algorithms", "Boids", "L-Systems"],
@@ -148,7 +148,7 @@ const DATA: Project[] = [
   {
     slug: "les-nananimaux",
     title: "Les Nananimaux",
-    cat: "creative",
+    cat: "web",
     date: "2026",
     img: "/imgs/projects/nananimaux/generation.webp",
     tags: ["Three.js", "Vite", "JavaScript"],
@@ -177,7 +177,7 @@ const DATA: Project[] = [
   {
     slug: "quantum-art",
     title: "Quantum Art",
-    cat: "creative",
+    cat: "art",
     date: "2026",
     img: "/imgs/projects/quantum-art/minia-quantum.webp",
     tags: ["Python", "Matplotlib"],
@@ -206,7 +206,7 @@ const DATA: Project[] = [
   {
     slug: "regard",
     title: "Regard",
-    cat: "3d",
+    cat: "apps",
     date: "2025",
     img: "/imgs/projects/regard/regard-overview.webp",
     tags: ["Unity", "C#", "Next.js API", "Blender"],
@@ -235,7 +235,7 @@ const DATA: Project[] = [
   {
     slug: "girly-chaos",
     title: "Girly Chaos",
-    cat: "games",
+    cat: "apps",
     date: "2025",
     img: "/imgs/projects/girlyChaos/chess-overview.webp",
     tags: ["C++", "OpenGL", "GLSL"],
@@ -319,7 +319,7 @@ const DATA: Project[] = [
   {
     slug: "rer-a-gate",
     title: "RER A Gate",
-    cat: "games",
+    cat: "apps",
     date: "2024",
     img: "/imgs/projects/rerAGate/rer-a-gate.webp",
     tags: ["C++", "CMake"],
@@ -375,7 +375,7 @@ const DATA: Project[] = [
   {
     slug: "moulagos",
     title: "Moulagos",
-    cat: "creative",
+    cat: "art",
     date: "2024",
     img: "/imgs/projects/moulagos/kits-soiree.webp",
     tags: ["Figma", "Branding", "Packaging", "UX/UI"],
@@ -443,7 +443,7 @@ const DATA: Project[] = [
   {
     slug: "making-of-sauvage",
     title: "Le Making-Of Sauvage",
-    cat: "creative",
+    cat: "art",
     date: "2023",
     img: "/imgs/projects/makingOfSauvage/making-of-sauvage.webp",
     tags: ["After Effects", "Premiere Pro", "Photoshop"],
@@ -471,7 +471,7 @@ const DATA: Project[] = [
   {
     slug: "mari-e",
     title: "MARI-E",
-    cat: "3d",
+    cat: "web",
     date: "2023",
     img: "/imgs/projects/mari-e/brochure-marie.png",
     tags: ["WebXR", "ThreeJS", "DALL-E", "JavaScript"],
@@ -501,7 +501,7 @@ const DATA: Project[] = [
   {
     slug: "inus-tale",
     title: "Inu's Tale",
-    cat: "games",
+    cat: "apps",
     date: "2023",
     img: "/imgs/projects/inusTale/inus-tale.png",
     tags: ["Godot", "GDScript"],
@@ -529,7 +529,7 @@ const DATA: Project[] = [
   {
     slug: "au-fil-du-temps",
     title: "Au Fil du Temps",
-    cat: "creative",
+    cat: "web",
     date: "2022",
     img: "/imgs/projects/auFilDuTemps/AuFilDuTemps1.png",
     tags: ["HTML", "CSS", "JavaScript", "Paper JS"],

@@ -48,9 +48,8 @@ export const T = {
     all: "Tout",
     cats: {
       web: "Web",
-      "3d": "3D & WebGL",
-      games: "Jeux",
-      creative: "Créatif",
+      apps: "Applis & jeux",
+      art: "Art & design",
     },
     inspIntro: "Ce qui nourrit mon travail : musique, films, affiches, livres.",
     live: "Voir en ligne",
@@ -128,9 +127,8 @@ export const T = {
     all: "All",
     cats: {
       web: "Web",
-      "3d": "3D & WebGL",
-      games: "Games",
-      creative: "Creative",
+      apps: "Apps & games",
+      art: "Art & design",
     },
     inspIntro: "What feeds the work: music, films, posters, books.",
     live: "View live",
