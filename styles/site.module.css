@@ -735,7 +735,7 @@
 .insp {
   position: relative;
   background: var(--grain-dark), var(--pink);
-  padding: var(--section-y) var(--pad-x);
+  padding: var(--section-y) var(--pad-x) calc(var(--section-y) - 24px);
   overflow: hidden;
 }
 .inspHalftone {
@@ -748,9 +748,8 @@
   -webkit-mask-image: linear-gradient(20deg, #000 0%, transparent 55%);
   mask-image: linear-gradient(20deg, #000 0%, transparent 55%);
 }
-/* the strip below has 16px of inner top padding (room for rotated cards) */
 .inspHead {
-  margin-bottom: calc(var(--title-gap) - 16px);
+  margin-bottom: var(--title-gap);
 }
 .inspHeadRight {
   display: flex;
@@ -779,6 +778,17 @@
   font-size: 20px;
   font-weight: 900;
 }
+@media (max-width: 700px) {
+  .inspHeadRight {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .inspIntro {
+    font-size: 17px;
+  }
+}
 .inspArrow:hover {
   background: var(--yellow);
   color: var(--ink);
@@ -806,7 +816,9 @@
   pointer-events: none;
 }
 .inspItem {
-  flex: 0 0 clamp(190px, 18vw, 260px);
+  --photo-h: clamp(180px, 16vw, 240px);
+  flex: 0 0 auto;
+  width: calc(var(--photo-h) * var(--ar) + 18px); /* + polaroid side padding */
   position: relative;
 }
 .polaroid {
@@ -822,7 +834,7 @@
 }
 .polaroidImg {
   position: relative;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: var(--ar);
   overflow: hidden;
   background: var(--paper-2);
 }
@@ -837,6 +849,15 @@
   text-transform: uppercase;
   text-align: center;
   padding: 9px 4px 10px;
+}
+.captionType {
+  display: block;
+  margin-bottom: 4px;
+  font-family: var(--font-body), sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--pink-deep);
 }
 
 /* Contact footer */

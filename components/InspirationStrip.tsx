@@ -7,12 +7,12 @@ import { INSPIRATIONS } from "@/content/inspirations";
 import s from "@/styles/site.module.css";
 
 const LAYOUT = [
-  { mt: 0, rot: -2 },
-  { mt: 30, rot: 1.5 },
-  { mt: 10, rot: -1 },
-  { mt: 38, rot: 2 },
-  { mt: 4, rot: -1.5 },
-  { mt: 24, rot: 1 },
+  { mt: 0, rot: -1.5 },
+  { mt: 12, rot: 1 },
+  { mt: 4, rot: -0.75 },
+  { mt: 14, rot: 1.5 },
+  { mt: 2, rot: -1 },
+  { mt: 10, rot: 0.75 },
 ];
 
 /** Auto-scroll speed in px per second. */
@@ -140,8 +140,14 @@ export default function InspirationStrip({ lang }: { lang: Lang }) {
         {items.map((it, i) => {
           const l = LAYOUT[i % LAYOUT.length];
           const copy = i >= INSPIRATIONS.length;
+          const ar = it.w / it.h;
           return (
-            <div key={`${it.name}-${i}`} className={s.inspItem} style={{ marginTop: l.mt }} aria-hidden={copy || undefined}>
+            <div
+              key={`${it.name}-${i}`}
+              className={s.inspItem}
+              style={{ marginTop: l.mt, "--ar": ar } as React.CSSProperties}
+              aria-hidden={copy || undefined}
+            >
               <a
                 href={it.url}
                 target="_blank"
@@ -151,9 +157,12 @@ export default function InspirationStrip({ lang }: { lang: Lang }) {
                 tabIndex={copy ? -1 : undefined}
               >
                 <span className={s.polaroidImg} style={{ display: "block" }}>
-                  <Image src={it.img} alt={copy ? "" : it.name} fill sizes="260px" draggable={false} />
+                  <Image src={it.img} alt={copy ? "" : it.name} fill sizes={`${Math.ceil(240 * ar)}px`} draggable={false} />
                 </span>
-                <span className={s.caption} style={{ display: "block" }}>{it.name}</span>
+                <span className={s.caption} style={{ display: "block" }}>
+                  <span className={s.captionType}>{it.type[lang]}</span>
+                  {it.name}
+                </span>
               </a>
             </div>
           );
