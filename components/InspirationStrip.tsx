@@ -140,7 +140,7 @@ export default function InspirationStrip({ lang }: { lang: Lang }) {
         {items.map((it, i) => {
           const l = LAYOUT[i % LAYOUT.length];
           const copy = i >= INSPIRATIONS.length;
-          const ar = it.w / it.h;
+          const ar = it.ratio ?? it.w / it.h;
           return (
             <div
               key={`${it.name}-${i}`}
