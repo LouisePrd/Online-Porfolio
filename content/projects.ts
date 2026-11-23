@@ -209,7 +209,7 @@ const DATA: Project[] = [
     cat: "apps",
     date: "2025",
     img: "/imgs/projects/regard/regard-overview.webp",
-    tags: ["Unity", "C#", "Next.js API", "Blender"],
+    tags: ["Unity", "C#", "Blender"],
     links: { source: "https://github.com/REG-RD", report: "https://drive.google.com/file/d/1gD_S1r4MI6pO2nQb7feqqenLv3u_mohs/view?usp=sharing" },
     intro: {
       fr: "Une application mobile pour découvrir comment vos proches vous perçoivent.",
@@ -224,8 +224,8 @@ const DATA: Project[] = [
       en: "Mobile Application",
     },
     context: {
-      fr: "Projet tutoré en groupe, deuxième année du cycle ingénieur (bac +4)",
-      en: "Group-based mentoring project for second-year engineering students (bac +4)",
+      fr: "Projet tutoré en groupe, deuxième année du cycle ingénieur",
+      en: "Group-based mentoring project for second-year engineering students",
     },
     media: {
       images: ["/imgs/projects/regard/regard-overview.webp"],

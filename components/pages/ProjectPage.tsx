@@ -51,6 +51,9 @@ export default function ProjectPage({ p, lang }: { p: Project; lang: Lang }) {
   const hasMedia =
     m.videos?.length || m.videoUrl || m.iframeUrl || m.canvaUrl || m.panorama || m.images?.length || m.rows?.length || m.logos?.length || m.carousel?.length || m.verticalImages?.length || m.gifs?.length;
 
+  /** YouTube video shown side by side with the grid images */
+  const videoInGrid = Boolean(m.videoUrl && m.images?.some((img) => typeof img === "string"));
+
   return (
     <Shell>
       <SiteNav lang={lang} page="projects" altHref={projectHref(p, lang === "fr" ? "en" : "fr")} />
@@ -100,7 +103,7 @@ export default function ProjectPage({ p, lang }: { p: Project; lang: Lang }) {
         <section className={`${s.container} ${s.pdMedia}`}>
           <h2 className={s.pdLabel}>{d.media}</h2>
 
-          {[m.videoUrl, m.iframeUrl, m.canvaUrl].filter(Boolean).map((src) => (
+          {[videoInGrid ? undefined : m.videoUrl, m.iframeUrl, m.canvaUrl].filter(Boolean).map((src) => (
             <div key={src} className={`${s.pdEmbed} ${src === m.canvaUrl ? s.pdEmbedSmall : ""}`}>
               <iframe
                 src={src}
@@ -161,6 +164,17 @@ export default function ProjectPage({ p, lang }: { p: Project; lang: Lang }) {
 
           {m.images?.some((img) => typeof img === "string") && (
             <div className={s.pdGrid}>
+              {videoInGrid && (
+                <div className={s.pdEmbed}>
+                  <iframe
+                    src={m.videoUrl}
+                    title={projectTitle(p, lang)}
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                    allowFullScreen
+                  />
+                </div>
+              )}
               {m.images.filter((img) => typeof img === "string").map((src) => (
                 <ZoomImage key={src} src={src} w={1200} h={750} alt={projectTitle(p, lang)} lang={lang} sizes="(max-width: 800px) 100vw, 50vw" />
               ))}
